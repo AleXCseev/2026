@@ -2,13 +2,13 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     // this.time()
-    this.modal();
+    // this.modal();
   },
 
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
       var fixedOffset = 0;
-      var cardHeight = $(".card").outerHeight(false);
+      var cardHeight = $(".order").outerHeight(false);
       var windowHeight = $(window).height();
 
       if ($(window).width() < 1081) {
@@ -32,21 +32,28 @@ var landingFunctions = {
       nav: true,
       loop: true,
       stagePadding: 10,
+      autoHeight: false,
       // autoplay: true,
       // autoplayTimeout: 3000,
       // autoplayHoverPause: true,
-    });
-
-    $(".faq__tab-btn").click(function () {
-      if ($(this).closest(".faq__tab").hasClass("active")) {
-        $(".faq__tab").removeClass("active");
-        $(".faq__text").slideUp();
-      } else {
-        $(".faq__tab").removeClass("active");
-        $(".faq__text").slideUp();
-        $(this).closest(".faq__tab").addClass("active");
-        $(this).closest(".faq__tab").find(".faq__text").slideDown();
-      }
+      responsive: {
+        0: {
+          items: 1,
+          autoHeight: true,
+        },
+        700: {
+          items: 2,
+          autoHeight: false,
+        },
+        1080: {
+          items: 3,
+          autoHeight: false,
+        },
+        1280: {
+          items: 4,
+          autoHeight: false,
+        },
+      },
     });
 
     $(".review__slider").owlCarousel({
@@ -75,14 +82,6 @@ var landingFunctions = {
         },
       },
     });
-
-    // $.raty.path = $("body").data("path") +  '/img/raty';
-
-    // $('.modal__raiting').raty({
-    // 	half: true,
-    // 	space: false,
-    // 	number: 5,
-    // });
 
     AOS.init({
       disable: function () {

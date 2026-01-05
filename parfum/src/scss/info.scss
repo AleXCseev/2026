@@ -1,0 +1,118 @@
+.info {
+  background-color: var(--altwhite-color);
+  background-image: url(../img/info-bg.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+}
+.info__wrapper {
+  padding: 50px 0 28vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__title {
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--text-color);
+  line-height: normal;
+  margin-bottom: 14px;
+}
+
+.info__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.85;
+  text-align: center;
+  color: var(--darkgrey-color);
+  margin-bottom: 48px;
+}
+
+.info__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.info__item {
+  border-radius: 30px;
+  padding: 30px 35px;
+  box-shadow: 0 30px 25px 0 rgba(0, 0, 0, 0.05);
+  background: var(--white-color);
+}
+
+.info__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text-color);
+  line-height: normal;
+  opacity: 0.9;
+  margin-bottom: 9px;
+}
+
+.info__item-list {
+  list-style-type: disc;
+  font-weight: 400;
+  padding-left: 26px;
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--darkgrey-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1080px) {
+  .info__wrapper {
+    padding: 50px 0 34vw;
+  }
+  .info__items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info__text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .info {
+    background-size: 135%;
+  }
+  .info__wrapper {
+    padding: 14vw 0 45vw;
+  }
+  .info__title {
+    font-size: 8.5vw;
+    margin-bottom: 3vw;
+  }
+  .info__text {
+    margin-bottom: 30px;
+    font-size: 4.5vw;
+  }
+  .info__items {
+    gap: 9.5vw;
+  }
+  .info__item {
+    border-radius: 7vw;
+    padding: 7vw;
+  }
+  .info__item-title {
+    font-size: 5.5vw;
+    margin-bottom: 2vw;
+  }
+  .info__item-list {
+    padding-left: 7vw;
+    font-size: 4.5vw;
+    gap: 2vw;
+  }
+}
