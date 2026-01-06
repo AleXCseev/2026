@@ -1,0 +1,148 @@
+.review {
+  background: var(--lightgrey-color);
+}
+
+.review__wrapper {
+  padding: 60px 0;
+}
+
+.tag {
+}
+
+.review__title {
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: normal;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.review__slider {
+  width: 100%;
+  height: auto;
+
+  .owl-stage-outer {
+    padding-top: 33px;
+  }
+
+  .owl-nav {
+    width: calc(100% + 140px);
+  }
+}
+
+.review__slide {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 0 25px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review__photo {
+  width: 66px;
+  height: 66px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 8px;
+  margin-top: -33px;
+  margin-bottom: 5px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 0 5px 12px rgba(30, 30, 30, 0.6);
+  }
+}
+
+.review__name {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--text-color);
+  line-height: normal;
+  margin-bottom: 4px;
+}
+
+.review__age {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-color);
+  line-height: normal;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+.review__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 5px;
+
+  img {
+    width: 14px !important;
+    height: auto;
+  }
+}
+
+.review__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--darkgrey-color);
+  opacity: 0.8;
+}
+
+.review__img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+
+@media (max-width: 1080px) {
+  .review__slider {
+    width: calc(100% - 140px);
+    margin: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .review__slider {
+    width: 100%;
+
+    .owl-nav {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 200px;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .review__wrapper {
+    padding: 19vw 0 8vw;
+  }
+  .review__title {
+    font-size: 10vw;
+    margin-bottom: 11vw;
+  }
+  .review__slide {
+    border-radius: 4.5vw;
+    padding: 0 3.5vw 6vw;
+  }
+  .review__img {
+    border-radius: 7vw;
+  }
+}

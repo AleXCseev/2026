@@ -33,9 +33,9 @@ var landingFunctions = {
       loop: true,
       stagePadding: 10,
       autoHeight: false,
-      // autoplay: true,
-      // autoplayTimeout: 3000,
-      // autoplayHoverPause: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,
@@ -57,28 +57,24 @@ var landingFunctions = {
     });
 
     $(".review__slider").owlCarousel({
-      items: 4,
+      items: 3,
       margin: 20,
-      dots: true,
+      dots: false,
       dotsEach: true,
       nav: true,
       loop: true,
-      // autoHeight: true,
+      autoHeight: false,
       // autoplay: true,
       // autoplayTimeout: 5000,
       // autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,
-        },
-        541: {
-          items: 2,
+          autoHeight: true,
         },
         1081: {
           items: 3,
-        },
-        1281: {
-          items: 4,
+          autoHeight: false,
         },
       },
     });
