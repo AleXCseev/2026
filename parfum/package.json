@@ -22,5 +22,8 @@
     "gulp-sass": "^5.0.0",
     "gulp-ttf2woff": "^1.1.1",
     "sass": "^1.45.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }
