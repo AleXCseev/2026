@@ -14,7 +14,10 @@ var landingFunctions = {
       if ($(window).width() < 1081) {
         $("html, body")
           .stop()
-          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
+          .animate(
+            { scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) },
+            1000,
+          );
         e.preventDefault();
       } else {
         $("html, body")
@@ -159,7 +162,13 @@ var landingFunctions = {
       monthNum += now.getMonth() + 1;
 
       // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
+      return (
+        dayNum +
+        "." +
+        monthNum +
+        "." +
+        String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
+      );
     }
 
     // $(".date__1").text(getDate(-5));
