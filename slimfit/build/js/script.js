@@ -4,6 +4,7 @@ var landingFunctions = {
     // this.time()
     // this.modal();
     this.bar();
+    this.order();
   },
 
   initLibraris: function () {
@@ -12,97 +13,35 @@ var landingFunctions = {
       var cardHeight = $(".order").outerHeight(false);
       var windowHeight = $(window).height();
 
-      if ($(window).width() < 1081) {
-        $("html, body")
-          .stop()
-          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
-        e.preventDefault();
-      } else {
-        $("html, body")
-          .stop()
-          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
-        e.preventDefault();
-      }
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
+      e.preventDefault();
     });
 
-    // $(".gallery__slider").owlCarousel({
-    //   items: 4,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   stagePadding: 10,
-    //   autoHeight: false,
-    //   autoplay: true,
-    //   autoplayTimeout: 3000,
-    //   autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoHeight: true,
-    //     },
-    //     700: {
-    //       items: 2,
-    //       autoHeight: false,
-    //     },
-    //     1080: {
-    //       items: 3,
-    //       autoHeight: false,
-    //     },
-    //     1280: {
-    //       items: 4,
-    //       autoHeight: false,
-    //     },
+    // AOS.init({
+    //   disable: function () {
+    //     if ($(window).width() <= 1080) {
+    //       return true;
+    //     }
+    //     return false;
     //   },
+    //   once: true,
+    //   duration: 1000,
+    //   offset: 0,
     // });
 
-    // $(".review__slider").owlCarousel({
-    //   items: 3,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoHeight: false,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 5000,
-    //   // autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoHeight: true,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //       autoHeight: false,
-    //     },
-    //   },
+    // $(window).resize(function () {
+    //   AOS.refresh();
     // });
 
-    AOS.init({
-      disable: function () {
-        if ($(window).width() <= 1080) {
-          return true;
-        }
-        return false;
-      },
-      once: true,
-      duration: 1000,
-      offset: 0,
-    });
-
-    $(window).resize(function () {
-      AOS.refresh();
-    });
-
-    $("[data-fancybox]").fancybox({
-      loop: true,
-      infobar: false,
-      animationEffect: false,
-      backFocus: false,
-      hash: false,
-    });
+    // $("[data-fancybox]").fancybox({
+    //   loop: true,
+    //   infobar: false,
+    //   animationEffect: false,
+    //   backFocus: false,
+    //   hash: false,
+    // });
   },
 
   bar: function () {
@@ -132,14 +71,24 @@ var landingFunctions = {
 
       setTimeout(() => {
         $(".bar__active").addClass("active");
+        timer();
       }, 5000);
 
       setTimeout(() => {
         $(".bar__block").slideUp();
         $(".order__block").slideDown();
-
-        timer()
       }, 7000);
+    });
+  },
+
+  order: function () {
+    $(".order__size-btn").click(function () {
+      $(".order__size-btn").removeClass("active");
+      $(this).addClass("active");
+
+      const price = $(this).find(".new__price").text();
+
+      $(".current__price").text(price);
     });
   },
 

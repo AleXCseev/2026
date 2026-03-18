@@ -128,7 +128,7 @@
 }
 
 .order__block {
-  // display: none;
+  display: none;
 }
 
 .timer__block {
@@ -322,4 +322,119 @@
   &:hover {
     background-color: var(--text-red);
   }
+}
+
+@media (max-width: 540px) {
+  .bar__block {
+    border-radius: 3vw;
+    padding: 9.8vw;
+    margin-bottom: 5vw;
+  }
+  .bar__title {
+    font-size: 7vw;
+    margin-bottom: 9.8vw;
+  }
+  .bar {
+    border-radius: 3vw;
+    padding: 5vw 0;
+    margin-bottom: 9.8vw;
+  }
+  .bar__track {
+    padding: 0 10vw;
+    gap: 29vw;
+  }
+  .bar__item {
+    width: 53vw;
+    border-radius: 3vw;
+    padding: 5vw;
+  }
+  @keyframes bar {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1148vw);
+    }
+  }
+  .bar__naumber {
+    font-size: 9.8vw;
+    margin-bottom: 2vw;
+    transition: 0.3s ease;
+  }
+  .bar__info {
+    font-size: 5vw;
+  }
+  .start__bar {
+    border-radius: 10vw;
+    padding: 3.5vw 5vw;
+    font-size: 5vw;
+  }
+  .timer__block {
+    border-radius: 3vw;
+    padding: 5vw;
+  }
+  .timer__wrapper {
+    gap: 5vw;
+    margin-bottom: 5vw;
+  }
+  .timer__divider {
+    font-size: 8vw;
+  }
+  .timer__item {
+    border-radius: 3vw;
+    padding: 5vw 9vw;
+  }
+  .timer__number {
+    font-size: 9.8vw;
+    margin-bottom: 2vw;
+  }
+  .timer__text {
+    font-size: 5.5vw;
+  }
+  .timer__info {
+    font-size: 5vw;
+  }
+  .order__form {
+    border-radius: 3vw;
+    padding: 5vw;
+  }
+  .order__size-btn {
+    border-radius: 3vw;
+    padding: 3vw 5vw;
+  }
+  .price {
+    gap: 2.5vw;
+  }
+  .old__price {
+    font-size: 4vw;
+  }
+  .new__price {
+    font-size: 4vw;
+  }
+  .order__inputs {
+    flex-direction: column;
+    gap: 5vw;
+  }
+  .input {
+    border-radius: 3vw;
+    padding: 3vw 5vw;
+    font-size: 3.8vw;
+  }
+  .order__result {
+    border-radius: 3vw;
+    padding: 3vw 5vw;
+    gap: 3vw;
+  }
+  .order__info {
+    font-size: 4vw;
+  }
+  .current__price {
+    font-size: 7vw;
+  }
+  .order__btn {
+    border-radius: 20vw;
+    padding: 3vw 5vw;
+    font-size: 4vw;
+  }
+
 }
