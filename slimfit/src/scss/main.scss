@@ -10,7 +10,7 @@ body {
   line-height: 1.4;
   font-weight: 400;
   color: var(--text-color);
-  background: var(--white-color);
+  background: var(--main-bg);
 }
 
 .visually-hidden {
@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  width: 1016px;
+  width: 1200px;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -42,6 +42,12 @@ body {
 .main {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1000px;
+  }
 }
 
 @media (max-width: 1080px) {

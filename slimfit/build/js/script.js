@@ -1,10 +1,10 @@
 var landingFunctions = {
   init: function () {
     this.initLibraris();
-    // this.time()
+    this.time();
     // this.modal();
     this.bar();
-    this.order();
+    // this.order();
   },
 
   initLibraris: function () {
@@ -45,39 +45,14 @@ var landingFunctions = {
   },
 
   bar: function () {
-    const timer = () => {
-      let timer = 600;
-
-      const countdownInterval = setInterval(function () {
-        let minutes = Math.floor(timer / 60);
-        let seconds = timer % 60;
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        $("#minutes").text(minutes);
-        $("#seconds").text(seconds);
-
-        // Условие остановки
-        if (--timer < 0) {
-          clearInterval(countdownInterval);
-        }
-      }, 1000);
-    };
-
     $(".start__bar").click(function () {
       $(this).attr("disabled", true);
       $(".bar__track").addClass("active");
 
       setTimeout(() => {
-        $(".bar__active").addClass("active");
-        timer();
-      }, 5000);
-
-      setTimeout(() => {
         $(".bar__block").slideUp();
         $(".order__block").slideDown();
-      }, 7000);
+      }, 10000);
     });
   },
 
@@ -99,7 +74,7 @@ var landingFunctions = {
 
     if (!String.prototype.padStart) {
       String.prototype.padStart = function padStart(targetLength, padString) {
-        targetLength = targetLength >> 0; //truncate if number or convert non-number to 0;
+        targetLength = targetLength >> 0;
         padString = String(typeof padString !== "undefined" ? padString : " ");
         if (this.length > targetLength) {
           return String(this);
@@ -146,12 +121,12 @@ var landingFunctions = {
       }
       monthNum += now.getMonth() + 1;
 
-      // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
+      return dayNum + "." + monthNum + "." + now.getFullYear();
+      // return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
     // $(".date__1").text(getDate(-5));
-    // $(".date").text(getDate(2));
+    $(".date").text(getDate(-2));
   },
 
   modal: function () {
