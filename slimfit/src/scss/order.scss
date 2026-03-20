@@ -210,6 +210,27 @@
   margin-left: auto;
 }
 
+.price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.old__price {
+  font-size: 26px;
+  font-weight: 500;
+  color: #082567;
+  text-decoration: line-through;
+}
+
+.new__price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f00;
+}
+
 .input__wrapper {
   width: 100%;
   height: auto;
@@ -311,6 +332,9 @@
     width: 100%;
     order: 5;
   }
+  .price {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 540px) {
@@ -380,5 +404,15 @@
     font-size: 4.5vw;
     padding: 4vw;
     border-radius: 3vw;
+  }
+  .price {
+    gap: 4.5vw;
+    margin-bottom: 4.5vw;
+  }
+  .old__price {
+    font-size: 6vw;
+  }
+  .new__price {
+    font-size: 7.5vw;
   }
 }
