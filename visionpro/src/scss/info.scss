@@ -1,0 +1,174 @@
+.info__section {
+}
+.info__section-wrapper {
+  padding: 32px 0 24px;
+}
+
+.info__date {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 13px;
+  color: #4a5565;
+}
+
+.main__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.125;
+  color: #101828;
+}
+
+.blockquote {
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  border-left: 3px solid #00aa28;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #eefdf3;
+
+  .text {
+    color: #0a0a0a !important;
+  }
+}
+
+.blockquote-2 {
+  border-left: 2px solid #f0b100;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fefce8;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.info-img {
+  width: 100%;
+  height: auto;
+}
+
+.color-alt {
+  color: #364153;
+}
+
+.text-medium {
+  font-size: 24px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.block {
+  padding: 24px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #f0fdfa;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.info__vision {
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(176deg, #00bc7d 0%, #009689 50%, #0092b8 100%);
+
+  p {
+    color: #fff;
+  }
+}
+
+.info__vision-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 48px;
+    height: auto;
+  }
+}
+
+.vision__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.vision__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d0fae5;
+}
+
+.info-list {
+  list-style-type: decimal;
+  // list-style-position: inside;
+  padding-left: 20px;
+}
+
+.text-big {
+    font-size: 32px;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+.blockquote__alert {
+    border-radius: 14px;
+    background: #175bfa;
+    padding: 32px;
+
+    p {
+        color: #fff;
+    }
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.alert__top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    img {
+        width: 48px;
+        height: auto;
+    }
+}
+
+.alert__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.39738;
+    color: #fff;
+}
+
+.text {
+}
+.bold {
+}
