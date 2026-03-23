@@ -2,9 +2,7 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.time();
-    // this.modal();
-    this.bar();
-    // this.order();
+    this.quantity();
   },
 
   initLibraris: function () {
@@ -42,29 +40,6 @@ var landingFunctions = {
     //   backFocus: false,
     //   hash: false,
     // });
-  },
-
-  bar: function () {
-    $(".start__bar").click(function () {
-      $(this).attr("disabled", true);
-      $(".bar__track").addClass("active");
-
-      setTimeout(() => {
-        $(".bar__block").slideUp();
-        $(".order__block").slideDown();
-      }, 10000);
-    });
-  },
-
-  order: function () {
-    $(".order__size-btn").click(function () {
-      $(".order__size-btn").removeClass("active");
-      $(this).addClass("active");
-
-      const price = $(this).find(".new__price").text();
-
-      $(".current__price").text(price);
-    });
   },
 
   time: function () {
@@ -129,56 +104,32 @@ var landingFunctions = {
     $(".date").text(getDate(-2));
   },
 
-  modal: function () {
-    $(".add__review").click(function () {
-      $(".modal__review").addClass("active");
-    });
+  quantity: function () {
+    var currentNumber;
 
-    function close() {
-      $(".modal__review").removeClass("active");
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
     }
 
-    $(".modal__review").click(function (e) {
-      var target = e.target;
-      if (target.classList.contains("modal__close")) {
-        close();
-      }
-      if (target.classList.contains("modal")) {
-        close();
-      }
-    });
-
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        console.log(reader);
-        reader.onload = function (e) {
-          $(".file img").attr("src", e.target.result).css("display", "block");
-        };
-        reader.readAsDataURL(input.files[0]);
-      }
+    if (localStorage.getItem("quantity")) {
+      $(".quantity").text(localStorage.getItem("quantity"));
+    } else {
+      currentNumber = 25;
+      localStorage.setItem("quantity", currentNumber);
+      $(".quantity").text(currentNumber);
     }
 
-    $(".modal__review .input__file").on("change", function () {
-      readURL(this);
-    });
-
-    $(".modal__review form").submit(function (e) {
-      e.preventDefault();
-      $(this).removeClass("active");
-      $(".send__window").addClass("active");
-      $(".modal__review .name__input").val("");
-      $(".modal__review .modal__area").val("");
-      $(".modal__review .file img").attr("src", "").css("display", "none");
-      delayClose();
-    });
-    function delayClose() {
-      setTimeout(function () {
-        $(".modal__review form").addClass("active");
-        $(".send__window").removeClass("active");
-        close();
-      }, 5000);
-    }
+    setInterval(function () {
+      currentNumber = localStorage.getItem("quantity");
+      if (currentNumber >= 3) {
+        currentNumber = currentNumber - getRandomInt(3);
+        $(".quantity").text(currentNumber);
+        localStorage.setItem("quantity", currentNumber);
+      } else {
+        currentNumber = 25;
+        localStorage.setItem("quantity", currentNumber);
+      }
+    }, 100000);
   },
 };
 
