@@ -2,7 +2,7 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.time();
-    // this.quantity();
+    this.quantity();
   },
 
   initLibraris: function () {
@@ -15,6 +15,46 @@ var landingFunctions = {
         .stop()
         .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
       e.preventDefault();
+    });
+
+    $(".info__slider").owlCarousel({
+      items: 3,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      // autoplay: false,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 2,
+        },
+        1081: {
+          items: 3,
+        },
+      },
+    });
+
+    $(".video__slider").owlCarousel({
+      items: 3,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      // autoplay: false,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 2,
+        },
+        700: {
+          items: 3,
+        },
+      },
     });
 
     // AOS.init({
