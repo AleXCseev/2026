@@ -1,16 +1,22 @@
 .radar__section {
-  height: 100%;
+}
+
+.section {
   overflow-y: auto;
-  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .radar__wrapper {
   height: 100%;
-  padding: 30px 0;
+  gap: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 100px;
+}
+
+.wrapper {
+  min-height: calc(100vh - 90px);
+  min-height: calc(100svh - 90px);
+  padding: 30px 0;
 }
 
 .radar__content {
@@ -386,6 +392,10 @@
     align-items: center;
     gap: 50px;
   }
+  .wrapper {
+    min-height: calc(100vh - 79px);
+    min-height: calc(100svh - 79px);
+  }
   .radar__content {
     width: 100%;
   }
@@ -417,7 +427,91 @@
   .price {
     padding: 5px 0 0px;
   }
-  .radar__section {
+  .site__wrapper {
     background: radial-gradient(93.26% 32.69% at 63.98% 75.68%, #001372 0%, #000 100%);
+  }
+}
+
+@media (max-width: 440px) {
+  .radar__title {
+    font-size: 6.8vw;
+    margin-bottom: 1.5vw;
+  }
+  .radar__wrapper {
+    gap: 10vw;
+    justify-content: flex-start;
+  }
+  .wrapper {
+    padding: 8vw 2vw;
+    min-height: calc(100vh - 71px);
+    min-height: calc(100svh - 71px);
+  }
+  .radar__text {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+  }
+  .radar__text-small {
+    font-size: 4.5vw;
+    margin-bottom: 0;
+  }
+  .radar__btn-wrapper {
+    gap: 2vw;
+    justify-content: space-between;
+  }
+  .radar__btn div {
+    padding: 3vw 4vw;
+    gap: 1.5vw;
+    font-size: 3vw;
+  }
+  .radar__btn svg {
+    width: 4vw;
+    height: auto;
+  }
+  .radar__info-wrapper {
+    width: 45vw;
+    padding: 4vw 0;
+  }
+  .radar__info {
+    font-size: 3.5vw;
+  }
+  .price {
+    padding: 1vw 0 0;
+    gap: 1vw;
+    font-size: 3.2vw;
+  }
+  .price__info {
+    font-size: 3vw;
+  }
+  .new__price {
+    font-size: 5vw;
+  }
+  .radar__items {
+    margin-top: 5vw;
+  }
+  .radar__item-title {
+    font-size: 5vw;
+  }
+  .radar__item-info {
+    font-size: 2.6vw;
+  }
+  .radar__block {
+    width: 91vw;
+    height: 91vw;
+  }
+  .radar__pin {
+    width: 3.4vw;
+    height: 3.4vw;
+  }
+  .radar__pin-1 {
+    left: 18%;
+    bottom: 21%;
+  }
+  .radar__pin-2 {
+    top: 29%;
+    left: 29%;
+  }
+  .radar__pin-3 {
+    bottom: 36%;
+    right: 24%;
   }
 }
