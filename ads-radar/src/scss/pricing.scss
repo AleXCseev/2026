@@ -1,5 +1,5 @@
-.site__wrapper:has(.pricing__section) {
-  background: #000818;
+body:has(.pricing__section) {
+  background-image: none;
 }
 
 .pricing__section {
@@ -68,7 +68,30 @@
       height: auto;
     }
     .features__title {
-      margin-bottom: 10vw;
+      margin-bottom: 6vw;
+    }
+    .features__items {
+      margin-bottom: 8vw;
+    }
+    .pricing__text {
+      font-size: 3.8vw;
+      padding: 4vw 0 5vw;
+    }
+    .pricing__spot-text {
+      font-size: 3.2vw;
+    }
+    .pricing__spot {
+      margin-bottom: 2.5vw;
+      max-width: 62vw;
+    }
+    .progressbar {
+      width: 50vw;
+      height: 1vw;
+      border-radius: 3vw;
+    }
+    .radar__btn div {
+      padding: 4vw 6vw;
+      font-size: 4.5vw;
     }
   }
 }
