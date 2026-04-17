@@ -1,0 +1,261 @@
+.advantage__section {
+}
+
+.advantage__wrapper {
+  padding: 54px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+.advantage__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.advantage__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+
+  span {
+    display: none;
+  }
+}
+
+.advantage__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--text-color-gray);
+}
+
+.advantage__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.advantage__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.advantage__item-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(0, 218, 243, 0.1);
+
+  img {
+    width: 24px;
+    height: auto;
+  }
+}
+
+.advantage__item-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.advantage__item-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--text-color-gray);
+}
+
+.advantage__info {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-alt-color);
+}
+
+.advantage__prod {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantage__prod-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1080px) {
+  .advantage__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+  }
+  .advantage__title span {
+    display: block;
+  }
+  .advantage__content {
+    position: relative;
+    z-index: 1;
+  }
+  .advantage__prod {
+    margin-bottom: -80px;
+  }
+}
+
+@media (max-width: 540px) {
+  .advantage__wrapper {
+    padding: 14vw 0;
+  }
+  .advantage__prod-img {
+    width: 150%;
+  }
+  .advantage__prod {
+    margin-bottom: -32vw;
+  }
+  .advantage__content {
+    gap: 8vw;
+  }
+  .advantage__title {
+    font-size: 10vw;
+  }
+  .advantage__text {
+    font-size: 5vw;
+  }
+  .advantage__items {
+    gap: 5.5vw;
+  }
+  .advantage__item {
+    gap: 4vw;
+  }
+  .advantage__item-title {
+    font-size: 4vw;
+  }
+  .advantage__item-text {
+    font-size: 3.4vw;
+  }
+  .advantage__info {
+    font-size: 4vw;
+  }
+}
+
+.advantage__block {
+  width: 100%;
+  height: auto;
+  background: var(--info-item-color);
+}
+
+.advantage__block-wrapper {
+  padding: 96px 0;
+}
+
+.advantage__block-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.advantage__block-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-color-gray);
+  margin-bottom: 64px;
+}
+
+.advanatge__stages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.advanatge__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.advantage__number {
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #292a2e;
+
+  span {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text-alt-color);
+  }
+}
+
+.advantage__stage-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.advantgae__stage-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text-color-gray);
+}
+
+@media (max-width: 1080px) {
+  .advanatge__stages {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .advantage__block-wrapper {
+    padding: 24vw 0;
+  }
+  .advantage__block-title {
+    font-size: 8vw;
+    margin-bottom: 3vw;
+  }
+  .advantage__block-text {
+    font-size: 4vw;
+    margin-bottom: 14vw;
+  }
+  .advanatge__stage {
+    gap: 2vw;
+  }
+  .advantage__number {
+    width: 24vw;
+    height: 24vw;
+  }
+  .advantage__number span {
+    font-size: 8vw;
+  }
+  .advantage__stage-title {
+    font-size: 5vw;
+  }
+  .advantgae__stage-text {
+    font-size: 3.5vw;
+  }
+}
