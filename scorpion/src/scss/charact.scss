@@ -147,3 +147,45 @@
 
 .charact__item-5 {
 }
+
+@media (max-width: 1080px) {
+  .characteristic__items {
+    grid-template-columns: 1fr;
+  }
+  .charact__item-1 {
+    grid-column: inherit;
+  }
+}
+
+@media (max-width: 540px) {
+  .characteristic__items {
+    gap: 6vw;
+  }
+  .charact__item {
+    padding: 10vw 10vw 19vw;
+    gap: 4vw;
+  }
+  .charact__hover {
+    bottom: 10vw;
+    left: 10vw;
+    gap: 2vw;
+    width: 39vw;
+  }
+  .charact__hover {
+    opacity: 1 !important;
+  }
+  .charact__icon {
+    width: 12.3vw;
+  }
+  .charact__title {
+    font-size: 6vw;
+  }
+  .charact__text {
+    font-size: 4vw;
+  }
+  .characteristic__block {
+    .characteristic__wrapper {
+      padding: 0 0 24vw;
+    }
+  }
+}

@@ -1,30 +1,20 @@
 var landingFunctions = {
   init: function () {
     this.initLibraris();
-    // this.time()
+    this.time();
+    this.bar();
     // this.modal();
   },
 
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
       var fixedOffset = 0;
-      var cardHeight = $(".order").outerHeight(false);
-      var windowHeight = $(window).height();
 
-      if ($(window).width() < 1081) {
-        $("html, body")
-          .stop()
-          .animate(
-            { scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) },
-            1000,
-          );
-        e.preventDefault();
-      } else {
-        $("html, body")
-          .stop()
-          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
-        e.preventDefault();
-      }
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
+      e.preventDefault();
+      
     });
 
     $(".gallery__slider").owlCarousel({
@@ -144,17 +134,28 @@ var landingFunctions = {
       monthNum += now.getMonth() + 1;
 
       // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return (
-        dayNum +
-        "." +
-        monthNum +
-        "." +
-        String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
-      );
+      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
     // $(".date__1").text(getDate(-5));
-    $(".date").text(getDate(2));
+    // $(".date").text(getDate(2));
+  },
+
+  bar: function () {
+    $(".bar__start").click(function () {
+      $(".bar__track").addClass("active");
+
+      setTimeout(() => {
+        $(".result").fadeIn(300);
+        $(".order__bar").css("opacity", 0);
+      }, 6000);
+
+      setTimeout(() => {
+        $(".result").fadeOut(300);
+        $(".order__bar").hide();
+        $(".order__content").fadeIn(300);
+      }, 8000);
+    });
   },
 
   modal: function () {
