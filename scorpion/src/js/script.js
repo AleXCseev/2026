@@ -3,7 +3,7 @@ var landingFunctions = {
     this.initLibraris();
     this.time();
     this.bar();
-    // this.modal();
+    this.faq();
   },
 
   initLibraris: function () {
@@ -14,45 +14,7 @@ var landingFunctions = {
         .stop()
         .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
       e.preventDefault();
-      
     });
-
-    $(".gallery__slider").owlCarousel({
-      items: 1,
-      margin: 20,
-      dots: false,
-      dotsEach: true,
-      nav: true,
-      loop: true,
-      // stagePadding: 10,
-      autoHeight: false,
-      // autoplay: true,
-      // autoplayTimeout: 3000,
-      // autoplayHoverPause: true,
-    });
-
-    // $(".review__slider").owlCarousel({
-    //   items: 3,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoHeight: false,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 5000,
-    //   // autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoHeight: true,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //       autoHeight: false,
-    //     },
-    //   },
-    // });
 
     AOS.init({
       disable: function () {
@@ -158,56 +120,16 @@ var landingFunctions = {
     });
   },
 
-  modal: function () {
-    $(".add__review").click(function () {
-      $(".modal__review").addClass("active");
-    });
-
-    function close() {
-      $(".modal__review").removeClass("active");
-    }
-
-    $(".modal__review").click(function (e) {
-      var target = e.target;
-      if (target.classList.contains("modal__close")) {
-        close();
-      }
-      if (target.classList.contains("modal")) {
-        close();
+  faq: function () {
+    $(".faq__btn").click(function () {
+      if ($(this).hasClass("active")) {
+        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
+      } else {
+        $(this).addClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
       }
     });
-
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        console.log(reader);
-        reader.onload = function (e) {
-          $(".file img").attr("src", e.target.result).css("display", "block");
-        };
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-
-    $(".modal__review .input__file").on("change", function () {
-      readURL(this);
-    });
-
-    $(".modal__review form").submit(function (e) {
-      e.preventDefault();
-      $(this).removeClass("active");
-      $(".send__window").addClass("active");
-      $(".modal__review .name__input").val("");
-      $(".modal__review .modal__area").val("");
-      $(".modal__review .file img").attr("src", "").css("display", "none");
-      delayClose();
-    });
-    function delayClose() {
-      setTimeout(function () {
-        $(".modal__review form").addClass("active");
-        $(".send__window").removeClass("active");
-        close();
-      }, 5000);
-    }
   },
 };
 
