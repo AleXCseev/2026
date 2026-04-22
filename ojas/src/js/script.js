@@ -10,13 +10,41 @@ var landingFunctions = {
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
       var fixedOffset = 0;
-      var cardHeight = $("#order").outerHeight(false);
-      var windowHeight = $(window).height();
+      // var cardHeight = $("#order").outerHeight(false);
+      // var windowHeight = $(window).height();
 
       $("html, body")
         .stop()
-        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
       e.preventDefault();
+    });
+
+    $(".info__review-slider").owlCarousel({
+      items: 3,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: true,
+      loop: true,
+      // stagePadding: 10,
+      autoHeight: false,
+      // autoplay: true,
+      // autoplayTimeout: 3000,
+      // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 16,
+        },
+        540: {
+          items: 2,
+          margin: 20,
+        },
+        1080: {
+          items: 3,
+          margin: 20,
+        },
+      },
     });
 
     // AOS.init({
@@ -50,9 +78,9 @@ var landingFunctions = {
       $(".bar__track").addClass("active");
 
       setTimeout(() => {
-        $(".bar__block").slideUp();
-        $(".order__block").slideDown();
-      }, 10000);
+        $(".bar__wrapper").slideUp();
+        $(".order__form").slideDown();
+      }, 11000);
     });
   },
 
