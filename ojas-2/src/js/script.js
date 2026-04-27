@@ -1,9 +1,9 @@
 var landingFunctions = {
   init: function () {
     this.initLibraris();
-    this.time();
+    // this.time();
     // this.modal();
-    this.bar();
+    // this.bar();
     // this.order();
   },
 
@@ -17,34 +17,6 @@ var landingFunctions = {
         .stop()
         .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
       e.preventDefault();
-    });
-
-    $(".info__review-slider").owlCarousel({
-      items: 3,
-      margin: 20,
-      dots: false,
-      dotsEach: true,
-      nav: true,
-      loop: true,
-      // stagePadding: 10,
-      autoHeight: false,
-      // autoplay: true,
-      // autoplayTimeout: 3000,
-      // autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-          margin: 16,
-        },
-        540: {
-          items: 2,
-          margin: 20,
-        },
-        1080: {
-          items: 3,
-          margin: 20,
-        },
-      },
     });
 
     // AOS.init({
