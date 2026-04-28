@@ -1,0 +1,135 @@
+.rated__section {
+  background: #f5f5f5;
+}
+
+.rated__section-wrapper {
+  padding: 64px 0;
+}
+
+.rated__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+.rated__title {
+  font-family: var(--third-family);
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  color: #101828;
+  margin-bottom: 16px;
+}
+
+.rated__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #364153;
+  margin-bottom: 40px;
+}
+
+.rated__slider {
+  width: 100%;
+  padding: 0 96px;
+}
+
+.rated__slide {
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.rated__slide-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.rated__slide-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.rated__img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.slide__item-1 {
+  .rated__slide-text {
+    color: #6a7282;
+  }
+}
+
+.slide__item-2 {
+  .rated__slide-text {
+    color: #ffd700;
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 1080px) {
+  .rated__title {
+    font-size: 38px;
+  }
+  .rated__slider {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .rated__section-wrapper {
+    padding: 14vw 0;
+  }
+  .rated__rating {
+    gap: 1vw;
+    margin-bottom: 3vw;
+  }
+  .rated__rating img {
+    width: 8vw;
+  }
+  .rated__title {
+    font-size: 8vw;
+    margin-bottom: 3vw;
+  }
+  .rated__text {
+    font-size: 5vw;
+    margin-bottom: 8vw;
+  }
+  .rated__slider {
+    padding: 0;
+  }
+  .rated__slide {
+    border-radius: 3vw;
+    padding: 5vw;
+    gap: 5vw;
+  }
+  .rated__slide-item {
+    gap: 4vw;
+  }
+  .rated__slide-text {
+    font-size: 5vw;
+  }
+  .rated__img {
+    border-radius: 3vw;
+  }
+}
