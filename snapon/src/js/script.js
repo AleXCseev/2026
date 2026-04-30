@@ -19,6 +19,28 @@ var landingFunctions = {
       e.preventDefault();
     });
 
+    $(".gallery__slider").owlCarousel({
+      items: 2,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: true,
+      loop: true,
+      // stagePadding: 10,
+      autoHeight: false,
+      // autoplay: true,
+      // autoplayTimeout: 3000,
+      // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        720: {
+          items: 2,
+        }
+      }
+    });
+
     // AOS.init({
     //   disable: function () {
     //     if ($(window).width() <= 1080) {
