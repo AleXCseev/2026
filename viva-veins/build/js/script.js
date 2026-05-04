@@ -1,7 +1,8 @@
 var landingFunctions = {
   init: function () {
     this.initLibraris();
-    // this.time();
+    this.time();
+    this.bar();
     // this.faq();
     // this.quantity();
   },
@@ -103,7 +104,7 @@ var landingFunctions = {
       }, 1000);
     }
 
-    timer();
+    // timer();
 
     function getDate(plusDays) {
       var now = new Date();
@@ -125,6 +126,44 @@ var landingFunctions = {
 
     // $(".date__1").text(getDate(-5));
     $(".date").text(getDate(-2));
+  },
+
+  bar: function () {
+    const percent = ["20%", "30%", "40%", "50%", "40%", "30%", "20%", "10%", "20%", "30%", "40%", "50%"];
+    let currentPercent = 0;
+
+    $(".bar__start").click(function () {
+      $(this).attr("disabled", true);
+
+      const track = $(".bar__track");
+
+      $(".bar__info").hide();
+
+      track.show();
+
+      const interval = setInterval(function () {
+        currentPercent++;
+
+        if (currentPercent >= percent.length - 1) {
+          clearInterval(interval);
+
+          track.find("span").addClass("active");
+
+          setTimeout(() => {
+            finish();
+          }, 3000);
+        }
+
+        // track.find("span").fadeOut(200)
+        track.find("span").show().text(percent[currentPercent]);
+      }, 300);
+    });
+
+    function finish() {
+      $(".bar__block").slideUp(600);
+      $(".order__info").slideDown(600);
+      $(".order").slideDown(600);
+    }
   },
 
   faq: function () {
