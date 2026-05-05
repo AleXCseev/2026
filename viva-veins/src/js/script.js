@@ -3,7 +3,7 @@ var landingFunctions = {
     this.initLibraris();
     this.time();
     this.bar();
-    // this.faq();
+    this.faq();
     // this.quantity();
   },
 
@@ -124,12 +124,40 @@ var landingFunctions = {
       // return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
-    // $(".date__1").text(getDate(-5));
-    $(".date").text(getDate(-2));
+    $(".date").text(getDate(-5));
+    $(".date__1").text(getDate(-4));
+    $(".date__2").text(getDate(-3));
+    $(".date__3").text(getDate(-2));
+    $(".date__4").text(getDate(-1));
   },
 
   bar: function () {
-    const percent = ["20%", "30%", "40%", "50%", "40%", "30%", "20%", "10%", "20%", "30%", "40%", "50%"];
+    const percent = [
+      "20%",
+      "30%",
+      "40%",
+      "50%",
+      "40%",
+      "30%",
+      "20%",
+      "10%",
+      "20%",
+      "30%",
+      "40%",
+      "50%",
+      "20%",
+      "30%",
+      "40%",
+      "50%",
+      "40%",
+      "30%",
+      "20%",
+      "10%",
+      "20%",
+      "30%",
+      "40%",
+      "50%",
+    ];
     let currentPercent = 0;
 
     $(".bar__start").click(function () {
@@ -156,7 +184,7 @@ var landingFunctions = {
 
         // track.find("span").fadeOut(200)
         track.find("span").show().text(percent[currentPercent]);
-      }, 300);
+      }, 200);
     });
 
     function finish() {
