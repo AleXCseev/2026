@@ -2,9 +2,6 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.time();
-    this.bar();
-    this.faq();
-    // this.quantity();
   },
 
   initLibraris: function () {
@@ -107,109 +104,6 @@ var landingFunctions = {
     $(".date__2").text(getDate(-3));
     $(".date__3").text(getDate(-2));
     $(".date__4").text(getDate(-1));
-  },
-
-  bar: function () {
-    const percent = [
-      "20%",
-      "30%",
-      "40%",
-      "50%",
-      "40%",
-      "30%",
-      "20%",
-      "10%",
-      "20%",
-      "30%",
-      "40%",
-      "50%",
-      "20%",
-      "30%",
-      "40%",
-      "50%",
-      "40%",
-      "30%",
-      "20%",
-      "10%",
-      "20%",
-      "30%",
-      "40%",
-      "50%",
-    ];
-    let currentPercent = 0;
-
-    $(".bar__start").click(function () {
-      $(this).attr("disabled", true);
-
-      const track = $(".bar__track");
-
-      $(".bar__info").hide();
-
-      track.show();
-
-      const interval = setInterval(function () {
-        currentPercent++;
-
-        if (currentPercent >= percent.length - 1) {
-          clearInterval(interval);
-
-          track.find("span").addClass("active");
-
-          setTimeout(() => {
-            finish();
-          }, 3000);
-        }
-
-        // track.find("span").fadeOut(200)
-        track.find("span").show().text(percent[currentPercent]);
-      }, 200);
-    });
-
-    function finish() {
-      $(".bar__block").slideUp(600);
-      $(".order__info").slideDown(600);
-      $(".order").slideDown(600);
-    }
-  },
-
-  faq: function () {
-    $(".faq__btn").click(function () {
-      if ($(this).hasClass("active")) {
-        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
-        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
-      } else {
-        $(this).addClass("active");
-        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
-      }
-    });
-  },
-
-  quantity: function () {
-    var currentNumber;
-
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    if (localStorage.getItem("quantity")) {
-      $(".quantity").text(localStorage.getItem("quantity"));
-    } else {
-      currentNumber = 25;
-      localStorage.setItem("quantity", currentNumber);
-      $(".quantity").text(currentNumber);
-    }
-
-    setInterval(function () {
-      currentNumber = localStorage.getItem("quantity");
-      if (currentNumber >= 3) {
-        currentNumber = currentNumber - getRandomInt(3);
-        $(".quantity").text(currentNumber);
-        localStorage.setItem("quantity", currentNumber);
-      } else {
-        currentNumber = 25;
-        localStorage.setItem("quantity", currentNumber);
-      }
-    }, 100000);
   },
 };
 

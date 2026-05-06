@@ -1,17 +1,17 @@
 .footer__section {
+  border-top: 1px solid #e5e7eb;
   background: #f3f4f6;
-  border-top: 1px solid #d1d5dc;
 }
 
 .footer__section-wrapper {
-  padding: 24px 0;
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
 
-.footer__title {
+.footer__text {
   font-weight: 400;
   font-size: 13px;
   line-height: 1.5;
@@ -19,21 +19,10 @@
   color: #4a5565;
 }
 
-.footer__text {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 1.4;
-  text-align: center;
-  color: #4a5565;
-}
-
 @media (max-width: 540px) {
   .footer__section-wrapper {
-    padding: 5vw 0;
+    padding: 8vw 0;
     gap: 2vw;
-  }
-  .footer__title {
-    font-size: 3.5vw;
   }
   .footer__text {
     font-size: 3vw;

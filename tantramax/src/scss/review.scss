@@ -1,0 +1,27 @@
+.review__section {
+}
+.review__section-wrapper {
+}
+
+.review {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+  background: #fff;
+}
+
+.review__img {
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+}
+
+@media (max-width: 540px) {
+  .review {
+    border-radius: 2.5vw;
+    padding: 5vw;
+  }
+  .review__img {
+    margin-top: 3vw;
+  }
+}
