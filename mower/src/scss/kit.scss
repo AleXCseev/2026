@@ -1,0 +1,147 @@
+.kit__section {
+  background-image: url(../img/kit-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.kit__section-wrapper {
+  padding: 60px 0 76px;
+}
+
+.kit__content {
+  width: 100%;
+  max-width: 716px;
+  margin: auto;
+}
+
+.kit__title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 100px rgba(32, 36, 19, 0.5);
+  margin-bottom: 30px;
+}
+
+.kit__text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.kit__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.kit__item {
+  border-radius: 10px;
+  background: linear-gradient(270deg, #6f6f6f 0%, rgba(1, 1, 1, 0.7) 74.06%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.kit__item-img {
+  width: auto;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.kit__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.kit__item-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.kit__img-small {
+  width: 87px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .kit__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .kit__section-wrapper {
+    padding: 12vw 0 11vw;
+  }
+  .kit__title {
+    font-size: 11vw;
+    margin-bottom: 3vw;
+  }
+  .kit__text {
+    font-size: 4.5vw;
+    margin-bottom: 9vw;
+  }
+  .kit__items {
+    gap: 3.5vw;
+  }
+  .kit__item {
+    border-radius: 2.5vw;
+  }
+  .kit__item-img {
+    height: 32vw;
+    border-radius: 2.5vw;
+  }
+  .kit__item-wrapper {
+    padding: 2vw;
+    gap: 2vw;
+  }
+  .kit__item-text {
+    font-size: 4vw;
+  }
+  .kit__img-small {
+    width: 23vw;
+    border-radius: 2vw;
+  }
+}
+
+.kit__line {
+}
+
+.kit__line-wrapper {
+  padding: 12px 0;
+}
+
+.kit__line-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+  color: #202413;
+}
+
+@media (max-width: 540px) {
+  .kit__line-wrapper {
+    padding: 3.5vw 0;
+  }
+  .kit__line-text {
+    font-size: 4vw;
+    font-weight: 800;
+  }
+}
