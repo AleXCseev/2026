@@ -8,61 +8,43 @@ var landingFunctions = {
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
       var fixedOffset = 0;
-      var cardHeight = $(".order").outerHeight(false);
-      var windowHeight = $(window).height();
 
-      if ($(window).width() < 1081) {
-        $("html, body")
-          .stop()
-          .animate(
-            { scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) },
-            1000,
-          );
-        e.preventDefault();
-      } else {
-        $("html, body")
-          .stop()
-          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
-        e.preventDefault();
-      }
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
+      e.preventDefault();
     });
 
-    $(".gallery__slider").owlCarousel({
-      items: 1,
-      margin: 20,
+    $(".review__slider").owlCarousel({
+      items: 3,
+      margin: 16,
       dots: false,
       dotsEach: true,
       nav: true,
       loop: true,
-      // stagePadding: 10,
-      autoHeight: false,
+      autoHeight: true,
       // autoplay: true,
       // autoplayTimeout: 3000,
       // autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 3,
+          nav: false,
+        },
+        700: {
+          items: 1,
+          nav: true,
+        },
+        1080: {
+          items: 2,
+          nav: true,
+        },
+        1280: {
+          items: 3,
+          nav: true,
+        },
+      },
     });
-
-    // $(".review__slider").owlCarousel({
-    //   items: 3,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoHeight: false,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 5000,
-    //   // autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoHeight: true,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //       autoHeight: false,
-    //     },
-    //   },
-    // });
 
     AOS.init({
       disable: function () {
@@ -80,13 +62,13 @@ var landingFunctions = {
       AOS.refresh();
     });
 
-    $("[data-fancybox]").fancybox({
-      loop: true,
-      infobar: false,
-      animationEffect: false,
-      backFocus: false,
-      hash: false,
-    });
+    // $("[data-fancybox]").fancybox({
+    //   loop: true,
+    //   infobar: false,
+    //   animationEffect: false,
+    //   backFocus: false,
+    //   hash: false,
+    // });
   },
 
   time: function () {
@@ -144,13 +126,7 @@ var landingFunctions = {
       monthNum += now.getMonth() + 1;
 
       // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return (
-        dayNum +
-        "." +
-        monthNum +
-        "." +
-        String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
-      );
+      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
     // $(".date__1").text(getDate(-5));

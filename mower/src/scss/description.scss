@@ -96,3 +96,145 @@
   height: auto;
   border-radius: 10px;
 }
+
+@media (max-width: 1280px) {
+  .description__item-2 {
+    top: 48%;
+    left: 17%;
+  }
+  .description__item-1 {
+    top: 30%;
+    left: 38%;
+  }
+  .description__item-3 {
+    top: 82%;
+    left: 59%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .description__title {
+    font-size: 70px;
+    margin-bottom: 600px;
+  }
+  .description__item {
+    max-width: 260px;
+    font-size: 18px;
+  }
+  .description__item-2 {
+    top: 45%;
+    left: 11%;
+  }
+  .description__item-3 {
+    top: 78%;
+    left: 45%;
+  }
+  .description__item-3:before {
+    width: 124px;
+    height: 83px;
+    background-image: url(../img/descr-line-3-mobile.png);
+    right: auto;
+    left: -134px;
+    top: 50%;
+    transform: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .description__title {
+    font-size: 70px;
+    margin-bottom: 370px;
+  }
+  .description__item {
+    max-width: 160px;
+    font-size: 18px;
+  }
+  .description__item-1 {
+    top: 30%;
+    left: 41%;
+  }
+  .description__item-1:before {
+    width: 120px;
+    height: 40px;
+    background-image: url(../img/descr-line-1-mobile.png);
+    right: -130px;
+    top: 50%;
+  }
+  .description__item-2 {
+    top: 45%;
+    left: 39%;
+  }
+  .description__item-2:before {
+    width: 52px;
+    height: 67px;
+    background-image: url(../img/descr-line-2-mobile.png);
+    right: 50%;
+    top: auto;
+    transform: translateX(50%);
+    bottom: -70px;
+  }
+  .description__item-3 {
+    top: 76%;
+    left: 55%;
+  }
+  .description__info {
+    width: 245px;
+  }
+}
+
+@media (max-width: 540px) {
+  .description__section {
+    background-image: url(../img/descr-bg-mobile.jpg);
+  }
+  .description__section-wrapper {
+    padding: 12vw 0 4vw;
+  }
+  .description__title {
+    font-size: 13vw;
+    margin-bottom: 110vw;
+  }
+  .description__info {
+    width: 53vw;
+    border-radius: 2.5vw;
+    padding: 4vw 2.5vw 2.5vw;
+  }
+  .description__info-text {
+    font-size: 4.5vw;
+    margin-bottom: 3vw;
+  }
+  .description__info-img {
+    border-radius: 2.5vw;
+  }
+  .description__item {
+    max-width: 42.7vw;
+    font-size: 4.5vw;
+  }
+  .description__item-1 {
+    max-width: 20vw;
+    top: 28%;
+    left: 29%;
+  }
+  .description__item-1:before {
+    width: 32vw;
+    height: 10.7vw;
+    right: -34vw;
+  }
+  .description__item-2 {
+    top: 50%;
+    left: 27%;
+  }
+  .description__item-2:before {
+    width: 13.85vw;
+    height: 17.85vw;
+    bottom: -18vw;
+  }
+  .description__item-3 {
+    top: 73%;
+    left: 75%;
+  }
+  .description__item-3:before {
+    width: 33.05vw;
+    height: 22.15vw;
+    left: -35vw;
+  }
+}
