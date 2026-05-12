@@ -20,31 +20,31 @@
   <body data-path=".">
     <div class="site__wrapper">
       <header class="header__section">
-  <!-- <div class="preloader">
+  <div class="preloader">
     <span>Демонстраційне відео</span>
     <video src="img/video.mp4" class="preloader__video" autoplay playsinline loop muted></video>
     <button class="header__order close__preloader">
-      Пропустити
+      Далі
     </button>
-  </div> -->
+  </div>
   <div class="container">
     <div class="header__section-wrapper">
       <div class="header__top">
         <button id="menu-open" class="open__menu"></button>
         <div id="menu" class="mobile__menu">
             <a href="#about" class="header__nav-link">Про модель</a>
-            <a href="#about" class="header__nav-link">Характеристики</a>
-            <a href="#about" class="header__nav-link">Переваги</a>
-            <a href="#about" class="header__nav-link">Галерея</a>
-            <a href="#about" class="header__nav-link">Відгуки</a>
+            <!-- <a href="#charact" class="header__nav-link">Характеристики</a> -->
+            <a href="#advantage" class="header__nav-link">Переваги</a>
+            <a href="#gallery" class="header__nav-link">Галерея</a>
+            <a href="#review" class="header__nav-link">Відгуки</a>
         </div>
         <h2 class="header__name">Running</h2>
         <div class="header__nav">
           <a href="#about" class="header__nav-link">Про модель</a>
-          <a href="#about" class="header__nav-link">Характеристики</a>
-          <a href="#about" class="header__nav-link">Переваги</a>
-          <a href="#about" class="header__nav-link">Галерея</a>
-          <a href="#about" class="header__nav-link">Відгуки</a>
+          <!-- <a href="#charact" class="header__nav-link">Характеристики</a> -->
+          <a href="#advantage" class="header__nav-link">Переваги</a>
+          <a href="#gallery" class="header__nav-link">Галерея</a>
+          <a href="#review" class="header__nav-link">Відгуки</a>
         </div>
         <a href="#order" class="header__order"> Замовити </a>
       </div>
@@ -65,7 +65,7 @@
         <div class="header__size-block">
           <h4 class="header__size-title">Розміри LION-LU</h4>
           <div class="header__sizes">
-            <div class="header__size">39</div>
+            <!-- <div class="header__size">39</div> -->
             <div class="header__size">40</div>
             <div class="header__size">41</div>
             <div class="header__size">42</div>
@@ -81,7 +81,7 @@
     </div>
   </div>
 </header>
- <section class="info__section">
+ <section class="info__section" id="about">
   <div class="info__line">
     <div class="container">
       <div class="info__line-wrapper">
@@ -117,7 +117,7 @@
     </div>
   </div>
 </section>
- <section class="gallery__section">
+ <section class="gallery__section" id="gallery">
   <div class="container">
     <div class="gallery__section-wrapper">
       <div class="gallery__slider owl-carousel">
@@ -146,8 +146,246 @@
     </div>
   </div>
 </section>
- 
-       
+ <section class="faq__section">
+  <div class="container">
+    <div class="faq__section-wrapper">
+      <h2 class="faq__section-title">часті запитання</h2>
+      <div class="faq__items">
+        <div class="faq__item">
+          <button type="button" class="faq__btn">
+            <span>Чи підходять ці кросівки для щоденного носіння?</span>
+            <div class="faq__info">
+              <span>Читати більше</span>
+              <div class="faq__icon">
+                <img src="img/faq-arrow.png" alt="" />
+              </div>
+            </div>
+          </button>
+          <p class="faq__text">
+            Так, кросівки Lion-Lu ідеально створені для активного ритму життя. Завдяки м’якій підошві, яка ефективно
+            амортизує кожен крок, навантаження на стопи значно зменшується. Це робить їх чудовим вибором як для довгих
+            прогулянок містом, так і для вирішення щоденних справ. Універсальний чорний колір та поєднання класики з
+            сучасним характером дозволяють носити їх практично з будь-яким одягом.
+          </p>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__btn">
+            <span>Як правильно обрати розмір?</span>
+            <div class="faq__info">
+              <span>Читати більше</span>
+              <div class="faq__icon">
+                <img src="img/faq-arrow.png" alt="" />
+              </div>
+            </div>
+          </button>
+          <p class="faq__text">
+            Щоб взуття сиділо ідеально, ми рекомендуємо орієнтуватися на довжину стопи в сантиметрах. Наша розмірна
+            сітка: <br />
+            39 — 25.0 см <br />
+            40 — 26.0 см <br />
+            41 — 26.5 см <br />
+            42 — 27.0 см <br />
+            43 — 27.5 см <br />
+            44 — 28.0 см <br />
+            45 — 28.5 см <br />
+            46 — 29.0 см <br />
+            Порада: Поставте ногу на аркуш паперу, обведіть її олівцем та виміряйте відстань від п’яти до кінчика
+            великого пальця. Оберіть відповідний розмір за списком вище.
+          </p>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__btn">
+            <span>Чи можна прати кросівки?</span>
+            <div class="faq__info">
+              <span>Читати більше</span>
+              <div class="faq__icon">
+                <img src="img/faq-arrow.png" alt="" />
+              </div>
+            </div>
+          </button>
+          <p class="faq__text">
+            Для збереження первинного вигляду та амортизаційних властивостей підошви, ми рекомендуємо ручне чищення.
+            Використовуйте м’яку щітку або губку з легким мильним розчином. <br />
+            Машинне прання не рекомендується, оскільки воно може пошкодити структуру підошви та клейові з'єднання.
+            Сушити кросівки варто при кімнатній температурі, уникаючи прямих сонячних променів та обігрівачів — це
+            допоможе Lion-Lu служити вам значно довше.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="advantage__section">
+  <div class="container">
+    <div class="advantage__section-wrapper">
+      <div class="advantage__1">
+        <div class="advantage__block">
+          <img src="img/advantage-1.jpg" alt="" class="advantage__img" />
+          <h3 class="advantage__title">Lion</h3>
+        </div>
+        <p class="advantage__text-decor">Легкі. Стильні. Для спорту.</p>
+      </div>
+      <div class="advantage__2">
+        <p class="advantage__text-decor">Твій комфорт починається з правильного взуття.</p>
+        <div class="advantage__block">
+          <img src="img/advantage-2.jpg" alt="" class="advantage__img" />
+          <h3 class="advantage__title">-Lu</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="description__section" id="advantage">
+  <div class="container">
+    <div class="description__section-wrapper">
+      <div class="description__content">
+        <h2 class="description__title">Якість, яка служить щодня.</h2>
+        <p class="description__text">
+          ✔ не тиснуть <br />
+          ✔ не парять <br />
+          ✔ виглядають стильно
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="review__section" id="review">
+  <div class="container">
+    <div class="review__section-wrapper">
+      <div class="review__left">
+        <h2 class="review__section-title">що говорять наші покупці</h2>
+        <div class="review__block">
+          <p class="review__naumber">4.8</p>
+          <div>
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <p class="review__block-text">149 відгуків</p>
+          </div>
+        </div>
+      </div>
+      <div class="review__slider owl-carousel">
+        <div class="review">
+          <p class="review__name">Олександр, Київ</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <p class="review__text">
+            Дуже легкі кросівки, реально зручно ходити весь день. Нога не втомлюється, навіть після довгих прогулянок.
+          </p>
+        </div>
+        <div class="review">
+          <p class="review__name">Ігор, Одеса</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <p class="review__text">
+            Брав на кожен день — повністю задоволений. Не парять, навіть коли тепло. За свою ціну топ.
+          </p>
+        </div>
+        <div class="review">
+          <p class="review__name">Юрій, Львів</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <p class="review__text">
+            Зручні, м’яка підошва. Трохи боявся, що будуть тиснути, але сіли ідеально. Рекомендую.
+          </p>
+        </div>
+        <div class="review">
+          <p class="review__name">Максим, Дніпро</p>
+          <div class="rating">
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+            <img src="img/star.png" alt="" />
+          </div>
+          <p class="review__text">
+            Ношу вже кілька тижнів — виглядають як нові. Легкі, стильні, підходять під будь-який одяг.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="order__section">
+  <div class="container">
+    <div class="order__section-wrapper">
+      <div class="order" id="order">
+        <form action="" class="order__form">
+          <h2 class="order__title">оформити замовлення</h2>
+          <h3 class="order__subtitle">Персональна інформація</h3>
+          <div class="inputs">
+            <div class="input__wrapper">
+              <input id="name" type="text" placeholder="" required />
+              <label for="name"> Ваше ім`я </label>
+            </div>
+            <div class="input__wrapper">
+              <input id="phone" type="tel" placeholder="" required />
+              <label for="phone"> Номер телефону </label>
+            </div>
+          </div>
+          <div class="inputs">
+            <div class="color__block">
+              <p class="color__size-text">колір</p>
+              <div class="color"></div>
+            </div>
+            <div class="size__block">
+              <p class="color__size-text">Розмір</p>
+              <div class="size__btns">
+                <button type="button" class="size__btn">40</button>
+                <button type="button" class="size__btn">41</button>
+                <button type="button" class="size__btn active">42</button>
+                <button type="button" class="size__btn">43</button>
+                <button type="button" class="size__btn">44</button>
+              </div>
+            </div>
+          </div>
+          <h3 class="order__subtitle">Вартість замовлення</h3>
+          <div class="order__result">
+            <p class="order__result-text">Загальна вартість замовлення</p>
+            <span class="new__price">470 ₴</span>
+          </div>
+          <button type="submit" class="submit__btn">Оформити замовлення</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+ <footer class="footer__section">
+  <div class="container">
+    <div class="footer__section-wrapper">
+      <h2 class="footer__title">Lion-Lu.</h2>
+      <div class="footer__links">
+        <a href="#about" class="header__nav-link">Про модель</a>
+        <!-- <a href="#charact" class="header__nav-link">Характеристики</a> -->
+        <a href="#advantage" class="header__nav-link">Переваги</a>
+        <a href="#gallery" class="header__nav-link">Галерея</a>
+        <a href="#review" class="header__nav-link">Відгуки</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
     
     <script src="libs/jquery.min.js"></script>

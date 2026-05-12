@@ -2,7 +2,9 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.menu();
-    // this.preloader();
+    this.faq();
+    this.order();
+    this.preloader();
     // this.time()
     // this.modal();
   },
@@ -26,37 +28,37 @@ var landingFunctions = {
       loop: true,
       // stagePadding: 10,
       autoHeight: false,
-      // autoplay: true,
-      // autoplayTimeout: 3000,
-      // autoplayHoverPause: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
     });
 
     $(".gallery__btn").click(function () {
       owl.trigger("next.owl.carousel");
     });
 
-    // $(".review__slider").owlCarousel({
-    //   items: 3,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoHeight: false,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 5000,
-    //   // autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoHeight: true,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //       autoHeight: false,
-    //     },
-    //   },
-    // });
+    $(".review__slider").owlCarousel({
+      items: 4,
+      margin: 20,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      autoHeight: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      // responsive: {
+      //   0: {
+      //     items: 1,
+      // autoHeight: true,
+      // },
+      // 1081: {
+      // items: 3,
+      // autoHeight: false,
+      // },
+      // },
+    });
 
     AOS.init({
       disable: function () {
@@ -103,6 +105,25 @@ var landingFunctions = {
         $("#menu").removeClass("active");
         $("#menu-open").removeClass("active");
       });
+  },
+
+  faq: function () {
+    $(".faq__btn").click(function () {
+      if ($(this).hasClass("active")) {
+        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
+      } else {
+        $(this).addClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
+      }
+    });
+  },
+
+  order: function () {
+    $(".size__btn").click(function () {
+      $(".size__btn").removeClass("active");
+      $(this).addClass("active");
+    });
   },
 
   time: function () {
