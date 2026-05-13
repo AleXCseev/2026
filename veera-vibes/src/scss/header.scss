@@ -1,0 +1,147 @@
+.header__section {
+  border-bottom: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.header__section-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: auto;
+}
+
+.header__name {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 40px;
+    height: auto;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+    color: #1f2937;
+  }
+}
+
+.header__right {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__nav {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__nav-link {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1f2937;
+  position: relative;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+
+  img {
+    width: 24px;
+    height: auto;
+  }
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #14532d;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+    color: #14532d;
+  }
+}
+
+.header__icons {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__order {
+  border-radius: 8px;
+  padding: 10px 24px;
+  background: #14532d;
+  width: auto;
+  height: auto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s ease;
+
+  &:hover {
+    background: #1f2937;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .header__section-wrapper {
+    padding: 4vw 4vw;
+    gap: 4vw;
+  }
+  .header__name {
+    gap: 3vw;
+  }
+  .header__name img {
+    width: 8vw;
+  }
+  .header__name p {
+    font-size: 4.2vw;
+  }
+  .header__icons {
+    gap: 4vw;
+  }
+  .header__nav-link {
+    display: none;
+  }
+  .header__order {
+    border-radius: 2vw;
+    padding: 2.5vw 5.5vw;
+    font-size: 3.5vw;
+  }
+}
