@@ -1,7 +1,7 @@
 var landingFunctions = {
   init: function () {
     this.initLibraris();
-    this.time();
+    // this.time();
     // this.modal();
     this.bar();
     // this.order();
@@ -9,13 +9,11 @@ var landingFunctions = {
 
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
-      var fixedOffset = 0;
-      var cardHeight = $("#order").outerHeight(false);
-      var windowHeight = $(window).height();
+      var fixedOffset = -20;
 
       $("html, body")
         .stop()
-        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
       e.preventDefault();
     });
 
@@ -53,17 +51,6 @@ var landingFunctions = {
         $(".bar__block").slideUp();
         $(".order__block").slideDown();
       }, 10000);
-    });
-  },
-
-  order: function () {
-    $(".order__size-btn").click(function () {
-      $(".order__size-btn").removeClass("active");
-      $(this).addClass("active");
-
-      const price = $(this).find(".new__price").text();
-
-      $(".current__price").text(price);
     });
   },
 

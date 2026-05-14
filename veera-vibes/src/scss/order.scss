@@ -4,7 +4,6 @@
 .order__wrapper {
   width: 100%;
   height: auto;
-  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,3 +96,114 @@
   display: none;
 }
 
+.order {
+  width: 100%;
+  height: auto;
+  padding: 36px;
+  border-radius: 14px;
+  background: linear-gradient(154deg, #fef3c6 0%, #ffedd4 100%);
+  border: 4px solid #20a115;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order__title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33;
+  text-align: center;
+  color: #0a0a0a;
+  margin-bottom: 23px;
+}
+
+.order__form {
+  width: 100%;
+  height: auto;
+}
+
+.input__wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #364153;
+  }
+
+  input {
+    width: 100%;
+    height: auto;
+    border: 2px solid #d1d5dc;
+    border-radius: 10px;
+    padding: 17px 18px;
+    font-weight: 400;
+    font-size: 17px;
+    color: rgba(10, 10, 10, 0.5);
+  }
+}
+
+.submit__btn {
+  cursor: pointer;
+  margin-bottom: 23px;
+}
+
+.order__info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42;
+  text-align: center;
+  color: #6a7282;
+  margin: auto;
+  margin-bottom: 23px;
+  width: 100%;
+  max-width: 520px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .start__bar {
+    width: 24vw;
+    height: 24vw;
+    font-size: 4.5vw;
+  }
+  .order {
+    padding: 8vw 5vw;
+    border-radius: 3vw;
+    border-width: 1vw;
+  }
+  .order__title {
+    font-size: 4.5vw;
+    margin-bottom: 5vw;
+  }
+  .input__wrapper {
+    gap: 2vw;
+    margin-bottom: 4vw;
+  }
+  .input__wrapper label {
+    font-size: 4vw;
+  }
+  .input__wrapper input {
+    border-radius: 2vw;
+    padding: 3vw;
+    font-size: 4vw;
+  }
+  .submit__btn {
+    margin-bottom: 5vw;
+  }
+  .order__info {
+    font-size: 3.5vw;
+    margin-bottom: 5vw;
+  }
+}

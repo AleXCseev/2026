@@ -1,0 +1,151 @@
+.review__section {
+}
+.review__section-wrapper {
+  padding-bottom: 80px;
+}
+
+.review__title {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #0a0a0a;
+}
+
+.review {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 25px;
+  padding-top: 32px;
+}
+
+.review__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.review__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.review__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0a0a0a;
+  margin-bottom: 8px;
+}
+
+.review__img {
+  width: 100%;
+  height: auto;
+}
+
+.answer {
+  margin-top: 8px;
+  border-radius: 10px;
+  padding: 24px 16px 16px;
+  background: #fffbeb;
+  width: calc(100% - 30px);
+  margin-left: auto;
+}
+
+.review__logo-1 {
+  background: linear-gradient(135deg, #51a2ff 0%, #155dfc 100%);
+}
+
+.review__logo-2 {
+  background: linear-gradient(135deg, #fb64b6 0%, #e60076 100%);
+}
+
+.review__logo-3 {
+  background: linear-gradient(135deg, #05df72 0%, #00a63e 100%);
+}
+
+.review__logo-4 {
+  background: linear-gradient(135deg, #c27aff 0%, #9810fa 100%);
+}
+
+.review__logo-5 {
+  background: linear-gradient(135deg, #ff6467 0%, #e7000b 100%);
+}
+
+.review__logo-6 {
+  background: linear-gradient(135deg, #fdc700 0%, #d08700 100%);
+}
+
+.review__logo-7 {
+  background: linear-gradient(135deg, #7c86ff 0%, #4f39f6 100%);
+}
+
+.review__logo-8 {
+  background: linear-gradient(135deg, #00d5be 0%, #009689 100%);
+}
+
+.review__logo-9 {
+  background: linear-gradient(135deg, #ff8904 0%, #f54900 100%);
+}
+
+.review__logo-10 {
+  background: linear-gradient(135deg, #ff637e 0%, #ec003f 100%);
+}
+
+.review__logo-11 {
+  background: linear-gradient(135deg, #00d3f2 0%, #0092b8 100%);
+}
+
+.review__logo-12 {
+  background: linear-gradient(135deg, #ed6aff 0%, #c800de 100%);
+}
+
+.review__logo-13 {
+  background: linear-gradient(135deg, #9ae600 0%, #5ea500 100%);
+}
+
+.review__logo-14 {
+  background: linear-gradient(135deg, #00d492 0%, #096 100%);
+}
+
+.review__logo-15 {
+  background: linear-gradient(135deg, #a684ff 0%, #7f22fe 100%);
+}
+
+.review__logo-16 {
+  background: linear-gradient(135deg, #ffb900 0%, #e17100 100%);
+}
+
+@media (max-width: 540px) {
+  .review__title {
+    font-size: 7vw;
+  }
+  .review__wrapper {
+    gap: 4vw;
+  }
+  .review__logo {
+    width: 11vw;
+    height: 11vw;
+    font-size: 4.5vw;
+  }
+  .review__name {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+  }
+  .answer {
+    margin-top: 2vw;
+    border-radius: 2vw;
+    padding: 5vw 4vw 4vw;
+    width: calc(100% - 6vw);
+  }
+}
