@@ -1,0 +1,46 @@
+.info__section-wrapper {
+    padding: 40px 0;
+}
+
+.info__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.info__item {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+}
+
+.info__item-text {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 50%;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.info-2__section {
+    background-image: url(../img/info-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.info-2__section-wrapper {
+    padding: 40px 0 321px;
+}
+
+.advantage__title {
+}
+.advantage__text {
+}

@@ -1,0 +1,21 @@
+.gallery__section-wrapper {
+  padding: 40px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+}
