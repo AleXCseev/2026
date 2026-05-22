@@ -18,6 +18,32 @@ var landingFunctions = {
       e.preventDefault();
     });
 
+    // gsap.registerPlugin(ScrollTrigger);
+
+    // const sections = document.querySelectorAll("section");
+
+    // sections.forEach((section) => {
+    //   // Создаем анимацию для каждой отдельной секции
+    //   gsap.fromTo(
+    //     section,
+    //     {
+    //       opacity: 0,
+    //       y: 50,
+    //     },
+    //     {
+    //       opacity: 1,
+    //       y: 0, // Возвращаем в исходное положение
+    //       duration: 1, // Длительность анимации в секундах
+    //       ease: "power2.out", // Плавное замедление в конце
+    //       scrollTrigger: {
+    //         trigger: section, // Элемент, который запускает анимацию
+    //         start: "top 80%", // Анимация начнется, когда верх секции пересечет 80% высоты экрана
+    //         end: "bottom 20%", // Конечная точка (опционально)
+    //       },
+    //     },
+    //   );
+    // });
+
     // AOS.init({
     //   disable: function () {
     //     if ($(window).width() <= 1080) {
