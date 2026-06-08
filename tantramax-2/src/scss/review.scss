@@ -1,0 +1,44 @@
+.review__section {
+}
+.review__section-wrapper {
+}
+
+.review {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+  background: #fff;
+}
+
+.info__review-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.review__img {
+  width: 100%;
+  height: auto;
+}
+
+.review-answer {
+  border-radius: 10px;
+  padding: 16px;
+  background: #f9fafb;
+  margin-left: 32px;
+}
+
+@media (max-width: 540px) {
+  .review {
+    border-radius: 2.5vw;
+    padding: 5vw;
+  }
+  .review__img {
+    margin-top: 3vw;
+  }
+  .review-answer {
+    border-radius: 2.5vw;
+    padding: 4vw;
+    margin-left: 4vw;
+  }
+}
