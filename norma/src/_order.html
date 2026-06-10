@@ -1,16 +1,170 @@
 <section class="order__section" id="order">
   <div class="container">
-    <div class="order__wrapper wrapper">
+    <div class="order__wrapper">
       <div class="bar__block mb-40">
-        <h2 class="info-title text-center mb-40">स्लिम फिट कैसे पाएं?</h2>
+        <div class="bar__tag mb-16">🎯 आज विशेष ऑफर</div>
+        <h2 class="bar__title mb-12">जानें आज का खास ऑफर</h2>
+        <p class="bar__text mb-36">पहिया घुमाएँ और Normavein पर व्यक्तिगत छूट प्राप्त करें</p>
         <div class="bar">
           <img src="img/bar.png" alt="" class="bar__track" />
-          <img src="img/bar-pointer.png" alt="" class="bar__pointer" />
-          <button type="button" class="start__bar">start</button>
+          <button type="button" class="start__bar pulse">%</button>
         </div>
       </div>
-      <div class="order__block">
-        
+      <div class="bar__info-wrapper">
+        <div class="bar__info">
+          <div class="bar__info-tag mb-16">✓ छूट प्राप्त हुई!</div>
+          <div class="bar__timer mb-20">
+            <p class="bar__timer-text">⏰ आपकी व्यक्तिगत छूट समाप्त हो रही है:</p>
+            <div class="timer">
+              <div class="timer__item hours">00</div>
+              <div class="timer__divider">:</div>
+              <div class="timer__item minutes">00</div>
+              <div class="timer__divider">:</div>
+              <div class="timer__item seconds">00</div>
+            </div>
+          </div>
+          <div class="bar__items">
+            <p class="bar__item bar__item-1">⚡ आज के लिए सीमित स्टॉक</p>
+            <p class="bar__item bar__item-2">केवल हेल्थ भारत टुडे के पाठकों के लिए</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order__block">
+  <div class="container">
+    <div class="order__block-wrapper">
+      <p class="tag mb-12">विशेष पेशकश</p>
+      <h3 class="info__title-small mb-16">Normavein 50% छूट के साथ उपलब्ध है</h3>
+      <div class="order__price mb-20">
+        <div class="order__price-icon">
+          <p class="price__icon">🌿</p>
+          <p class="price__icon-text">50 मि.ल</p>
+        </div>
+        <div class="order__price-body">
+          <h3 class="order__price-name">Normavein</h3>
+          <div class="price">
+            <span class="new__price"> ₹1,850 </span>
+            <span class="old__price"> ₹3,700 </span>
+          </div>
+          <div class="order__price__items">
+            <span class="active"> 50% की छूट </span>
+            <span>प्राप्ति पर भुगतान</span>
+            <span>अत्यंत गुप्त में</span>
+            <span>सीमित स्टॉक</span>
+          </div>
+        </div>
+      </div>
+      <p class="info__text mb-20">
+        यह ऑफर केवल हेल्थ भारत टुडे के वर्तमान पाठकों के लिए उपलब्ध है. पैकेजों की संख्या सीमित है और अगली डिलीवरी तिथि
+        की अभी तक पुष्टि नहीं की गई है।
+      </p>
+      <a href="#form" class="order__btn"> 🛒 50% छूट के साथ ऑर्डर करें </a>
+    </div>
+  </div>
+</section>
+
+<section class="form__section">
+  <div class="container">
+    <div class="form__section-wrapper">
+      <div class="form__wrapper mb-80">
+        <p class="form__tag mb-24">
+          यह ऑफर केवल हेल्थ भारत टुडे के वर्तमान पाठकों के लिए उपलब्ध है. पैकेजों की संख्या सीमित है.
+        </p>
+        <form class="form" id="form">
+          <h3 class="form__title">Normavein को अभी ऑर्डर करें</h3>
+          <p class="form__text">अपने संपर्क छोड़ें - ऑर्डर की पुष्टि करने के लिए एक विशेषज्ञ आपसे संपर्क करेगा</p>
+          <div class="input__wrapper">
+            <label for="name">आपका नाम *</label>
+            <input id="name" type="text" placeholder="उदाहरण के लिए: अंजलि शर्मा" required />
+          </div>
+          <div class="input__wrapper">
+            <label for="phone">आपका फोन नंबर *</label>
+            <input id="phone" type="tel" placeholder="+91 XXXXX XXXXX" required />
+          </div>
+          <button type="submit" class="order__btn form__submit">🛒 50% छूट के साथ नॉर्मवेइन ऑर्डर करें</button>
+          <p class="form__text-small">ऑनलाइन भुगतान की आवश्यकता नहीं है. भुगतान केवल रसीद पर.</p>
+          <div class="form__items">
+            <div class="form__item">
+              <span class="form__item-icon"> 💳 </span>
+              <span>डिलवरी पर नकदी</span>
+            </div>
+            <div class="form__item">
+              <span class="form__item-icon"> 📦 </span>
+              <span>गोपनीय पैकेजिंग</span>
+            </div>
+            <div class="form__item">
+              <span class="form__item-icon"> 📞 </span>
+              <span>फोन द्वारा ऑर्डर की पुष्टि</span>
+            </div>
+            <div class="form__item">
+              <span class="form__item-icon"> 🏷️ </span>
+              <span>सीमित 50% छूट</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p class="tag mb-12">वीडियो समीक्षा</p>
+      <h3 class="info__title-small mb-16">
+        वीडियो प्रशंसापत्र: "जब मैंने साड़ी पहनी तो मुझे फिर से आत्मविश्वास महसूस हुआ"
+      </h3>
+      <div class="context__video-block mb-80">
+        <div class="context__video-wrapper">
+          <video src="img/video/video_rev_3.mp4" playsinline loop controls class="context__video"></video>
+          <!-- <div class="video__block-info">
+            <h3 class="video__block-title">अंजलि, 39, पुणे</h3>
+            <p class="video__block-text">वास्तविक समीक्षा</p>
+          </div> -->
+        </div>
+        <div class="context__info">
+          <div class="context__info-block mb-16">
+            <h3>📝वीडियो प्रतिलेखन</h3>
+            <p>
+              “मैं अपने पैरों की वजह से साड़ी पहनने से कतराती थी।. मुझे ऐसा लगा मानो हर कोई मेरी नसें देख रहा हो. जब
+              मैंने नॉर्मवेइन का उपयोग शुरू किया, तो मेरे पैर हल्के महसूस होने लगे और धीरे-धीरे मैं फिर से आत्मविश्वास
+              महसूस करने लगा।. अब, जब मैं घर से बाहर निकलता हूं, तो मैं केवल यह नहीं सोचता कि अपने पैरों को कैसे छिपाऊं"
+            </p>
+          </div>
+          <div class="context__info-block-2 mb-12">
+            <h3 class="context__info-title">✓ सत्यापित खरीदार</h3>
+            <p class="context__info-text">प्रियंका, 35, मुंबई</p>
+          </div>
+          <p class="context__info-bottom">ग्राहक समीक्षा शैली वीडियो. व्यक्तिगत अनुभव अलग-अलग हो सकता है.</p>
+        </div>
+      </div>
+      <p class="tag mb-12">विशेषज्ञ की राय</p>
+      <h3 class="info__title-small mb-16">क्या कहते हैं विशेषज्ञ?</h3>
+      <div class="doctor__block">
+        <div class="doctor__info">
+          <img src="img/doctor-img.jpg" alt="" class="doctor__img" />
+          <h3 class="doctor__info-name">डॉ. प्रिया नायर</h3>
+          <p class="doctor__info-text">कल्याण सलाहकार</p>
+          <div class="doctor__rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+        </div>
+        <div class="doctor__body">
+          <p class="doctor__quote">"</p>
+          <p class="doctor__text mb-16">
+            लंबे समय तक खड़े रहना, गर्भावस्था, व्यायाम की कमी और अधिक वजन के कारण पैरों और रक्त वाहिकाओं पर तनाव बढ़
+            सकता है।. ऐसे मामलों में, नियमित रूप से चलना, अपने पैरों को आराम देना, हल्का व्यायाम और बाहरी देखभाल सहायक
+            आदतें हो सकती हैं।
+          </p>
+          <p class="doctor__text mb-16">
+            नॉर्मवेइन जैसी क्रीम आपकी दैनिक स्व-देखभाल दिनचर्या का हिस्सा हो सकती हैं, जो आपके पैरों को ठंडा, ताज़ा और
+            आरामदायक महसूस कराने में मदद करती हैं।
+          </p>
+          <p class="doctor__alert">
+            <span>⚕️ महत्वपूर्ण:</span> यदि दर्द, सूजन या दिखाई देने वाली नसें गंभीर हैं, तो किसी योग्य स्वास्थ्य देखभाल
+            पेशेवर से परामर्श लें।
+          </p>
+        </div>
       </div>
     </div>
   </div>

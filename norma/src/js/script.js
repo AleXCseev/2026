@@ -9,7 +9,7 @@ var landingFunctions = {
 
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
-      var fixedOffset = -20;
+      var fixedOffset = 0;
 
       $("html, body")
         .stop()
@@ -45,10 +45,13 @@ var landingFunctions = {
   bar: function () {
     $(".start__bar").click(function () {
       $(this).attr("disabled", true);
+      $(this).removeClass("pulse");
       $(".bar__track").addClass("active");
 
       setTimeout(() => {
         $(".bar__block").slideUp();
+        $(".bar__info-wrapper").slideDown();
+        $(".form__wrapper").slideDown();
         $(".order__block").slideDown();
       }, 10000);
     });
