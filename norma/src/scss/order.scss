@@ -259,9 +259,12 @@
 }
 
 .price__icon {
-  font-size: 32px;
-  line-height: 1.5;
-  text-align: center;
+  width: 36px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .price__icon-text {

@@ -2,6 +2,7 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.time();
+    this.faq();
     // this.modal();
     this.bar();
     // this.order();
@@ -49,11 +50,26 @@ var landingFunctions = {
       $(".bar__track").addClass("active");
 
       setTimeout(() => {
+        $('[href*="#order"]').attr("href", "#form");
         $(".bar__block").slideUp();
         $(".bar__info-wrapper").slideDown();
         $(".form__wrapper").slideDown();
         $(".order__block").slideDown();
+        $(".order-footer__section").slideDown();
+        $("#second-order").slideDown();
       }, 10000);
+    });
+  },
+
+  faq: function () {
+    $(".faq__btn").click(function () {
+      if ($(this).hasClass("active")) {
+        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
+      } else {
+        $(this).addClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
+      }
     });
   },
 
