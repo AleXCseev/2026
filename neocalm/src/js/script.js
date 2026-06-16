@@ -1,68 +1,22 @@
-var landingFunctions = {
+const landingFunctions = {
   init: function () {
     this.initLibraris();
-    this.time()
-    // this.modal();
+    this.time();
+    this.faq();
+    this.fixed();
   },
 
   initLibraris: function () {
     $('[href*="#"]').on("click", function (e) {
-      var fixedOffset = 0;
-      var cardHeight = $(".order").outerHeight(false);
-      var windowHeight = $(window).height();
+      const fixedOffset = 0;
+      const cardHeight = $("#order").outerHeight(false);
+      const windowHeight = $(window).height();
 
-      if ($(window).width() < 1081) {
-        $("html, body")
-          .stop()
-          .animate(
-            { scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) },
-            1000,
-          );
-        e.preventDefault();
-      } else {
-        $("html, body")
-          .stop()
-          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
-        e.preventDefault();
-      }
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
+      e.preventDefault();
     });
-
-    $(".gallery__slider").owlCarousel({
-      items: 1,
-      margin: 20,
-      dots: false,
-      dotsEach: true,
-      nav: true,
-      loop: true,
-      // stagePadding: 10,
-      autoHeight: false,
-      // autoplay: true,
-      // autoplayTimeout: 3000,
-      // autoplayHoverPause: true,
-    });
-
-    // $(".review__slider").owlCarousel({
-    //   items: 3,
-    //   margin: 20,
-    //   dots: false,
-    //   dotsEach: true,
-    //   nav: true,
-    //   loop: true,
-    //   autoHeight: false,
-    //   // autoplay: true,
-    //   // autoplayTimeout: 5000,
-    //   // autoplayHoverPause: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       autoHeight: true,
-    //     },
-    //     1081: {
-    //       items: 3,
-    //       autoHeight: false,
-    //     },
-    //   },
-    // });
 
     AOS.init({
       disable: function () {
@@ -144,68 +98,59 @@ var landingFunctions = {
       monthNum += now.getMonth() + 1;
 
       // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return (
-        dayNum +
-        "." +
-        monthNum +
-        "." +
-        String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
-      );
+      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
     // $(".date__1").text(getDate(-5));
-    $(".date").text(getDate(2));
+    // $(".date").text(getDate(2));
   },
 
-  modal: function () {
-    $(".add__review").click(function () {
-      $(".modal__review").addClass("active");
-    });
-
-    function close() {
-      $(".modal__review").removeClass("active");
-    }
-
-    $(".modal__review").click(function (e) {
-      var target = e.target;
-      if (target.classList.contains("modal__close")) {
-        close();
-      }
-      if (target.classList.contains("modal")) {
-        close();
+  faq: function () {
+    $(".faq__btn").click(function () {
+      if ($(this).hasClass("active")) {
+        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
+      } else {
+        $(this).addClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
       }
     });
+  },
 
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        console.log(reader);
-        reader.onload = function (e) {
-          $(".file img").attr("src", e.target.result).css("display", "block");
-        };
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
+  fixed: function () {
+    const $fixedEl = $(".fixed");
+    const $targetZones = $(".header__card");
 
-    $(".modal__review .input__file").on("change", function () {
-      readURL(this);
-    });
+    if ($fixedEl.length && $targetZones.length) {
+      const fixedElHeight = $fixedEl.outerHeight();
+      const isTopFixed = $fixedEl.css("top") !== "auto";
+      const fixedTopOffset = isTopFixed ? parseInt($fixedEl.css("top"), 10) || 0 : 0;
 
-    $(".modal__review form").submit(function (e) {
-      e.preventDefault();
-      $(this).removeClass("active");
-      $(".send__window").addClass("active");
-      $(".modal__review .name__input").val("");
-      $(".modal__review .modal__area").val("");
-      $(".modal__review .file img").attr("src", "").css("display", "none");
-      delayClose();
-    });
-    function delayClose() {
-      setTimeout(function () {
-        $(".modal__review form").addClass("active");
-        $(".send__window").removeClass("active");
-        close();
-      }, 5000);
+      $(window).on("scroll.multiHide", function () {
+        const scrollTop = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const currentCheckPoint = isTopFixed ? scrollTop + fixedTopOffset + fixedElHeight : scrollTop + windowHeight;
+        let shouldHide = false;
+
+        $targetZones.each(function () {
+          const $zone = $(this);
+          const zoneTop = $zone.offset().top;
+          const zoneBottom = zoneTop + $zone.outerHeight();
+
+          if (currentCheckPoint >= zoneTop && scrollTop <= zoneBottom) {
+            shouldHide = true;
+            return false;
+          }
+        });
+
+        if (shouldHide) {
+          $fixedEl.slideUp(300);
+        } else {
+          $fixedEl.slideDown(300);
+        }
+      });
+
+      $(window).trigger("scroll.multiHide");
     }
   },
 };

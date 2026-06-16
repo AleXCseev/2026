@@ -383,13 +383,14 @@
   color: #7a746e;
 }
 
-.heeader__mobile-items {
+.header__mobile-items {
   display: none;
 }
 
 .header__mobile-right {
   display: none;
 }
+
 
 @media (max-width: 1080px) {
   .header__section-wrapper {
@@ -409,6 +410,9 @@
 }
 
 @media (max-width: 540px) {
+  body {
+    background-color: #fff;
+  }
   .header__top-right {
     display: none;
   }
@@ -471,7 +475,7 @@
     padding: 2vw 3vw 2vw 6vw;
     margin-bottom: 2vw;
   }
-  .tag,
+  .header__section .tag,
   .header__price,
   .header__text span {
     display: none;
@@ -513,6 +517,11 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #1f1b19;
+
+    img {
+      width: 11vw;
+      height: auto;
+    }
   }
 
   .header__mobile-right {
