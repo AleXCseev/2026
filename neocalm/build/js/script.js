@@ -27,7 +27,7 @@ const landingFunctions = {
       },
       once: true,
       duration: 1000,
-      offset: 0,
+      offset: 100,
     });
 
     $(window).resize(function () {

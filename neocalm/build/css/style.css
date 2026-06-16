@@ -2005,6 +2005,23 @@ body {
   .order__content .header__card {
     width: 100%;
   }
+  .order__content .header__price {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 5.5vw;
+    gap: 3vw;
+  }
+  .order__content .old__price {
+    font-size: 4vw;
+  }
+  .order__content .new__price {
+    font-size: 8vw;
+  }
+  .order__content .header__timer {
+    font-size: 2.5vw;
+    padding: 1vw 2.5vw 0.5vw;
+  }
 }
 .faq__section {
   background: #f2eee8;
