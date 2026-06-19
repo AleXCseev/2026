@@ -2,10 +2,10 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.nav();
-    // this.time();
-    // this.order();
-    // this.faq();
-    // this.quantity();
+    this.reels();
+    this.share();
+    this.order();
+    this.modal();
   },
 
   initLibraris: function () {
@@ -79,106 +79,132 @@ var landingFunctions = {
   },
 
   nav: function () {
-    $(".nav__btn").click(function () {
+    $(".nav__trigger").click(function (e) {
+      // e.stopPropagation();
+      $("body").css("overflow", "auto")
+      $(".modal").hide();
       if ($(this).hasClass("active")) return;
 
       const id = $(this).data("id");
 
       $(".section").removeClass("active");
       $("#" + id).addClass("active");
+      $("html, body").animate({ scrollTop: 0 }, "smooth");
     });
   },
 
-  order: function () {},
+  reels: function () {
+    $(".reels__btn-like").click(function () {
+      $(this).find("img").hide();
+      $(this).find(".active").fadeIn(300);
+    });
 
-  time: function () {
-    Date.prototype.daysInMonth = function () {
-      return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
-    };
-
-    if (!String.prototype.padStart) {
-      String.prototype.padStart = function padStart(targetLength, padString) {
-        targetLength = targetLength >> 0;
-        padString = String(typeof padString !== "undefined" ? padString : " ");
-        if (this.length > targetLength) {
-          return String(this);
-        } else {
-          targetLength = targetLength - this.length;
-          if (targetLength > padString.length) {
-            padString += padString.repeat(targetLength / padString.length);
-          }
-          return padString.slice(0, targetLength) + String(this);
-        }
-      };
-    }
-
-    function timer() {
-      function runMultiple(hoursSelector, minutesSelector, secondsSelector, milisecondsSelector) {
-        var d = new Date();
-        var h = String(23 - d.getHours()).padStart(2, "0");
-        var m = String(59 - d.getMinutes()).padStart(2, "0");
-        var s = String(60 - d.getSeconds()).padStart(2, "0");
-        // var ms = String(1000 - d.getMilliseconds()).padStart(3, "0");
-        $(hoursSelector).text(h);
-        $(minutesSelector).text(m);
-        $(secondsSelector).text(s);
-        // $(milisecondsSelector).text(ms)
+    $(".reels__btn-comment").click(function () {
+      if ($("#comment").hasClass("active")) {
+        $("html, body").animate(
+          {
+            scrollTop: $("#comment").offset().top,
+          },
+          600,
+        );
+        return;
       }
-      setInterval(function () {
-        runMultiple(".hours", ".minutes", ".seconds");
-      }, 1000);
-    }
 
-    timer();
+      $("#comment").addClass("active");
+      $("#comment").show();
+      $("html, body").animate(
+        {
+          scrollTop: $("#comment").offset().top,
+        },
+        600,
+      );
+    });
 
-    function getDate(plusDays) {
-      var now = new Date();
-      now.setDate(now.getDate() + plusDays);
-      var dayNum = "";
-      if (now.getDate() < 10) {
-        dayNum = "0";
-      }
-      dayNum += now.getDate();
-      var monthNum = "";
-      if (now.getMonth() + 1 < 10) {
-        monthNum = "0";
-      }
-      monthNum += now.getMonth() + 1;
-
-      return dayNum + "." + monthNum + "." + now.getFullYear();
-      // return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
-    }
-
-    // $(".date__1").text(getDate(-5));
-    $(".date").text(getDate(-2));
+    $(".comment__block-close").click(function () {
+      $("#comment").slideUp(600);
+      setTimeout(() => {
+        $("#comment").removeClass("active");
+      }, 600);
+      $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
   },
 
-  quantity: function () {
-    var currentNumber;
-
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    if (localStorage.getItem("quantity")) {
-      $(".quantity").text(localStorage.getItem("quantity"));
-    } else {
-      currentNumber = 25;
-      localStorage.setItem("quantity", currentNumber);
-      $(".quantity").text(currentNumber);
-    }
-
-    setInterval(function () {
-      currentNumber = localStorage.getItem("quantity");
-      if (currentNumber >= 3) {
-        currentNumber = currentNumber - getRandomInt(3);
-        $(".quantity").text(currentNumber);
-        localStorage.setItem("quantity", currentNumber);
-      } else {
-        currentNumber = 25;
-        localStorage.setItem("quantity", currentNumber);
+  share: function () {
+    $(".profile__share-btn").click(function () {
+      if ($("#share").hasClass("active")) {
+        $("html, body").animate(
+          {
+            scrollTop: $("#share").offset().top,
+          },
+          600,
+        );
+        return;
       }
-    }, 100000);
+
+      $("#share").addClass("active");
+      $("#share").show();
+      $("html, body").animate(
+        {
+          scrollTop: $("#share").offset().top,
+        },
+        600,
+      );
+    });
+
+    $(".share__block-close").click(function () {
+      $("#share").slideUp(600);
+      setTimeout(() => {
+        $("#share").removeClass("active");
+      }, 600);
+      $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+  },
+
+  order: function () {
+    $(".shop__item").click(function () {
+      const current = $(this).data("count");
+      $(".shop__item").removeClass("active");
+      $(this).addClass("active");
+    });
+  },
+
+  modal: function () {
+    let currentStories = 1;
+
+    $(".open__modal").click(function () {
+      const id = $(this).data("modal");
+
+      $("#modal-" + id).fadeIn(300);
+
+      $(`[data-stories="1"]`).show();
+      currentStories = 1;
+
+      $("body").css("overflow", "hidden")
+    });
+
+    $(".modal").swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (currentStories === 1 && direction === "left") {
+          if ($(this).find(`[data-stories="2"]`).length) {
+            currentStories = 2;
+            $(this).find(`[data-stories="1"]`).fadeOut(300);
+            $(this).find(`[data-stories="2"]`).fadeIn(300);
+          }
+          return;
+        }
+        if (currentStories === 2 && direction === "right") {
+          currentStories = 1;
+          $(this).find(`[data-stories="1"]`).fadeIn(300);
+          $(this).find(`[data-stories="2"]`).fadeOut(300);
+          return;
+        }
+      },
+    });
+
+    $(".modal__close").click(function () {
+      $(".modal").fadeOut(300);
+      $("body").css("overflow", "auto")
+    });
   },
 };
 

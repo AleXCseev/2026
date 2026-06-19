@@ -25,30 +25,31 @@
       @@include("_profile.html")
 
       <div class="nav">
-        <button type="button" data-id="home" class="nav__btn">
+        <button type="button" data-id="home" class="nav__btn nav__trigger">
           <img src="img/nav-icon-1.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> घर </span>
         </button>
-        <button type="button" data-id="search" class="nav__btn">
+        <button type="button" data-id="search" class="nav__btn nav__trigger">
           <img src="img/nav-icon-2.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> खोज </span>
         </button>
-        <button type="button" data-id="reels" class="nav__btn">
+        <button type="button" data-id="reels" class="nav__btn nav__trigger">
           <img src="img/nav-icon-3.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> उत्तर </span>
         </button>
-        <button type="button" data-id="shop" class="nav__btn">
+        <button type="button" data-id="shop" class="nav__btn nav__trigger">
           <img src="img/nav-icon-4.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> दुकान </span>
         </button>
-        <button type="button" data-id="profile" class="nav__btn">
+        <button type="button" data-id="profile" class="nav__btn nav__trigger">
           <img src="img/nav-icon-5.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> प्रोफ़ाइल </span>
         </button>
       </div>
     </div>
-    <!-- @@include("_modal.html")   -->
+    @@include("_modal.html")  
     <script src="libs/jquery.min.js"></script>
+    <script src="libs/jquery.touchSwipe.min.js"></script>
     <!-- <script src="libs/aos.js"></script> -->
     <script src="libs/jquery.fancybox.min.js"></script>
     <script src="libs/owl.carousel.min.js"></script>

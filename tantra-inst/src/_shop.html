@@ -4,15 +4,97 @@
       <div class="header__wrapper">
         <h1 class="header__title">दुकान</h1>
         <div class="header__btns">
-          <a href="#" class="header__btn">
+          <button type="button" data-id="search" class="header__btn nav__trigger">
             <img src="img/search-icon.png" alt="" />
-          </a>
-          <a href="#" class="header__btn">
+          </button>
+          <button type="button" data-id="shop" class="header__btn nav__trigger">
             <img src="img/burger-icon.png" alt="" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  shop section
+  <div class="shop__info">
+    <img src="img/prod.png" alt="" class="shop__prod" />
+    <h2 class="shop__info-title">तंत्र मैक्स</h2>
+    <h3 class="shop__info-subtitle">प्राकृतिक पावर बूस्टर 60 कैप्सूल</h3>
+    <div class="info__bottom">
+      <div class="info__rating">
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+      </div>
+      <span>4.9 · 14,381 समीक्षाएँ</span>
+    </div>
+  </div>
+  <div class="shop__block">
+    <div class="container">
+      <div class="shop__block-wrapper">
+        <h3 class="shop__block-title">एक कोर्स चुनें</h3>
+        <div class="shop__items">
+          <button type="button" data-count="1" class="shop__item active">
+            <div class="shop__item-dot"></div>
+            <div class="shop__item-body">
+              <div class="shop__item-info">
+                <h3>1 पैक</h3>
+                <p>परीक्षण पाठ्यक्रम · 30 दिन</p>
+              </div>
+              <div class="price">
+                <span class="old__price">₹2490</span>
+                <span class="new__price">₹1990</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-count="2" class="shop__item">
+            <div class="shop__item-dot"></div>
+            <div class="shop__item-body">
+              <div class="shop__item-info">
+                <h3>2 पैक</h3>
+                <p>लोकप्रिय · 60 दिन</p>
+              </div>
+              <div class="price">
+                <span class="old__price">₹4980</span>
+                <span class="new__price">₹3490</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-count="3" class="shop__item">
+            <div class="shop__item-dot"></div>
+            <div class="shop__item-body">
+              <div class="shop__item-info">
+                <h3>3 पैक</h3>
+                <p>अधिकतम 90 दिन</p>
+              </div>
+              <div class="price">
+                <span class="old__price">₹7470</span>
+                <span class="new__price">₹4490</span>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="shop__delivery">
+          <p>
+            📦 मुफ़्त गुमनाम डिलीवरी
+          </p>
+          <p>
+            💳प्राप्ति पर भुगतान
+          </p>
+          <p>
+            🔄 [वापसी की शर्तें - मौजूदा शर्तों की जांच करें]
+          </p>
+        </div>
+        <form action="" class="shop__form">
+          <div class="input__wrapper">
+            <input type="text" placeholder="अपना नाम दर्ज करें" required>
+          </div>
+          <div class="input__wrapper">
+            <input type="tel" placeholder="+91 XXXXXXXXXXX" required>
+          </div>
+          <button type="submit" class="shop__submit">एक आदेश द</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>

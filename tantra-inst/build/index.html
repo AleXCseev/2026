@@ -27,38 +27,38 @@
       <div class="header__wrapper">
         <h1 class="header__title">तंत्र मैक्स</h1>
         <div class="header__btns">
-          <a href="#" class="header__btn">
+          <button type="button" data-id="search" class="header__btn nav__trigger">
             <img src="img/search-icon.png" alt="" />
-          </a>
-          <a href="#" class="header__btn">
+          </button>
+          <button type="button" data-id="shop" class="header__btn nav__trigger">
             <img src="img/burger-icon.png" alt="" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </header>
   <div class="container">
     <div class="home__reals-items">
-      <a href="#" class="home__reals-item">
+      <button type="button" data-modal="1" class="home__reals-item open__modal">
         <img src="img/home-reals-icon-1.png" alt="" />
         <span>ऊर्जा</span>
-      </a>
-      <a href="#" class="home__reals-item">
+      </button>
+      <button type="button" data-modal="2" class="home__reals-item open__modal">
         <img src="img/home-reals-icon-2.png" alt="" />
         <span>जोड़ा</span>
-      </a>
-      <a href="#" class="home__reals-item">
+      </button>
+      <button type="button" data-modal="3" class="home__reals-item open__modal">
         <img src="img/home-reals-icon-3.png" alt="" />
         <span>पत्नी</span>
-      </a>
-      <a href="#" class="home__reals-item">
+      </button>
+      <button type="button" data-modal="4" class="home__reals-item open__modal">
         <img src="img/home-reals-icon-4.png" alt="" />
         <span>विशेषज्ञों</span>
-      </a>
-      <a href="#" class="home__reals-item">
+      </button>
+      <button type="button" data-modal="5" class="home__reals-item open__modal">
         <img src="img/home-reals-icon-5.png" alt="" />
         <span>छूट</span>
-      </a>
+      </button>
     </div>
     <div class="home__main">
       <div class="home__play-tag">
@@ -264,105 +264,640 @@
     </div>
   </div>
 </section>
-
-
  <section class="section search" id="search">
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <h1 class="header__title">खोज</h1>
         <div class="header__btns">
-          <a href="#" class="header__btn">
+          <button type="button" data-id="search" class="header__btn nav__trigger">
             <img src="img/search-icon.png" alt="" />
-          </a>
-          <a href="#" class="header__btn">
+          </button>
+          <button type="button" data-id="shop" class="header__btn nav__trigger">
             <img src="img/burger-icon.png" alt="" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  search section
-</section> <section class="section reels" id="reels">
-  <!-- <header class="header">
+  <div class="container">
+    <div class="search__wrapper">
+      <img src="img/search-icon.png" alt="" />
+      <input type="text" placeholder="तंत्र मैक्स द्वारा खोजें…" class="search__input" />
+    </div>
+    <div class="search__tags">
+      <p class="search__tag">#क्षमता</p>
+      <p class="search__tag">#आयुर्वेद</p>
+      <p class="search__tag">#समीक्षाएँ</p>
+      <p class="search__tag">#विशेषज्ञ</p>
+      <p class="search__tag">#पहले/बाद में</p>
+    </div>
+    <div class="search__items">
+      <img src="img/search/1.jpg" alt="" class="search__item-img">
+      <img src="img/search/2.jpg" alt="" class="search__item-img">
+      <img src="img/search/3.jpg" alt="" class="search__item-img">
+      <img src="img/search/4.jpg" alt="" class="search__item-img">
+      <img src="img/search/5.jpg" alt="" class="search__item-img">
+      <img src="img/search/6.jpg" alt="" class="search__item-img">
+      <img src="img/search/7.jpg" alt="" class="search__item-img">
+      <img src="img/search/8.jpg" alt="" class="search__item-img">
+      <img src="img/search/9.jpg" alt="" class="search__item-img">
+    </div>
+  </div>
+</section>
+ <section class="section reels" id="reels">
+  <div class="reels__block">
+    <div class="reels__header">
+      <img src="img/nav-icon-3.png" alt="" />
+      <span>रीलें</span>
+    </div>
+    <div class="reels__body">
+      <div class="reels__body-top">
+        <div class="reels__icon">R</div>
+        <h2 class="reels__name">रवि</h2>
+        <p class="reels__tag">खरीदना</p>
+      </div>
+      <p class="reels__text"><span>मैं फिर से खुश हूं</span> #आयुर्वेदिकपावर"</p>
+    </div>
+    <div class="reels__btns">
+      <button type="button" class="reels__btn reels__btn-like">
+        <img src="img/main-icon-1.png" alt="" />
+        <img src="img/like-icon-red.png" class="active" alt="" />
+        <span>12k</span>
+      </button>
+      <button type="button" class="reels__btn reels__btn-comment">
+        <img src="img/comment-icon.png" alt="" />
+        <span>89</span>
+      </button>
+      <button type="button" class="reels__btn">
+        <img src="img/plane.png" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="comment__block" id="comment">
     <div class="container">
-      <div class="header__wrapper">
-        <h1 class="header__title">खोज</h1>
-        <div class="header__btns">
-          <a href="#" class="header__btn">
-            <img src="img/search-icon.png" alt="" />
-          </a>
-          <a href="#" class="header__btn">
-            <img src="img/burger-icon.png" alt="" />
-          </a>
+      <div class="comment__block-wrapper">
+        <div class="comment__block-title">
+          <h3>टिप्पणियाँ</h3>
+          <button type="button" class="comment__block-close">
+            <img src="img/close.png" alt="" />
+          </button>
+        </div>
+        <div class="comment__wrapper">
+          <div class="comment comment__1">
+            <div class="comment__icon">V</div>
+            <div class="comment__body">
+              <h3 class="comment__name">आप</h3>
+              <p class="comment__text">यह सचमुच काम करता है, सलाह के लिए धन्यवाद!</p>
+              <div class="comment__info">
+                <span>अब</span>
+                <button data-id="profile" class="nav__trigger" type="button">उत्तर</button>
+              </div>
+            </div>
+          </div>
+          <div class="comment comment__2">
+            <div class="comment__icon">R</div>
+            <div class="comment__body">
+              <h3 class="comment__name">रवि, ​​32</h3>
+              <p class="comment__text">मैंने इसे प्रयोग के तौर पर लिया, लेकिन परिणाम चौंकाने वाला था. पत्नी खुश है</p>
+              <div class="comment__info">
+                <span>2 घंटे</span>
+                <button data-id="profile" class="nav__trigger" type="button">उत्तर</button>
+              </div>
+            </div>
+          </div>
+          <div class="comment comment__3">
+            <div class="comment__icon">P</div>
+            <div class="comment__body">
+              <h3 class="comment__name">प्रियंका</h3>
+              <p class="comment__text">मैंने चुपके से इसे अपने पति के लिए ऑर्डर कर दिया. लड़कियों, यह एक चमत्कार है!</p>
+              <div class="comment__info">
+                <span>6 घंटे</span>
+                <button data-id="profile" class="nav__trigger" type="button">उत्तर</button>
+              </div>
+            </div>
+          </div>
+          <div class="comment comment__4">
+            <div class="comment__icon">A</div>
+            <div class="comment__body">
+              <h3 class="comment__name">अमित, 45</h3>
+              <p class="comment__text">5वें दिन ही सुबह की शक्ति वापस आ गई . ऊर्जा सागर</p>
+              <div class="comment__info">
+                <span>9 घंटे</span>
+                <button data-id="profile" class="nav__trigger" type="button">उत्तर</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </header> -->
-  reels section
-</section> <section class="section shop" id="shop">
+    <div class="add__comment-block">
+      <div class="container">
+        <div class="add__comment-wrapper">
+          <input type="text" placeholder="एक टिप्पणी जोड़ने..." />
+          <button type="button" data-id="profile" class="nav__trigger"><img src="img/comment-arrow.png" alt="" /></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section shop" id="shop">
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <h1 class="header__title">दुकान</h1>
         <div class="header__btns">
-          <a href="#" class="header__btn">
+          <button type="button" data-id="search" class="header__btn nav__trigger">
             <img src="img/search-icon.png" alt="" />
-          </a>
-          <a href="#" class="header__btn">
+          </button>
+          <button type="button" data-id="shop" class="header__btn nav__trigger">
             <img src="img/burger-icon.png" alt="" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  shop section
+  <div class="shop__info">
+    <img src="img/prod.png" alt="" class="shop__prod" />
+    <h2 class="shop__info-title">तंत्र मैक्स</h2>
+    <h3 class="shop__info-subtitle">प्राकृतिक पावर बूस्टर 60 कैप्सूल</h3>
+    <div class="info__bottom">
+      <div class="info__rating">
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+        <img src="img/star.png" alt="" />
+      </div>
+      <span>4.9 · 14,381 समीक्षाएँ</span>
+    </div>
+  </div>
+  <div class="shop__block">
+    <div class="container">
+      <div class="shop__block-wrapper">
+        <h3 class="shop__block-title">एक कोर्स चुनें</h3>
+        <div class="shop__items">
+          <button type="button" data-count="1" class="shop__item active">
+            <div class="shop__item-dot"></div>
+            <div class="shop__item-body">
+              <div class="shop__item-info">
+                <h3>1 पैक</h3>
+                <p>परीक्षण पाठ्यक्रम · 30 दिन</p>
+              </div>
+              <div class="price">
+                <span class="old__price">₹2490</span>
+                <span class="new__price">₹1990</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-count="2" class="shop__item">
+            <div class="shop__item-dot"></div>
+            <div class="shop__item-body">
+              <div class="shop__item-info">
+                <h3>2 पैक</h3>
+                <p>लोकप्रिय · 60 दिन</p>
+              </div>
+              <div class="price">
+                <span class="old__price">₹4980</span>
+                <span class="new__price">₹3490</span>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-count="3" class="shop__item">
+            <div class="shop__item-dot"></div>
+            <div class="shop__item-body">
+              <div class="shop__item-info">
+                <h3>3 पैक</h3>
+                <p>अधिकतम 90 दिन</p>
+              </div>
+              <div class="price">
+                <span class="old__price">₹7470</span>
+                <span class="new__price">₹4490</span>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="shop__delivery">
+          <p>
+            📦 मुफ़्त गुमनाम डिलीवरी
+          </p>
+          <p>
+            💳प्राप्ति पर भुगतान
+          </p>
+          <p>
+            🔄 [वापसी की शर्तें - मौजूदा शर्तों की जांच करें]
+          </p>
+        </div>
+        <form action="" class="shop__form">
+          <div class="input__wrapper">
+            <input type="text" placeholder="अपना नाम दर्ज करें" required>
+          </div>
+          <div class="input__wrapper">
+            <input type="tel" placeholder="+91 XXXXXXXXXXX" required>
+          </div>
+          <button type="submit" class="shop__submit">एक आदेश द</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
+
       <section class="section profile" id="profile">
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <h1 class="header__title">प्रोफ़ाइल</h1>
         <div class="header__btns">
-          <a href="#" class="header__btn">
+          <button type="button" data-id="search" class="header__btn nav__trigger">
             <img src="img/search-icon.png" alt="" />
-          </a>
-          <a href="#" class="header__btn">
+          </button>
+          <button type="button" data-id="shop" class="header__btn nav__trigger">
             <img src="img/burger-icon.png" alt="" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  profile section
+  <div class="profile__main">
+    <div class="container">
+      <div class="profile__main-wrapper">
+        <div class="profile__info">
+          <img src="img/home-reals-icon-5.png" alt="" class="profile__img" />
+          <div class="profile__info-item">
+            <h3>128</h3>
+            <p>पदों</p>
+          </div>
+          <div class="profile__info-item">
+            <h3>127k</h3>
+            <p>ग्राहकों</p>
+          </div>
+          <div class="profile__info-item">
+            <h3>14 K</h3>
+            <p>समीक्षा</p>
+          </div>
+        </div>
+        <div class="profile__text">
+          <h3>तंत्र मैक्स</h3>
+          <p>पुरुष शक्ति के लिए आयुर्वेदिक परिसर</p>
+        </div>
+        <div class="profile__btns">
+          <button type="button" data-id="shop" class="profile__btn profile__btn-1 nav__trigger">सदस्यता लें</button>
+          <button type="button" class="profile__btn profile__btn-2 profile__share-btn">शेयर करना</button>
+        </div>
+        <div class="home__reals-items">
+          <button type="button" data-modal="1" class="home__reals-item open__modal">
+            <img src="img/home-reals-icon-1.png" alt="" />
+            <span>ऊर्जा</span>
+          </button>
+          <button type="button" data-modal="2" class="home__reals-item open__modal">
+            <img src="img/home-reals-icon-2.png" alt="" />
+            <span>जोड़ा</span>
+          </button>
+          <button type="button" data-modal="3" class="home__reals-item open__modal">
+            <img src="img/home-reals-icon-3.png" alt="" />
+            <span>पत्नी</span>
+          </button>
+          <button type="button" data-modal="4" class="home__reals-item open__modal">
+            <img src="img/home-reals-icon-4.png" alt="" />
+            <span>विशेषज्ञों</span>
+          </button>
+          <button type="button" data-modal="5" class="home__reals-item open__modal">
+            <img src="img/home-reals-icon-5.png" alt="" />
+            <span>छूट</span>
+          </button>
+        </div>
+        <div class="search__items">
+          <img src="img/search/1.jpg" alt="" class="search__item-img" />
+          <img src="img/search/2.jpg" alt="" class="search__item-img" />
+          <img src="img/search/3.jpg" alt="" class="search__item-img" />
+          <img src="img/search/5.jpg" alt="" class="search__item-img" />
+          <img src="img/search/6.jpg" alt="" class="search__item-img" />
+          <img src="img/search/7.jpg" alt="" class="search__item-img" />
+          <img src="img/search/8.jpg" alt="" class="search__item-img" />
+          <img src="img/search/9.jpg" alt="" class="search__item-img" />
+          <img src="img/search/4.jpg" alt="" class="search__item-img" />
+        </div>
+        <div class="share__block" id="share">
+          <div class="container">
+            <div class="share__block-wrapper">
+              <div class="comment__block-title">
+                <h3>शेयर करना</h3>
+                <button type="button" class="share__block-close">
+                  <img src="img/close.png" alt="" />
+                </button>
+              </div>
+              <div class="share__btns">
+                <button type="button" data-id="shop" class="share__btn nav__trigger">
+                  <div class="share__btn-icon">
+                    <img src="img/share-icon-1.png" alt="" />
+                  </div>
+                  <span>WHATSAPP</span>
+                </button>
+                <button type="button" data-id="shop" class="share__btn nav__trigger">
+                  <div class="share__btn-icon">
+                    <img src="img/share-icon-2.png" alt="" />
+                  </div>
+                  <span>टेलीग्राम</span>
+                </button>
+                <button type="button" data-id="shop" class="share__btn nav__trigger">
+                  <div class="share__btn-icon">
+                    <img src="img/share-icon-3.png" alt="" />
+                  </div>
+                  <span>संदेश</span>
+                </button>
+                <button type="button" data-id="shop" class="share__btn nav__trigger">
+                  <div class="share__btn-icon">
+                    <img src="img/share-icon-4.png" alt="" />
+                  </div>
+                  <span>प्रतिलिपि</span>
+                </button>
+                <button type="button" data-id="shop" class="share__btn nav__trigger">
+                  <div class="share__btn-icon">
+                    <img src="img/share-icon-5.png" alt="" />
+                  </div>
+                  <span>अधिक</span>
+                </button>
+              </div>
+              <button type="button" data-id="shop" class="share__main-btn nav__trigger">रद्द करना</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
       <div class="nav">
-        <button type="button" data-id="home" class="nav__btn">
+        <button type="button" data-id="home" class="nav__btn nav__trigger">
           <img src="img/nav-icon-1.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> घर </span>
         </button>
-        <button type="button" data-id="search" class="nav__btn">
+        <button type="button" data-id="search" class="nav__btn nav__trigger">
           <img src="img/nav-icon-2.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> खोज </span>
         </button>
-        <button type="button" data-id="reels" class="nav__btn">
+        <button type="button" data-id="reels" class="nav__btn nav__trigger">
           <img src="img/nav-icon-3.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> उत्तर </span>
         </button>
-        <button type="button" data-id="shop" class="nav__btn">
+        <button type="button" data-id="shop" class="nav__btn nav__trigger">
           <img src="img/nav-icon-4.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> दुकान </span>
         </button>
-        <button type="button" data-id="profile" class="nav__btn">
+        <button type="button" data-id="profile" class="nav__btn nav__trigger">
           <img src="img/nav-icon-5.png" alt="" class="nav__btn-icon" />
           <span class="nav__btn-text"> प्रोफ़ाइल </span>
         </button>
       </div>
     </div>
-    
+    <div id="modal-1" class="modal">
+  <div class="stories stories__1" data-stories="1">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+          <div class="stories__nav-item"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-1.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>ऊर्जा</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">राहुल की कहानी</p>
+        <h2 class="stories__title">फिर से ऊर्जा से भरा</h2>
+        <p class="stories__text">2 हफ्तों में थकान चली गई। जीने और करने की इच्छा के साथ उठता हूं।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>और जानें</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="stories stories__2" data-stories="2">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+          <div class="stories__nav-item active"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-1.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>ऊर्जा</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">Tantra Max</p>
+        <h2 class="stories__title">प्राकृतिक शक्ति बूस्टर</h2>
+        <p class="stories__text">पुरुष ऊर्जा और सहनशक्ति के लिए 100% प्राकृतिक आयुर्वेदिक कॉम्प्लेक्स।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>ऑर्डर करें</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="modal-2" class="modal">
+  <div class="stories stories__3" data-stories="1">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+          <div class="stories__nav-item"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-2.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>जोड़ी</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">विक्रम और अनीष</p>
+        <h2 class="stories__title">नज़दीकियां वापस आई</h2>
+        <p class="stories__text">तीन साल में पहली बार हनीमून जैसी रात। हम सच में फिर साथ हैं।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>और जान</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="stories stories__4" data-stories="2">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+          <div class="stories__nav-item active"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-2.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>जोड़ी</h3>
+            <p>्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">जोड़ी का परिणाम</p>
+        <h2 class="stories__title">89% जोड़े — एक महीने में करीब</h2>
+        <p class="stories__text">केवल शक्ति नहीं, बल्कि भावनात्मक जुड़ाव भी। विश्वास वापस आया।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>ऑर्डर करें</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-3" class="modal">
+  <div class="stories stories__5" data-stories="1">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-3.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>पत्नी</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">मैं फिर खुश हूं</p>
+        <h2 class="stories__title">नज़दीकियां वापस आई</h2>
+        <p class="stories__text">वह नरम और आत्मविश्वासी हो गए। मैं वह महसूस करती हूं जो पहले नहीं था।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>और जान</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-4" class="modal">
+  <div class="stories stories__6" data-stories="1">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+          <div class="stories__nav-item"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-4.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>विशेषज्ञ</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">डॉक्टरों की राय</p>
+        <h2 class="stories__title">विशेषज्ञ सलाह देते हैं</h2>
+        <p class="stories__text">अश्वगंधा, गोक्षुर और L-आर्जिनिन — वैज्ञानिक रूप से सिद्ध सिनर्जिस्टिक कॉम्प्लेक्स।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>और जान</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="stories stories__7" data-stories="2">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+          <div class="stories__nav-item active"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-4.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>विशेषज्ञ</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">सर्टिफिकेशन</p>
+        <h2 class="stories__title">ISO · GMP · AYUSH</h2>
+        <p class="stories__text">यह फॉर्मूला भारत की तीन प्रयोगशालाओं में नैदानिक परीक्षणों से गुजरा है।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>ऑर्डर कर</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-5" class="modal">
+  <div class="stories stories__8" data-stories="1">
+    <div class="stories__wrapper">
+      <div class="stories__top">
+        <div class="stories__nav-items">
+          <div class="stories__nav-item active"></div>
+        </div>
+        <div class="stories__info">
+          <img src="img/home-reals-icon-5.png" alt="" class="stories__img" />
+          <div class="stories__info-body">
+            <h3>छूट</h3>
+            <p>प्रचारित</p>
+          </div>
+          <button type="button" class="modal__close">
+            <img src="img/modal-close.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="stories__body">
+        <p class="stories__tag">अभी सिर्फ</p>
+        <h2 class="stories__title">छूट −20%</h2>
+        <p class="stories__text">पहले ऑर्डर पर प्रोमो कोड TANTRA20। डिलीवरी पर भुगतान, गुमनाम डिलीवरी।</p>
+        <button type="button" data-id="shop" class="stories__btn nav__trigger">
+          <span>अभी ऑर्डर कर</span>
+          <img src="img/stories-arrow.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>  
     <script src="libs/jquery.min.js"></script>
+    <script src="libs/jquery.touchSwipe.min.js"></script>
     <!-- <script src="libs/aos.js"></script> -->
     <script src="libs/jquery.fancybox.min.js"></script>
     <script src="libs/owl.carousel.min.js"></script>
