@@ -1,0 +1,118 @@
+.section-3 {
+  .section__wrapper {
+    padding: 34px 0 30px;
+  }
+  .info__bg {
+    border: 1px solid #ece2d5;
+    border-radius: 18px;
+    background: #fff;
+    padding: 19px;
+    margin-bottom: 16px;
+  }
+
+  .info__bg-title {
+    font-weight: 800;
+    font-size: 15px;
+    color: #2b2320;
+    margin-bottom: 2px;
+    margin-bottom: 14px;
+  }
+
+  .info__bg-subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: #8a7d72;
+    margin-bottom: 14px;
+  }
+
+  .info__bg-text {
+    font-family: var(--font3);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3a322c;
+    margin-bottom: 14px;
+  }
+
+  .info__bg-allert {
+    color: #a8392b;
+    padding: 10px 28px;
+    border-radius: 12px;
+    background: #f3e3d4;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #a8392b;
+  }
+
+  .info__comparison-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    gap: 11px;
+    margin-bottom: 16px;
+  }
+
+  .info__comparison {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .info__comparison-icon {
+    font-size: 22px;
+  }
+
+  .info__comparison-title {
+    font-weight: 800;
+    font-size: 14px;
+    color: #d4ad58;
+  }
+
+  .info__comparison-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #d8c8b8;
+  }
+
+  .info__comparison-1 {
+    background: #1c1512;
+  }
+
+  .info__comparison-2 {
+    background: #a8392b;
+  }
+
+  .info__bg-bottom {
+    border: 1px solid #ece2d5;
+    border-radius: 16px;
+    background: #fff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+
+    h3 {
+      width: auto;
+      font-family: var(--font3);
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 1;
+      color: #a8392b;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #5f544a;
+    }
+  }
+}

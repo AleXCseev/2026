@@ -1,0 +1,48 @@
+// input.error {
+// 	border: 2px solid red;
+// }
+
+body {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: normal;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  // width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.site__wrapper {
+	width: 430px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #f6efe6;
+	position: relative;
+}
+
+.container {
+	width: 394px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main {
+	width: 100%;
+	height: auto;
+}
+
