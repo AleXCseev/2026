@@ -1,0 +1,134 @@
+.review__section {
+}
+.review__section-wrapper {
+  padding: 32px 0 100px;
+}
+
+.review__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.review {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  padding: 15px;
+}
+
+.review__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 11px;
+}
+
+.review__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background: #3f6fb0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.review__top-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.review__name {
+  font-weight: 800;
+  font-size: 13px;
+  color: #2b2320;
+  margin-bottom: 2px;
+}
+
+.review__rating {
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  color: #e7b84a;
+}
+
+.review__verified {
+  border-radius: 10px;
+  background: #f0e6d8;
+  width: auto;
+  height: auto;
+  padding: 3px 8px;
+  font-weight: 400;
+  font-size: 10px;
+  color: #9a8676;
+  flex-shrink: 0;
+}
+
+.review__message {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4a4038;
+}
+
+.review:nth-child(even) {
+  .review__icon {
+    background: #b5567f;
+  }
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 430px;
+  border-top: 1px solid rgba(212, 173, 88, 0.3);
+  background: #1c1512;
+}
+
+.fixed__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+.fixed__left {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.fixed__text {
+  font-weight: 400;
+  font-size: 10px;
+  color: #9a8676;
+  margin-bottom: 2px;
+}
+
+.fixed__timer {
+  font-family: var(--font3);
+  font-weight: 800;
+  font-size: 17px;
+  color: #d4ad58;
+}
+
+.minutes {
+}
+.seconds {
+}
+.order__btn {
+}

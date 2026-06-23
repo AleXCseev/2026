@@ -2,11 +2,7 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.timer();
-    // this.nav();
-    // this.reels();
-    // this.share();
-    // this.order();
-    // this.modal();
+    this.fixed();
   },
 
   initLibraris: function () {
@@ -21,13 +17,13 @@ var landingFunctions = {
       e.preventDefault();
     });
 
-    $("[data-fancybox]").fancybox({
-      loop: true,
-      infobar: false,
-      animationEffect: false,
-      backFocus: false,
-      hash: false,
-    });
+    // $("[data-fancybox]").fancybox({
+    //   loop: true,
+    //   infobar: false,
+    //   animationEffect: false,
+    //   backFocus: false,
+    //   hash: false,
+    // });
   },
 
   timer: function () {
@@ -40,145 +36,52 @@ var landingFunctions = {
       minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      $(".minutes").text(minutes)
-      $(".seconds").text(seconds)
-
+      $(".minutes").text(minutes);
+      $(".seconds").text(seconds);
 
       if (totalSeconds <= 0) {
         clearInterval(timerInterval);
       } else {
-        totalSeconds--; 
+        totalSeconds--;
       }
     }, 1000);
   },
 
-  nav: function () {
-    $(".nav__trigger").click(function (e) {
-      // e.stopPropagation();
-      $("body").css("overflow", "auto");
-      $(".modal").hide();
-      if ($(this).hasClass("active")) return;
+  fixed: function () {
+    const $fixedEl = $(".fixed");
+    const $targetZones = $(".hide__fixed");
 
-      const id = $(this).data("id");
+    if ($fixedEl.length && $targetZones.length) {
+      const fixedElHeight = $fixedEl.outerHeight();
+      const isTopFixed = $fixedEl.css("top") !== "auto";
+      const fixedTopOffset = isTopFixed ? parseInt($fixedEl.css("top"), 10) || 0 : 0;
 
-      $(".section").removeClass("active");
-      $("#" + id).addClass("active");
-      $("html, body").animate({ scrollTop: 0 }, "smooth");
-    });
-  },
+      $(window).on("scroll.multiHide", function () {
+        const scrollTop = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const currentCheckPoint = isTopFixed ? scrollTop + fixedTopOffset + fixedElHeight : scrollTop + windowHeight;
+        let shouldHide = false;
 
-  reels: function () {
-    $(".reels__btn-like").click(function () {
-      $(this).find("img").hide();
-      $(this).find(".active").fadeIn(300);
-    });
+        $targetZones.each(function () {
+          const $zone = $(this);
+          const zoneTop = $zone.offset().top;
+          const zoneBottom = zoneTop + $zone.outerHeight();
 
-    $(".reels__btn-comment").click(function () {
-      if ($("#comment").hasClass("active")) {
-        $("html, body").animate(
-          {
-            scrollTop: $("#comment").offset().top,
-          },
-          600,
-        );
-        return;
-      }
-
-      $("#comment").addClass("active");
-      $("#comment").show();
-      $("html, body").animate(
-        {
-          scrollTop: $("#comment").offset().top,
-        },
-        600,
-      );
-    });
-
-    $(".comment__block-close").click(function () {
-      $("#comment").slideUp(600);
-      setTimeout(() => {
-        $("#comment").removeClass("active");
-      }, 600);
-      $("html, body").animate({ scrollTop: 0 }, "smooth");
-    });
-  },
-
-  share: function () {
-    $(".profile__share-btn").click(function () {
-      if ($("#share").hasClass("active")) {
-        $("html, body").animate(
-          {
-            scrollTop: $("#share").offset().top,
-          },
-          600,
-        );
-        return;
-      }
-
-      $("#share").addClass("active");
-      $("#share").show();
-      $("html, body").animate(
-        {
-          scrollTop: $("#share").offset().top,
-        },
-        600,
-      );
-    });
-
-    $(".share__block-close").click(function () {
-      $("#share").slideUp(600);
-      setTimeout(() => {
-        $("#share").removeClass("active");
-      }, 600);
-      $("html, body").animate({ scrollTop: 0 }, "smooth");
-    });
-  },
-
-  order: function () {
-    $(".shop__item").click(function () {
-      const current = $(this).data("count");
-      $(".shop__item").removeClass("active");
-      $(this).addClass("active");
-    });
-  },
-
-  modal: function () {
-    let currentStories = 1;
-
-    $(".open__modal").click(function () {
-      const id = $(this).data("modal");
-
-      $("#modal-" + id).fadeIn(300);
-
-      $(`[data-stories="1"]`).show();
-      currentStories = 1;
-
-      $("body").css("overflow", "hidden");
-    });
-
-    $(".modal").swipe({
-      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        if (currentStories === 1 && direction === "left") {
-          if ($(this).find(`[data-stories="2"]`).length) {
-            currentStories = 2;
-            $(this).find(`[data-stories="1"]`).fadeOut(300);
-            $(this).find(`[data-stories="2"]`).fadeIn(300);
+          if (currentCheckPoint >= zoneTop && scrollTop <= zoneBottom) {
+            shouldHide = true;
+            return false;
           }
-          return;
-        }
-        if (currentStories === 2 && direction === "right") {
-          currentStories = 1;
-          $(this).find(`[data-stories="1"]`).fadeIn(300);
-          $(this).find(`[data-stories="2"]`).fadeOut(300);
-          return;
-        }
-      },
-    });
+        });
 
-    $(".modal__close").click(function () {
-      $(".modal").fadeOut(300);
-      $("body").css("overflow", "auto");
-    });
+        if (shouldHide) {
+          $fixedEl.slideUp(300);
+        } else {
+          $fixedEl.slideDown(300);
+        }
+      });
+
+      $(window).trigger("scroll.multiHide");
+    }
   },
 };
 
