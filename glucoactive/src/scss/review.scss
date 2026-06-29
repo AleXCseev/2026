@@ -1,0 +1,155 @@
+.review {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.review__section-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.review__section-slide {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 23px;
+}
+
+.review__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+}
+
+.review__header-back {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+
+  img {
+    width: 12px !important;
+    height: auto;
+  }
+}
+
+.review__header-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+}
+
+.review__close {
+  img {
+    width: 14px;
+    height: auto;
+  }
+}
+
+.video__wrapper {
+  width: 100%;
+  height: 102.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review__section-video {
+  width: auto;
+  height: 100%;
+}
+
+.review__section-wrapper {
+  padding: 18px 22px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.review__block-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.review__block-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 13px;
+  color: #fff;
+}
+
+.review__block-body {
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+
+  h3 {
+    font-weight: 800;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.review__body-rating {
+  font-weight: 400;
+  font-size: 12px;
+  color: #d4923f;
+}
+
+.review__block-verified {
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: auto;
+  height: auto;
+  background: rgba(34, 164, 93, 0.15);
+  font-weight: 700;
+  font-size: 10px;
+  color: #22a45d;
+  margin-left: 20px;
+}
+
+.review__block-title {
+  font-weight: 800;
+  font-size: 16px;
+  color: #22a45d;
+}
+
+.review__block-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.53;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.review__1 {
+  .video__wrapper {
+    background: #1a384d;
+  }
+  .review__block-icon {
+    background: #1a384d;
+  }
+}

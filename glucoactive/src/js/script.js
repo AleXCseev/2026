@@ -1,0 +1,215 @@
+var landingFunctions = {
+  init: function () {
+    this.initLibraris();
+    this.nav();
+    this.review();
+    this.reels();
+    // this.share();
+    // this.order();
+    // this.modal();
+  },
+
+  initLibraris: function () {
+    $('[href*="#"]').on("click", function (e) {
+      var fixedOffset = 0;
+      // var cardHeight = $("#order").outerHeight(false);
+      // var windowHeight = $(window).height();
+
+      $("html, body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
+      e.preventDefault();
+    });
+
+    $(".doctor__slider").owlCarousel({
+      items: 2,
+      margin: 14,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      // autoHeight: true,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+      // responsive: {
+      //   0: {
+      //     items: 1,
+      //   },
+      //   1081: {
+      //     items: 2,
+      //   },
+      //   1481: {
+      //     items: 3,
+      //   },
+      // },
+    });
+
+    $(".advantage__slider").owlCarousel({
+      items: 4,
+      margin: 11,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      autoWidth: true,
+    });
+
+    $(".review__slider").owlCarousel({
+      items: 3,
+      margin: 12,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      // autoHeight: true,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      // autoplayHoverPause: true,
+      // responsive: {
+      //   0: {
+      //     items: 1,
+      //   },
+      //   1081: {
+      //     items: 2,
+      //   },
+      //   1481: {
+      //     items: 3,
+      //   },
+      // },
+    });
+
+    $("[data-fancybox]").fancybox({
+      loop: true,
+      infobar: false,
+      animationEffect: false,
+      backFocus: false,
+      hash: false,
+    });
+  },
+
+  nav: function () {
+    $(".nav").sticky({});
+    $(".nav__trigger").click(function (e) {
+      // e.stopPropagation();
+      $("body").css("overflow", "auto");
+      $(".modal").hide();
+      if ($(this).hasClass("active")) return;
+
+      const id = $(this).data("id");
+
+      $(".section").removeClass("active");
+      $("#" + id).addClass("active");
+      $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+  },
+
+  review: function () {
+    $(".review__section-slider").owlCarousel({
+      items: 1,
+      margin: 0,
+      dots: true,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+    });
+
+    $(".review__trigger").click(function () {
+      const id = $(this).data("slide");
+      console.log(id);
+    });
+  },
+
+  reels: function () {
+    $(".reels__slider").owlCarousel({
+      items: 1,
+      margin: 0,
+      dots: true,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+    });
+  },
+
+  share: function () {
+    $(".profile__share-btn").click(function () {
+      if ($("#share").hasClass("active")) {
+        $("html, body").animate(
+          {
+            scrollTop: $("#share").offset().top,
+          },
+          600,
+        );
+        return;
+      }
+
+      $("#share").addClass("active");
+      $("#share").show();
+      $("html, body").animate(
+        {
+          scrollTop: $("#share").offset().top,
+        },
+        600,
+      );
+    });
+
+    $(".share__block-close").click(function () {
+      $("#share").slideUp(600);
+      setTimeout(() => {
+        $("#share").removeClass("active");
+      }, 600);
+      $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+  },
+
+  order: function () {
+    $(".shop__item").click(function () {
+      const current = $(this).data("count");
+      $(".shop__item").removeClass("active");
+      $(this).addClass("active");
+    });
+  },
+
+  modal: function () {
+    let currentStories = 1;
+
+    $(".open__modal").click(function () {
+      const id = $(this).data("modal");
+
+      $("#modal-" + id).fadeIn(300);
+
+      $(`[data-stories="1"]`).show();
+      currentStories = 1;
+
+      $("body").css("overflow", "hidden");
+    });
+
+    $(".modal").swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (currentStories === 1 && direction === "left") {
+          if ($(this).find(`[data-stories="2"]`).length) {
+            currentStories = 2;
+            $(this).find(`[data-stories="1"]`).fadeOut(300);
+            $(this).find(`[data-stories="2"]`).fadeIn(300);
+          }
+          return;
+        }
+        if (currentStories === 2 && direction === "right") {
+          currentStories = 1;
+          $(this).find(`[data-stories="1"]`).fadeIn(300);
+          $(this).find(`[data-stories="2"]`).fadeOut(300);
+          return;
+        }
+      },
+    });
+
+    $(".modal__close").click(function () {
+      $(".modal").fadeOut(300);
+      $("body").css("overflow", "auto");
+    });
+  },
+};
+
+$(document).ready(function () {
+  landingFunctions.init();
+});
