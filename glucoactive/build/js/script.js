@@ -4,9 +4,7 @@ var landingFunctions = {
     this.nav();
     this.review();
     this.reels();
-    // this.share();
-    // this.order();
-    // this.modal();
+    this.order();
   },
 
   initLibraris: function () {
@@ -28,6 +26,7 @@ var landingFunctions = {
       dotsEach: true,
       nav: false,
       loop: true,
+      stagePadding: 10,
       // autoHeight: true,
       // autoplay: true,
       // autoplayTimeout: 5000,
@@ -45,15 +44,16 @@ var landingFunctions = {
       // },
     });
 
-    $(".advantage__slider").owlCarousel({
-      items: 4,
-      margin: 11,
-      dots: false,
-      dotsEach: true,
-      nav: false,
-      loop: true,
-      autoWidth: true,
-    });
+    // $(".advantage__slider").owlCarousel({
+    //   items: 4,
+    //   margin: 11,
+    //   dots: false,
+    //   dotsEach: true,
+    //   nav: false,
+    //   loop: true,
+    //   autoWidth: true,
+    //   stagePadding: 10,
+    // });
 
     $(".review__slider").owlCarousel({
       items: 3,
@@ -90,10 +90,9 @@ var landingFunctions = {
 
   nav: function () {
     $(".nav").sticky({});
-    $(".nav__trigger").click(function (e) {
-      // e.stopPropagation();
+
+    $(document).on("click", ".nav__trigger", function () {
       $("body").css("overflow", "auto");
-      $(".modal").hide();
       if ($(this).hasClass("active")) return;
 
       const id = $(this).data("id");
@@ -105,7 +104,7 @@ var landingFunctions = {
   },
 
   review: function () {
-    $(".review__section-slider").owlCarousel({
+    const owl = $(".review__section-slider").owlCarousel({
       items: 1,
       margin: 0,
       dots: true,
@@ -114,9 +113,11 @@ var landingFunctions = {
       loop: true,
     });
 
-    $(".review__trigger").click(function () {
+    $(document).on("click", ".review__trigger", function () {
+      console.log("click");
       const id = $(this).data("slide");
-      console.log(id);
+
+      owl.trigger("to.owl.carousel", [+id - 1, 0]);
     });
   },
 
@@ -131,41 +132,10 @@ var landingFunctions = {
     });
   },
 
-  share: function () {
-    $(".profile__share-btn").click(function () {
-      if ($("#share").hasClass("active")) {
-        $("html, body").animate(
-          {
-            scrollTop: $("#share").offset().top,
-          },
-          600,
-        );
-        return;
-      }
-
-      $("#share").addClass("active");
-      $("#share").show();
-      $("html, body").animate(
-        {
-          scrollTop: $("#share").offset().top,
-        },
-        600,
-      );
-    });
-
-    $(".share__block-close").click(function () {
-      $("#share").slideUp(600);
-      setTimeout(() => {
-        $("#share").removeClass("active");
-      }, 600);
-      $("html, body").animate({ scrollTop: 0 }, "smooth");
-    });
-  },
-
   order: function () {
-    $(".shop__item").click(function () {
+    $(".order__form-btn").click(function () {
       const current = $(this).data("count");
-      $(".shop__item").removeClass("active");
+      $(".order__form-btn").removeClass("active");
       $(this).addClass("active");
     });
   },

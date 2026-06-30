@@ -30,6 +30,15 @@
   font-size: 16px;
   line-height: 1.375;
   color: #2b2320;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+
+  img {
+    width: 16px;
+    height: auto;
+  }
 }
 
 .nav {
@@ -62,9 +71,7 @@
   border-width: 2px;
   border-style: solid;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 15px 17px;
 
   &:before {
     content: "";
@@ -254,8 +261,9 @@
 }
 
 .doctor__slider {
-  width: 524px;
+  width: 544px;
   height: auto;
+  margin-left: -10px;
 }
 
 .owl-carousel .owl-stage {
@@ -267,7 +275,8 @@
   background: #fff;
   border-radius: 14px;
   padding: 14px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  min-height: 180px;
 }
 
 .doctor__slide-header {
@@ -319,9 +328,14 @@
 
 .advantage__slider {
   margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
 }
 
 .advantage__slide {
+  height: auto;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
   background: #fff;
   border-radius: 14px;

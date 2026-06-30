@@ -63,7 +63,7 @@
 
 .video__wrapper {
   width: 100%;
-  height: 102.3vw;
+  height: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,5 +151,32 @@
   }
   .review__block-icon {
     background: #1a384d;
+  }
+}
+
+.review__2 {
+  .video__wrapper {
+    background: #381a2e;
+  }
+  .review__block-icon {
+    background: #381a2e;
+  }
+}
+
+.review__3 {
+  .video__wrapper {
+    background: #1a381a;
+  }
+  .review__block-icon {
+    background: #1a381a;
+  }
+}
+
+.review__4 {
+  .video__wrapper {
+    background: #291a38;
+  }
+  .review__block-icon {
+    background: #291a38;
   }
 }
