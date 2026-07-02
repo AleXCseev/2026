@@ -68,22 +68,28 @@
   width: 100%;
   height: 56px;
   border-radius: 100%;
-  border-width: 2px;
-  border-style: solid;
-  position: relative;
-  padding: 15px 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  // border-width: 2px;
+  // border-style: solid;
+  // position: relative;
+  // padding: 15px 17px;
 
-  &:before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: 1px solid #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  // &:before {
+  //   content: "";
+  //   width: 50px;
+  //   height: 50px;
+  //   border-radius: 100%;
+  //   border: 1px solid #fff;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
 }
 
 .nav__text {
@@ -96,43 +102,49 @@
 
 .nav__item-1 {
   .nav__icon {
-    background-color: #22a45d;
-    border-color: #22a45d;
+    // background-color: #22a45d;
+    // border-color: #22a45d;
+    background-image: url(../img/nav/1.png);
   }
 }
 
 .nav__item-2 {
   .nav__icon {
-    background-color: #b5567f;
-    border-color: #b5567f;
+    // background-color: #b5567f;
+    // border-color: #b5567f;
+    background-image: url(../img/nav/2.png);
   }
 }
 
 .nav__item-3 {
   .nav__icon {
-    background-color: #1f8852;
-    border-color: #3e6fb0;
+    // background-color: #1f8852;
+    // border-color: #3e6fb0;
+    background-image: url(../img/nav/3.png);
   }
 }
 
 .nav__item-4 {
   .nav__icon {
-    background-color: #e13b2e;
-    border-color: #e13b2e;
+    // background-color: #e13b2e;
+    // border-color: #e13b2e;
+    background-image: url(../img/nav/4.png);
   }
 }
 
 .nav__item-5 {
   .nav__icon {
-    background-color: #d4923f;
-    border-color: #d4923f;
+    // background-color: #d4923f;
+    // border-color: #d4923f;
+    background-image: url(../img/nav/5.png);
   }
 }
 
 .nav__item-6 {
   .nav__icon {
-    background-color: #8037c6;
-    border-color: #8037c6;
+    // background-color: #8037c6;
+    // border-color: #8037c6;
+    background-image: url(../img/nav/6.png);
   }
 }
 
@@ -409,7 +421,7 @@
   border-radius: 100%;
   padding: 10px 14px;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  background:rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .review__slide-wrapper {

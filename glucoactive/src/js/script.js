@@ -91,15 +91,32 @@ var landingFunctions = {
   nav: function () {
     $(".nav").sticky({});
 
-    $(document).on("click", ".nav__trigger", function () {
+    function changePage(id) {
       $("body").css("overflow", "auto");
-      if ($(this).hasClass("active")) return;
-
-      const id = $(this).data("id");
+      history.pushState({ page: "virtual" }, "", "#" + id);
 
       $(".section").removeClass("active");
       $("#" + id).addClass("active");
       $("html, body").animate({ scrollTop: 0 }, "smooth");
+
+      $("video").each(function () {
+        this.pause();
+      });
+    }
+
+    $(document).on("click", ".nav__trigger", function () {
+      if ($(this).hasClass("active")) return;
+
+      const id = $(this).data("id");
+
+      changePage(id);
+    });
+
+    $(window).on("popstate", function (event) {
+      const state = event.originalEvent.state;
+      const id = "home";
+
+      changePage(id);
     });
   },
 
