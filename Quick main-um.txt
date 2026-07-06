@@ -1,12 +1,12 @@
-var landing = {
+const landing = {
 	init: function() {
 		this.getPrice();
 		this.formSubmit();
 	}, 
 	getPrice: function() {
 		$('.new__price').each(function () {
-			var p = parseInt($(this).text());
-	                var currency = $(this).text().replace(/[0-9]/g, '');
+			let p = parseInt($(this).text());
+	                const currency = $(this).text().replace(/[0-9]/g, '');
 			p = p * 100 / 40;
 			p2 = Math.ceil(p);
 			$(this).closest('.price').find('.old__price').text(p2 + ' ' + currency);
@@ -15,7 +15,7 @@ var landing = {
 	},
 	formSubmit: function () {
 		$(".order-form").submit(function(event) {
-			var size = $(this).find('.jq-selectbox__dropdown .selected').text();
+			const size = $(this).find('.jq-selectbox__dropdown .selected').text();
 
 			console.log(size);
 

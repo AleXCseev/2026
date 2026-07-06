@@ -1,0 +1,273 @@
+.reels {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.reels__slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.reels__slide {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 23px;
+}
+
+.reels__header {
+}
+
+.reels__header-wrapper {
+  padding: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.reels__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0ca755;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+}
+
+.reels__header-body {
+  h3 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.reels__close {
+  img {
+    width: 16px;
+    height: auto;
+  }
+}
+
+.reels__img {
+  width: 100%;
+  height: auto;
+}
+
+.reels__info {
+}
+
+.reels__info-wrapper {
+  padding: 14px 0 28px;
+}
+
+.reels__tag {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  background: #e23b2e;
+  border-radius: 6px;
+  padding: 5px 12px;
+  margin-bottom: 8px;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  color: #fff;
+}
+
+.reels__title {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.27273;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.reels__text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.53846;
+  color: #e6dcd6;
+  margin-bottom: 10vw;
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  button {
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.4) !important;
+
+    &.active {
+      background: #fff !important;
+    }
+  }
+}
+
+.reels__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.reels__form {
+  width: 100%;
+}
+
+.reels__form-tag {
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  color: #fff;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  padding: 4px 10px;
+  background: #0ca755;
+  margin-bottom: 4px;
+}
+
+.reels__form-title {
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.reels__form-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #e6dcd6;
+  margin-bottom: 12px;
+}
+
+.reels__block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.reels__prod {
+  width: 130px !important;
+  height: auto;
+  flex-shrink: 0;
+  margin-left: -26px;
+}
+
+.reels__block-body {
+  h3 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #e6dcd6;
+    margin-bottom: 4px;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.old__price {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #e6dcd6;
+}
+
+.new__price {
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #0ca755;
+}
+
+.input__wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+
+  label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #b2e5b2;
+    margin-bottom: 6px;
+  }
+
+  input {
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #808080;
+    padding: 12px 0;
+    border-bottom: 1px solid #408c40;
+  }
+}
+
+.order__submit {
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+
+.reels__bottom {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #80b280;
+}
