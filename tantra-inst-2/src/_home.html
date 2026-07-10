@@ -54,7 +54,7 @@
           <p class="title__info">सभी ></p>
         </div>
         <div class="stories__slider owl-carousel">
-          <div class="stories__slide">
+          <div data-id="story-1" class="stories__slide nav__trigger">
             <p class="stories__tag">राहुल की कहानी</p>
             <div class="stories__slide-block">
               <h3>मैं 47 साल का था. निर्माण गायब हो गया</h3>
@@ -65,7 +65,7 @@
               <span>कहानी पढ़ें →</span>
             </div>
           </div>
-          <div class="stories__slide">
+          <div data-id="story-1" class="stories__slide nav__trigger">
             <p class="stories__tag">अमित का इतिहास</p>
             <div class="stories__slide-block">
               <h3>तीन साल तक बिना परिणाम के</h3>
@@ -146,7 +146,7 @@
           <p class="title__info">सभी ></p>
         </div>
         <div class="reels__slider owl-carousel">
-          <div class="reels__slide reels__slide-1">
+          <div data-id="reels" data-slide="1" class="reels__slide reels__slide-1 reels__trigger nav__trigger">
             <div class="reels__slide-tag">▶ रीलें</div>
             <div class="reels__slide-block">
               <div class="reels__slider-top">
@@ -158,7 +158,7 @@
               <p class="reels__slide-text">"10 दिनों के बाद, मेरी पत्नी ने मुझसे पूछा कि मैं क्या पी रहा हूं।"</p>
             </div>
           </div>
-          <div class="reels__slide reels__slide-2">
+          <div data-id="reels" data-slide="2" class="reels__slide reels__slide-2 reels__trigger nav__trigger">
             <div class="reels__slide-tag">▶ रीलें</div>
             <div class="reels__slide-block">
               <div class="reels__slider-top">
@@ -170,7 +170,7 @@
               <p class="reels__slide-text">"परिणाम के बिना तीन वर्ष"</p>
             </div>
           </div>
-          <div class="reels__slide reels__slide-3">
+          <div data-id="reels" data-slide="3" class="reels__slide reels__slide-3 reels__trigger nav__trigger">
             <div class="reels__slide-tag">▶ रीलें</div>
             <div class="reels__slide-block">
               <div class="reels__slider-top">
@@ -271,7 +271,7 @@
           <p class="title__info">सभी ></p>
         </div>
         <div class="video__slider owl-carousel">
-          <div class="video__slide video__slide-1">
+          <a data-fancybox href="img/video/1.mp4" class="video__slide video__slide-1">
             <div class="video__play">
               <img src="img/tringle.svg" alt="" />
             </div>
@@ -281,8 +281,8 @@
             <p class="video__name">राहुल</p>
             <p class="video__info">10 दिन - प्रभाव</p>
             <p class="video__verified">✓ सत्यापित</p>
-          </div>
-          <div class="video__slide video__slide-2">
+          </a>
+          <a data-fancybox href="img/video/3.mp4" class="video__slide video__slide-2">
             <div class="video__play">
               <img src="img/tringle.svg" alt="" />
             </div>
@@ -292,8 +292,8 @@
             <p class="video__name">अमित</p>
             <p class="video__info">3 वर्ष → 1 सप्ताह</p>
             <p class="video__verified">✓ सत्यापित</p>
-          </div>
-          <div class="video__slide video__slide-3">
+          </a>
+          <a data-fancybox href="img/video/2.mp4" class="video__slide video__slide-3">
             <div class="video__play">
               <img src="img/tringle.svg" alt="" />
             </div>
@@ -303,8 +303,8 @@
             <p class="video__name">संजय, 28</p>
             <p class="video__info">100% काम किया</p>
             <p class="video__verified">✓ सत्यापित</p>
-          </div>
-          <div class="video__slide video__slide-4">
+          </a>
+          <!-- <a data-fancybox href="img/video/4.mp4" class="video__slide video__slide-4">
             <div class="video__play">
               <img src="img/tringle.svg" alt="" />
             </div>
@@ -314,7 +314,7 @@
             <p class="video__name">प्रियंका</p>
             <p class="video__info">5 दिन - पति बदल गया है</p>
             <p class="video__verified">✓ सत्यापित</p>
-          </div>
+          </a> -->
         </div>
       </div>
     </div>
@@ -409,7 +409,7 @@
   <div class="fixed__block">
     <div class="container">
       <div class="fixed__block-wrapper">
-        <button type="button" class="order__btn">
+        <button type="button" data-id="story-1" data-slide="6" class="order__btn slide__trigger nav__trigger">
           <span>तंत्र मैक्स ऑर्डर करें - 50% छूट</span>
           <img src="img/arrow.svg" alt="" />
         </button>

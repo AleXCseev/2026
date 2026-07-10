@@ -2,9 +2,10 @@ var landingFunctions = {
   init: function () {
     this.initLibraris();
     this.nav();
+    this.story();
     this.review();
     this.reels();
-    this.order();
+    this.timer();
   },
 
   initLibraris: function () {
@@ -47,7 +48,7 @@ var landingFunctions = {
       loop: true,
     });
 
-     $(".video__slider").owlCarousel({
+    $(".video__slider").owlCarousel({
       items: 3,
       margin: 12,
       dots: false,
@@ -55,6 +56,8 @@ var landingFunctions = {
       nav: false,
       loop: true,
     });
+
+    
   },
 
   nav: function () {
@@ -89,6 +92,29 @@ var landingFunctions = {
     });
   },
 
+  story: function () {
+    
+    const owl = $(".story__slider").owlCarousel({
+      items: 1,
+      margin: 10,
+      dots: true,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+      autoHeight: true,
+    });
+
+    $(document).on("click", ".slide__trigger", function () {
+      const id = $(this).data("slide");
+
+      owl.trigger("to.owl.carousel", [+id - 1, 0]);
+    });
+
+    owl.on('changed.owl.carousel', function(event) {
+      $("html, body").animate({ scrollTop: 0 }, 0);
+    })
+  },
+
   review: function () {
     const owl = $(".review__section-slider").owlCarousel({
       items: 1,
@@ -107,7 +133,7 @@ var landingFunctions = {
   },
 
   reels: function () {
-    $(".reels__slider").owlCarousel({
+     $(".reels__slider").owlCarousel({
       items: 3,
       margin: 12,
       dots: false,
@@ -115,14 +141,62 @@ var landingFunctions = {
       nav: false,
       loop: true,
     });
+
+    const owl = $(".reels__section-slider").owlCarousel({
+      items: 1,
+      margin: 10,
+      dots: false,
+      dotsEach: true,
+      nav: false,
+      loop: true,
+    });
+
+    $(document).on("click", ".reels__trigger", function () {
+      const id = $(this).data("slide");
+
+      owl.trigger("to.owl.carousel", [+id - 1, 0]);
+    });
   },
 
-  order: function () {
-    $(".order__form-btn").click(function () {
-      const current = $(this).data("count");
-      $(".order__form-btn").removeClass("active");
-      $(this).addClass("active");
-    });
+  timer: function () {
+    Date.prototype.daysInMonth = function () {
+      return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
+    };
+
+    if (!String.prototype.padStart) {
+      String.prototype.padStart = function padStart(targetLength, padString) {
+        targetLength = targetLength >> 0;
+        padString = String(typeof padString !== "undefined" ? padString : " ");
+        if (this.length > targetLength) {
+          return String(this);
+        } else {
+          targetLength = targetLength - this.length;
+          if (targetLength > padString.length) {
+            padString += padString.repeat(targetLength / padString.length);
+          }
+          return padString.slice(0, targetLength) + String(this);
+        }
+      };
+    }
+
+    function timer() {
+      function runMultiple(hoursSelector, minutesSelector, secondsSelector, milisecondsSelector) {
+        var d = new Date();
+        var h = String(23 - d.getHours()).padStart(2, "0");
+        var m = String(59 - d.getMinutes()).padStart(2, "0");
+        var s = String(60 - d.getSeconds()).padStart(2, "0");
+        // var ms = String(1000 - d.getMilliseconds()).padStart(3, "0");
+        $(hoursSelector).text(h);
+        $(minutesSelector).text(m);
+        $(secondsSelector).text(s);
+        // $(milisecondsSelector).text(ms)
+      }
+      setInterval(function () {
+        runMultiple(".hours", ".minutes", ".seconds");
+      }, 1000);
+    }
+
+    timer();
   },
 };
 
