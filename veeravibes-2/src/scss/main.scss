@@ -1,0 +1,64 @@
+// input.error {
+// 	border: 2px solid red;
+// }
+
+body {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  font-family: var(--font-family);
+  line-height: normal;
+  font-weight: 400;
+  color: #22262b;
+  background: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  // width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.site__wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+.container {
+  width: 1248px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding: 0 3.5vw;
+  }
+}
