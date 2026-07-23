@@ -3,9 +3,6 @@ var landingFunctions = {
     this.initLibraris();
     this.time();
     this.order();
-    // this.modal();
-    // this.bar();
-    // this.order();
   },
 
   initLibraris: function () {
@@ -34,13 +31,13 @@ var landingFunctions = {
     //   AOS.refresh();
     // });
 
-    // $("[data-fancybox]").fancybox({
-    //   loop: true,
-    //   infobar: false,
-    //   animationEffect: false,
-    //   backFocus: false,
-    //   hash: false,
-    // });
+    $("[data-fancybox]").fancybox({
+      loop: true,
+      infobar: false,
+      animationEffect: false,
+      backFocus: false,
+      hash: false,
+    });
   },
 
   order: function () {
@@ -51,15 +48,15 @@ var landingFunctions = {
 
     $(".add__answer").click(function () {
       if (!$(this).closest(".question").find(".question__button").hasClass("active")) {
-        console.log("error");
         return;
       }
-      console.log("click");
 
       const question = $(this).data("question");
 
-      $(".question.active").fadeOut(300).removeClass("active")
-      $(".question-" + (+question + 1)).fadeIn(300).addClass("active")
+      $(".question.active").slideUp(500).removeClass("active")
+      $(".question-" + (+question + 1)).slideDown(500).addClass("active")
+
+      // $("#order").animate({ scrollTop: 0 }, 0);
     });
   },
 
@@ -123,58 +120,6 @@ var landingFunctions = {
 
     // $(".date__1").text(getDate(-5));
     $(".date").text(getDate(-2));
-  },
-
-  modal: function () {
-    $(".add__review").click(function () {
-      $(".modal__review").addClass("active");
-    });
-
-    function close() {
-      $(".modal__review").removeClass("active");
-    }
-
-    $(".modal__review").click(function (e) {
-      var target = e.target;
-      if (target.classList.contains("modal__close")) {
-        close();
-      }
-      if (target.classList.contains("modal")) {
-        close();
-      }
-    });
-
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        console.log(reader);
-        reader.onload = function (e) {
-          $(".file img").attr("src", e.target.result).css("display", "block");
-        };
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-
-    $(".modal__review .input__file").on("change", function () {
-      readURL(this);
-    });
-
-    $(".modal__review form").submit(function (e) {
-      e.preventDefault();
-      $(this).removeClass("active");
-      $(".send__window").addClass("active");
-      $(".modal__review .name__input").val("");
-      $(".modal__review .modal__area").val("");
-      $(".modal__review .file img").attr("src", "").css("display", "none");
-      delayClose();
-    });
-    function delayClose() {
-      setTimeout(function () {
-        $(".modal__review form").addClass("active");
-        $(".send__window").removeClass("active");
-        close();
-      }, 5000);
-    }
   },
 };
 
