@@ -1,0 +1,22 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  // --second-family: "Liberation Sans", sans-serif;
+  // --third-family: "Nimbus Sans", sans-serif;
+  --main-bg: #faf9fd;
+  --text-color: #1a1426;
+  --text-color-alt: #645c7a;
+  --line-color: #8b5cf6;
+  --text-accent-color: #996bff;
+  --text-secondary-color: #4a425e;
+  --tag-bg-color: #fff;
+}
+
+body.dark-theme {
+  --main-bg: #0d0b14;
+  --text-color: #f5f3fa;
+  --text-color-alt: #9e96b8;
+  --line-color: #a882ff;
+  --text-accent-color: #b491ff;
+  --text-secondary-color: #c8c1d9;
+  --tag-bg-color: #1a1426;
+}
