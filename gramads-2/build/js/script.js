@@ -3,7 +3,9 @@ var landingFunctions = {
     this.initLibraris();
     this.theme();
     this.spincrement();
-    // this.tab();
+    this.menu();
+    this.sign();
+    this.tab();
     // this.time();
     // this.bar();
     // this.faq();
@@ -85,6 +87,58 @@ var landingFunctions = {
     });
   },
 
+  menu: function () {
+    function bodyOverflowHidden() {
+      $("body").css("overflow", "hidden");
+    }
+
+    function bodyOverflowAuto() {
+      $("body").css("overflow", "auto");
+    }
+
+    $("#open-menu").click(function () {
+      $("#menu").addClass("active");
+      $("#sign").removeClass("active");
+      bodyOverflowHidden();
+    });
+
+    $("#close-menu").click(function () {
+      $("#menu").removeClass("active");
+      bodyOverflowAuto();
+    });
+
+    $(".menu__list").click(function (e) {
+      $("#menu").removeClass("active");
+      bodyOverflowAuto();
+    });
+
+    $(".signin").click(function () {
+      $("#sign").addClass("active");
+      $("#menu").removeClass("active");
+      $(".sign__btn-enter").click();
+      bodyOverflowHidden();
+    });
+
+    $("#close-sign-menu").click(function () {
+      $("#sign").removeClass("active");
+      bodyOverflowAuto();
+    });
+  },
+
+  sign: function () {
+    $(".sign__trigger").click(function () {
+      const signItem = $(this).data("sign");
+
+      $(".sign__btn").removeClass("active");
+      $(".sign__btn-" + signItem).addClass("active");
+
+      $(".sign__info").removeClass("active");
+      $(".sign__info-" + signItem).addClass("active");
+      $(".sign__form").removeClass("active");
+      $("." + signItem).addClass("active");
+    });
+  },
+
   spincrement: function () {
     var show = true;
     var countbox = ".header__items";
@@ -108,14 +162,14 @@ var landingFunctions = {
   },
 
   tab: function () {
-    $(".forma__btn").click(function () {
+    $(".format__btn").click(function () {
       if ($(this).hasClass("active")) return;
 
       const activeTab = $(this).data("tab");
-      $(".forma__btn").removeClass("active");
+      $(".format__btn").removeClass("active");
       $(this).addClass("active");
 
-      $(".format__tab").slideUp(300);
+      $(".format__tab-wrapper").slideUp(300);
       $(".tab__" + activeTab).slideDown(300);
     });
   },
