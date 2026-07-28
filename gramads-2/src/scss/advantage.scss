@@ -1,0 +1,137 @@
+.advantage__section {
+  background: var(--bg-alt-color);
+}
+
+.advantage__section-wrapper {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle-3 {
+  width: 497px;
+  height: 497px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.advantage__content {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.advantage__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-secondary-color);
+
+    &:before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: var(--bg-dot-color);
+    }
+  }
+}
+
+.advantage__block {
+  width: 480px;
+  height: 380px;
+  border: 1px solid var(--line-color);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow:
+    0 10px 26px -6px rgba(82, 56, 128, 0.14),
+    0 4px 20px 0 var(--line-color);
+  background: var(--tag-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.advantage__block-title {
+  font-weight: 800;
+  font-size: 48px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.advantage__block-text {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+@media (max-width: 1080px) {
+  .advantage__section-wrapper {
+    flex-direction: column;
+  }
+  .advantage__content {
+    width: 100%;
+  }
+  .advantage__block {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .advantage__section-wrapper {
+    padding: 9vw 0;
+    gap: 5vw;
+  }
+  .advantage__content {
+    gap: 5vw;
+  }
+  .advantage__list {
+    gap: 2.5vw;
+  }
+  .advantage__list li:before {
+    top: 1.4vw;
+    transform: none;
+  }
+  .advantage__list li {
+    font-size: 3.5vw;
+  }
+  .advantage__block {
+    border-radius: 4vw;
+    padding: 7vw 5vw;
+    box-shadow:
+      0 0 36px -6px rgba(168, 107, 250, 0.2),
+      0 6px 20px -3px rgba(82, 56, 128, 0.14);
+    gap: 2vw;
+  }
+  .advantage__block-title {
+    font-size: 10vw;
+    color: var(--text-accent-color);
+  }
+  .advantage__block-text {
+    font-size: 3vw;
+    color: var(--text-color-alt);
+  }
+}

@@ -1,0 +1,270 @@
+.traffic__section {
+  background: var(--bg-alt-color);
+}
+
+.traffic__section-wrapper {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.traffic__content {
+  width: 560px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 28px;
+}
+
+.traffic__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.traffic__item {
+  padding-left: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+
+  &:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: var(--bg-dot-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-color);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--text-color-alt);
+  }
+}
+
+.traffic__block {
+  width: 480px;
+  border: 1px solid var(--line-color);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px -4px rgba(82, 56, 128, 0.16);
+  background: var(--tag-bg-color);
+}
+
+.traffic__title {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-color-alt);
+  margin-bottom: 4px;
+}
+
+.traffic__state {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.traffic__number {
+  width: auto;
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+.traffic__percent {
+  width: auto;
+  background: rgba(107, 217, 140, 0.18);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #16a34a;
+}
+
+.traffic__text {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-color-alt);
+  margin-bottom: 20px;
+}
+
+.traffic__block-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.traffic__block-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  &:last-child {
+    span {
+      color: var(--text-color);
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-color-alt);
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 11px;
+    color: #16a34a;
+  }
+}
+
+.traffic__app {
+  border: 1px solid var(--line-color);
+  border-radius: 12px;
+  padding: 21px 16px;
+  box-shadow:
+    0 0 40px -6px rgba(168, 107, 250, 0.22),
+    0 8px 24px -4px rgba(82, 56, 128, 0.16);
+  background: var(--tag-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+
+  span {
+    background: rgba(107, 217, 140, 0.18);
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #16a34a;
+  }
+}
+
+@media (max-width: 1080px) {
+  .traffic__section-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .traffic__content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .traffic__section-wrapper {
+    padding: 9vw 0;
+    gap: 5vw;
+  }
+  .traffic__content {
+    gap: 5vw;
+  }
+  .traffic__items {
+    gap: 2.5vw;
+  }
+  .traffic__item {
+    padding-left: 0;
+    gap: 0.5vw;
+  }
+  .traffic__item:before {
+    display: none;
+  }
+  .traffic__item h3 {
+    font-size: 3.5vw;
+  }
+  .traffic__item p {
+    font-size: 3.2vw;
+  }
+  .traffic__block {
+    width: 100%;
+    border-radius: 4vw;
+    padding: 5vw;
+  }
+  .traffic__title {
+    font-size: 3vw;
+    margin-bottom: 2.5vw;
+  }
+  .traffic__state {
+    gap: 2vw;
+    margin-bottom: 2.5vw;
+  }
+  .traffic__number {
+    font-size: 6vw;
+  }
+  .traffic__percent {
+    border-radius: 1.5vw;
+    padding: 1vw 2vw;
+    font-size: 2.5vw;
+  }
+  .traffic__text {
+    font-size: 3vw;
+    margin-bottom: 2.5vw;
+  }
+  .traffic__block-items {
+    gap: 4vw;
+    margin-bottom: 2.5vw;
+  }
+  .traffic__block-item {
+    width: auto;
+    gap: 0.5vw;
+  }
+  .traffic__block-item p {
+    font-size: 2.8vw;
+  }
+  .traffic__block-item h4 {
+    font-size: 4vw;
+  }
+  .traffic__block-item span {
+    font-size: 2.8vw;
+  }
+  .traffic__app {
+    border-radius: 2vw;
+    padding: 2.5vw 3vw;
+    gap: 2vw;
+  }
+  .traffic__app h3 {
+    font-size: 3vw;
+  }
+  .traffic__app span {
+    padding: 1vw 2vw;
+    font-size: 3vw;
+  }
+  .traffic__block-item:last-child span {
+    color: #16a34a;
+  }
+}
