@@ -4776,6 +4776,9 @@ body {
   .target__block {
     gap: 5vw;
   }
+  .target__right {
+    gap: 3vw;
+  }
   .target__small-item {
     border-radius: 4vw;
     padding: 4vw;
@@ -4785,5 +4788,8 @@ body {
     font-weight: 600;
     font-size: 3.5vw;
     color: var(--bg-dot-color);
+  }
+  .target__small-item p {
+    font-size: 3vw;
   }
 }
