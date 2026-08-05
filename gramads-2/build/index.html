@@ -38,7 +38,7 @@
             <a href="#optimization"> Оптимизация </a>
           </li>
           <li>
-            <a href="#contact"> Контакты </a>
+            <a data-fancybox data-src="#contact" href="javascript:;"> Контакты </a>
           </li>
         </ul>
         <div class="header__top-right">
@@ -170,39 +170,41 @@
 </header>
 
 <div class="menu" id="menu">
-  <div class="container">
-    <div class="menu__wrapper">
-      <div class="menu__header">
-        <div class="header__logo">
-          <img src="img/logo.png" alt="" />
-          <span>Grmads</span>
+  <div class="overlay">
+    <div class="container">
+      <div class="menu__wrapper">
+        <div class="menu__header">
+          <div class="header__logo">
+            <img src="img/logo.png" alt="" />
+            <span>Grmads</span>
+          </div>
+          <button type="button" id="close-menu" class="menu__close">
+            <span class="close__line close__line-1"></span>
+            <span class="close__line close__line-2"></span>
+          </button>
         </div>
-        <button type="button" id="close-menu" class="menu__close">
-          <span class="close__line close__line-1"></span>
-          <span class="close__line close__line-2"></span>
-        </button>
-      </div>
-      <div class="menu__body">
-        <ul class="menu__list">
-          <li>
-            <a class="menu__list-link" href="#format"> Форматы </a>
-          </li>
-          <li>
-            <a class="menu__list-link" href="#target"> Таргетинг </a>
-          </li>
-          <li>
-            <a class="menu__list-link" href="#optimization"> Оптимизация </a>
-          </li>
-          <li>
-            <a class="menu__list-link" href="#contact"> Контакты </a>
-          </li>
-        </ul>
-        <div class="menu__bootom">
-          <button type="button" class="menu__signin signin">Войти</button>
-          <a href="#" class="header__start">
-            <span> Запустить рекламу </span>
-            <img src="img/arrow.svg" alt="" />
-          </a>
+        <div class="menu__body">
+          <ul class="menu__list">
+            <li>
+              <a class="menu__list-link" href="#format"> Форматы </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="#target"> Таргетинг </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="#optimization"> Оптимизация </a>
+            </li>
+            <li>
+              <a class="menu__list-link" data-fancybox data-src="#contact" href="javascript:;"> Контакты </a>
+            </li>
+          </ul>
+          <div class="menu__bootom">
+            <button type="button" class="menu__signin signin">Войти</button>
+            <a href="#" class="header__start">
+              <span> Запустить рекламу </span>
+              <img src="img/arrow.svg" alt="" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -210,86 +212,139 @@
 </div>
 
 <div class="sign" id="sign">
-  <div class="container">
-    <div class="menu__wrapper">
-      <div class="menu__header">
-        <div class="header__logo">
-          <img src="img/logo.png" alt="" />
-          <span>Grmads</span>
-        </div>
-        <button type="button" id="close-sign-menu" class="menu__close">
-          <span class="close__line close__line-1"></span>
-          <span class="close__line close__line-2"></span>
-        </button>
-      </div>
-      <div class="sign__body">
-        <div class="sign__info sign__info-enter active">
-          <h2>С возвращением</h2>
-          <p>Войдите, чтобы управлять кампаниями</p>
-        </div>
-        <div class="sign__info sign__info-register">
-          <h2>Создайте аккаунт</h2>
-          <p>Начните привлекать аудиторию Telegram Mini Apps</p>
-        </div>
-        <div class="sign__nav">
-          <button type="button" data-sign="enter" class="sign__trigger sign__btn-enter sign__btn active">Вход</button>
-          <button type="button" data-sign="register" class="sign__trigger sign__btn-register sign__btn">Регистрация</button>
-        </div>
-        <form class="sign__form enter active" action="">
-          <div class="input__wrapper">
-            <label>
-              <span>Email</span>
-              <input type="mail" placeholder="you@company.com" required />
-            </label>
+  <div class="overlay">
+    <div class="container">
+      <div class="sign__wrapper">
+        <div class="sign__left">
+          <div class="menu__header">
+            <div class="header__logo">
+              <img src="img/logo.png" alt="" />
+              <span>Grmads</span>
+            </div>
           </div>
-          <div class="input__wrapper">
-            <label>
-              <span>Пароль</span>
-              <input type="password" placeholder="••••••••" required />
-            </label>
+          <h2 class="sign__left-title">Управляйте рекламой в Telegram Mini Apps из одного кабинета</h2>
+          <div class="sign__company">
+            <h4 class="sign__company-title">Кампания активна</h4>
+            <div class="sign__company-items">
+              <div class="sign__company-item">
+                <p>CTR</p>
+                <h5>4.8%</h5>
+              </div>
+              <div class="sign__company-item">
+                <p>CPC</p>
+                <h5>$0.06</h5>
+              </div>
+              <div class="sign__company-item">
+                <p>ROI</p>
+                <h5>+35%</h5>
+              </div>
+            </div>
           </div>
-          <a href="#" class="forget__link"> Забыли пароль? </a>
-          <button type="submit" class="header__start sign__submit">
-            <span> Войти </span>
-          </button>
+          <div class="sign__review">
+            <p class="sign__review-rating">★★★★★</p>
+            <div class="sign__review-text">
+              «Настроили первую кампанию за вечер — трафик пошёл уже на следующий день. CPI ниже, чем в других сетках.»
+            </div>
+            <div class="sign__review-bottom">
+              <img src="img/review/7.png" alt="" class="sign__review-photo" />
+              <div class="sign__review-body">
+                <h3>Марк Соловьёв</h3>
+                <p>UA-менеджер, Fintech-проект</p>
+              </div>
+            </div>
+          </div>
+          <ul class="sign__list">
+            <li>50M+ показов в день по всем Mini Apps</li>
+            <li>Запуск кампании за 5 минут</li>
+            <li>Антифрод и точный таргетинг</li>
+          </ul>
+        </div>
+        <div class="sign__forms">
+          <div class="menu__header">
+            <div class="header__logo">
+              <img src="img/logo.png" alt="" />
+              <span>Grmads</span>
+            </div>
+            <button type="button" id="close-sign-menu" class="menu__close">
+              <span class="close__line close__line-1"></span>
+              <span class="close__line close__line-2"></span>
+            </button>
+          </div>
+          <div class="sign__body">
+            <div class="sign__info sign__info-enter active">
+              <h2>С возвращением</h2>
+              <p>Войдите, чтобы управлять кампаниями</p>
+            </div>
+            <div class="sign__info sign__info-register">
+              <h2>Создайте аккаунт</h2>
+              <p>Начните привлекать аудиторию Telegram Mini Apps</p>
+            </div>
+            <div class="sign__nav">
+              <button type="button" data-sign="enter" class="sign__trigger sign__btn-enter sign__btn active">
+                Вход
+              </button>
+              <button type="button" data-sign="register" class="sign__trigger sign__btn-register sign__btn">
+                Регистрация
+              </button>
+            </div>
+            <form class="sign__form enter active" action="">
+              <div class="input__wrapper">
+                <label>
+                  <span>Email</span>
+                  <input type="mail" placeholder="you@company.com" required />
+                </label>
+              </div>
+              <div class="input__wrapper">
+                <label>
+                  <span>Пароль</span>
+                  <input type="password" placeholder="••••••••" required />
+                </label>
+              </div>
+              <a href="#" class="forget__link"> Забыли пароль? </a>
+              <button type="submit" class="header__start sign__submit">
+                <span> Войти </span>
+              </button>
 
-          <div class="sign__or">
-            <span>или</span>
-          </div>
-          <p class="sign__bottom">
-            Нет аккаунта? <button type="button" data-sign="register" class="sign__trigger">Зарегистрироваться</button>
-          </p>
-        </form>
-        <form class="sign__form register" action="">
-          <div class="input__wrapper">
-            <label>
-              <span>Имя</span>
-              <input type="name" placeholder="Как к вам обращаться" required />
-            </label>
-          </div>
-          <div class="input__wrapper">
-            <label>
-              <span>Email</span>
-              <input type="mail" placeholder="you@company.com" required />
-            </label>
-          </div>
-          <div class="input__wrapper">
-            <label>
-              <span>Пароль</span>
-              <input type="password" placeholder="••••••••" required />
-            </label>
-          </div>
-          <button type="submit" class="header__start sign__submit">
-            <span> Создать аккаунт </span>
-          </button>
+              <div class="sign__or">
+                <span>или</span>
+              </div>
+              <p class="sign__bottom">
+                Нет аккаунта?
+                <button type="button" data-sign="register" class="sign__trigger">Зарегистрироваться</button>
+              </p>
+            </form>
+            <form class="sign__form register" action="">
+              <div class="input__wrapper">
+                <label>
+                  <span>Имя</span>
+                  <input type="name" placeholder="Как к вам обращаться" required />
+                </label>
+              </div>
+              <div class="input__wrapper">
+                <label>
+                  <span>Email</span>
+                  <input type="mail" placeholder="you@company.com" required />
+                </label>
+              </div>
+              <div class="input__wrapper">
+                <label>
+                  <span>Пароль</span>
+                  <input type="password" placeholder="••••••••" required />
+                </label>
+              </div>
+              <button type="submit" class="header__start sign__submit">
+                <span> Создать аккаунт </span>
+              </button>
 
-          <div class="sign__or">
-            <span>или</span>
+              <div class="sign__or">
+                <span>или</span>
+              </div>
+              <p class="sign__bottom">
+                Уже есть аккаунт? <button type="button" data-sign="enter" class="sign__trigger">Войти</button>
+              </p>
+            </form>
           </div>
-          <p class="sign__bottom">
-            Уже есть аккаунт? <button type="button" data-sign="enter" class="sign__trigger">Войти</button>
-          </p>
-        </form>
+        </div>
       </div>
     </div>
   </div>
@@ -330,6 +385,9 @@
                   <p class="format__tag">Высокий CTR</p>
                   <p class="format__tag">Быстрый запуск</p>
                 </div>
+                <p class="format__left-text">
+                  Уже используют 500+ рекламодателей по всему миру для запуска кампаний в Telegram.
+                </p>
                 <a href="#" class="header__start">
                   <span> Запустить рекламу </span>
                   <img src="img/arrow.svg" alt="" />
@@ -338,7 +396,16 @@
               <div class="format__right">
                 <h3 class="format__right-title">Предпросмотр объявления</h3>
                 <div class="banner">
-                  <div class="banner__icon">
+                  <img class="banner__img" src="img/banner-bg.jpg" alt="">
+                  <div class="banner__bottom">
+                    <h3>Реклама в Telegram Mini Apps</h3>
+                    <p>Охватывай миллионы пользователей уже сегодня</p>
+                    <a href="#" class="header__start">
+                      <span> Запустить рекламу </span>
+                      <img src="img/arrow.svg" alt="" />
+                    </a>
+                  </div>
+                  <!-- <div class="banner__icon">
                     <img src="img/format-icon-1.png" alt="" />
                   </div>
                   <p class="banner__small">Реклама</p>
@@ -347,7 +414,7 @@
                   <p class="banner__text">
                     Регистрируйся и получай ежедневные бонусы. Выводи заработанные монеты в TON-кошелёк.
                   </p>
-                  <button type="button" class="banner__btn">Попробовать бесплатно</button>
+                  <button type="button" class="banner__btn">Попробовать бесплатно</button> -->
                 </div>
               </div>
             </div>
@@ -665,7 +732,7 @@
     </div>
   </div>
 </section>
- <section class="optimization__section">
+ <section class="optimization__section" id="optimization">
   <div class="container">
     <div class="optimization__section-wrapper">
       <div class="circle circle-5"></div>
@@ -775,7 +842,7 @@
     </div>
   </div>
 </section>
- <section class="target__section">
+ <section class="target__section" id="target">
   <div class="container">
     <div class="target__section-wrapper">
       <div class="circle circle-5"></div>
@@ -846,9 +913,335 @@
     </div>
   </div>
 </section>
-   
-      
-      
+ 
+      <section class="review__section" id="review">
+  <div class="container">
+    <div class="review__section-wrapper">
+      <div class="circle circle-5"></div>
+      <div class="section__header">
+        <p class="tag">Отзывы</p>
+        <h2 class="section__title">Нам доверяют рекламодатели Telegram Mini Apps</h2>
+        <p class="section__text">
+          Присоединяйтесь к тысячам довольных клиентов, которые уже растят свой бизнес с Grmads.
+        </p>
+      </div>
+      <div class="reviews">
+        <div class="review">
+          <div class="review__top">
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <img src="img/quote.png" alt="" class="review__quote" />
+          </div>
+          <p class="review__text">
+            Небольшая affiliate-команда в iGaming. В классических сетках аккаунты банили пачками — гэмблинг модерируется
+            только через прокладки. В Grmads креатив проходит модерацию честно, без клоак. Кампания стартовала за один
+            день: 9 800 регистраций и ROAS 165% за первый месяц.
+          </p>
+          <div class="review__bottom">
+            <img src="img/review/1.png" alt="" class="review__photo" />
+            <div class="review__bottom-body">
+              <h3>Роман Гайдук</h3>
+              <p>Руководитель партнёрской команды, BetCircle</p>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__top">
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <img src="img/quote.png" alt="" class="review__quote" />
+          </div>
+          <p class="review__text">
+            Приводим пользователей в наш DEX через Telegram-бот. Раньше работали с инфлюенсерами — результат как
+            лотерея. С Grmads получили 7 600 подключений кошелька по $0.31 и таргетинг без мусорного трафика в воронке.
+          </p>
+          <div class="review__bottom">
+            <img src="img/review/2.png" alt="" class="review__photo" />
+            <div class="review__bottom-body">
+              <h3>Лукас Ферейра</h3>
+              <p>Head of Growth, NovaSwap</p>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__top">
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <img src="img/quote.png" alt="" class="review__quote" />
+          </div>
+          <p class="review__text">
+            Делаем казуальную игру внутри Telegram Mini Apps. Классические UA-сети не понимают TMA — юзеры отваливались
+            на переходе. С Grmads трафик уже внутри Telegram: настройка за 20 минут, CPI $0.19, окупаемость на 16-й
+            день.
+          </p>
+          <div class="review__bottom">
+            <img src="img/review/3.png" alt="" class="review__photo" />
+            <div class="review__bottom-body">
+              <h3>Юлия Марченко</h3>
+              <p>Сооснователь, Northlight Games</p>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__top">
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <img src="img/quote.png" alt="" class="review__quote" />
+          </div>
+          <p class="review__text">
+            У VPN-офера всегда сложная экономика — в классических сетках ниша под ограничениями. В Grmads настроила
+            таргет по странам с блокировками: 8 700 установок за месяц по $0.33, конверсия в платную подписку 12%.
+          </p>
+          <div class="review__bottom">
+            <img src="img/review/4.png" alt="" class="review__photo" />
+            <div class="review__bottom-body">
+              <h3>Настасья Рудь</h3>
+              <p>Основатель, SafeLine VPN</p>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__top">
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <img src="img/quote.png" alt="" class="review__quote" />
+          </div>
+          <p class="review__text">
+            Веду 9 клиентов в агентстве — раньше под каждого искала каналы и торговалась с админами неделями. С Grmads
+            один кабинет на все кампании и автооптимизация: время на ведение сократилось почти вдвое, CPA по портфелю
+            упал на 38%.
+          </p>
+          <div class="review__bottom">
+            <img src="img/review/5.png" alt="" class="review__photo" />
+            <div class="review__bottom-body">
+              <h3>Виктория Ковальчук</h3>
+              <p>Head of Performance, Reach Media</p>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__top">
+            <div class="review__rating">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+            <img src="img/quote.png" alt="" class="review__quote" />
+          </div>
+          <p class="review__text">
+            Руковожу User Acquisition в арбитражной команде, ведём пять TMA-проектов одновременно. Grmads даёт управлять
+            всем из одного кабинета: CPI ниже и retention выше, чем у альтернатив, а поддержка отвечает быстро даже в
+            нестандартных ситуациях.
+          </p>
+          <div class="review__bottom">
+            <img src="img/review/6.png" alt="" class="review__photo" />
+            <div class="review__bottom-body">
+              <h3>Артём Белозёров</h3>
+              <p>Head of UA, Vertex Arbitrage</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="faq__section">
+  <div class="container">
+    <div class="faq__section-wrapper">
+      <div class="circle circle-6"></div>
+      <div class="section__header">
+        <p class="tag">Есть вопросы?</p>
+        <h2 class="section__title">Мы всегда на связи</h2>
+        <p class="section__text">
+          Пожалуйста, задайте их нашей дружелюбной команде — мы работаем круглосуточно и ответим в кратчайшие сроки.
+        </p>
+      </div>
+      <div class="faq__block">
+        <div class="faq__info">
+          <p class="faq__info-tag">Служба поддержки 24/7</p>
+          <h3 class="faq__info-title">Напишите нам — ответим в течение 15 минут</h3>
+          <div class="faq__info-items">
+            <a href="mailto:support@grmads.com" target="_blank" class="faq__info-item">
+              <div class="faq__info-icon">
+                <img src="img/faq-icon-1.png" alt="" />
+              </div>
+              <div class="faq__info-body">
+                <p>Email</p>
+                <h3>support@grmads.com</h3>
+              </div>
+            </a>
+            <a href="https://telegram.me/@grmads_support" target="_blank" class="faq__info-item">
+              <div class="faq__info-icon">
+                <img src="img/faq-icon-2.png" alt="" />
+              </div>
+              <div class="faq__info-body">
+                <p>Telegram</p>
+                <h3>@grmads_support</h3>
+              </div>
+            </a>
+            <a href="mailto:sales@grmads.com" target="_blank" class="faq__info-item">
+              <div class="faq__info-icon">
+                <img src="img/faq-icon-3.png" alt="" />
+              </div>
+              <div class="faq__info-body">
+                <p>Отдел продаж</p>
+                <h3>sales@grmads.com</h3>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="header__start">
+            <span> Связаться </span>
+            <img src="img/arrow.svg" alt="" />
+          </a>
+        </div>
+        <div class="faq__items">
+          <div class="faq__item">
+            <button type="button" class="faq__btn">
+              <h3 class="faq__btn-question">Как быстро запускается кампания?</h3>
+              <div class="faq__btn-icon"></div>
+            </button>
+            <p class="faq__item-text">
+              Регистрация, загрузка креатива и настройка таргетинга занимают около 5 минут. Модерация объявления обычно
+              проходит в течение часа.
+            </p>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__btn">
+              <h3 class="faq__btn-question">Какие модели оплаты доступны?</h3>
+              <div class="faq__btn-icon"></div>
+            </button>
+            <p class="faq__item-text">
+              Вы можете выбрать CPM (оплата за показы) или tCPC (целевая цена за клик) — в зависимости от целей
+              кампании. Рекомендуемую ставку система предложит автоматически.
+            </p>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__btn">
+              <h3 class="faq__btn-question">Как Grmads защищает от накрутки и ботов?</h3>
+              <div class="faq__btn-icon"></div>
+            </button>
+            <p class="faq__item-text">
+              Многоуровневая система антифрода фильтрует недействительный трафик в реальном времени — вы платите только
+              за подтверждённые «чистые» показы.
+            </p>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__btn">
+              <h3 class="faq__btn-question">Можно ли таргетироваться на владельцев TON-кошелька?</h3>
+              <div class="faq__btn-icon"></div>
+            </button>
+            <p class="faq__item-text">
+              Да, вы можете включать или исключать аудиторию по признаку наличия TON-кошелька, а также по статусу
+              Telegram Premium — для более точной монетизации.
+            </p>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__btn">
+              <h3 class="faq__btn-question">Есть ли ограничение на количество объявлений в кампании?</h3>
+              <div class="faq__btn-icon"></div>
+            </button>
+            <p class="faq__item-text">
+              В одной кампании можно использовать до 10 креативов одновременно для A/B тестирования форматов и офферов.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+      <footer class="footer__section">
+  <div class="container">
+    <div class="footer__section-wrapper">
+    <div class="circle circle-7"></div>
+      <div class="footer__tags">
+        <span>Безопасная платформа</span>
+        <span>Запуск за 5 минут</span>
+        <span>30+ стран</span>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <div class="header__logo">
+            <img src="img/logo.png" alt="" />
+            <span>Grmads</span>
+          </div>
+          <p class="footer__text">Реклама в Telegram Mini Apps · Премиум рекламная платформа</p>
+        </div>
+        <div class="footer__col">
+          <p class="tag">Продукт</p>
+          <ul class="footer__nav-list">
+            <li>
+              <a href="#format"> Форматы </a>
+            </li>
+            <li>
+              <a href="#target"> Таргетинг </a>
+            </li>
+            <li>
+              <a href="#optimization"> Оптимизация </a>
+            </li>
+            <li>
+              <a href="#"> Цены </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="tag">Компания</p>
+          <ul class="footer__nav-list">
+            <li>
+              <a href="#"> О нас </a>
+            </li>
+            <li>
+              <a href="#"> Блог </a>
+            </li>
+            <li>
+              <a data-fancybox data-src="#contact" href="javascript:;"> Контакты </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="tag">Правовая информация</p>
+          <ul class="footer__nav-list">
+            <li>
+              <a data-fancybox data-src="#modal-privacy" href="javascript:;"> Конфиденциальность </a>
+            </li>
+            <li>
+              <a data-fancybox data-src="#modal-refusal" href="javascript:;"> Условия использования </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+    </div>
+  </div>
+</footer>
+
     </div>
     <div class="footer__modal" id="modal-privacy">
   <h6>Політика конфіденційності</h6>
@@ -910,7 +1303,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="libs/jquery.spincrement.min.js"></script>
     <!-- <script src="libs/aos.js"></script> -->
-    <!-- <script src="libs/jquery.fancybox.min.js"></script> -->
+    <script src="libs/jquery.fancybox.min.js"></script>
     <!-- <script src="libs/owl.carousel.min.js"></script> -->
     <script src="js/script.js"></script>
   </body>

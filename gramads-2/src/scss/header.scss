@@ -95,6 +95,7 @@
   font-weight: 500;
   font-size: 15px;
   color: var(--text-color);
+  cursor: pointer;
 }
 
 .header__start {
@@ -622,14 +623,203 @@
     opacity: 1;
     visibility: visible;
   }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .container {
+    padding-bottom: 30px;
+    height: auto;
+  }
 }
 
 .menu__wrapper {
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   padding: 20px 0 0;
   height: 100%;
+}
+
+.sign__wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 0 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.sign__left {
+  border: 1px solid var(--line-color);
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 10px 26px -6px rgba(82, 56, 128, 0.14);
+  background: var(--input-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.sign__left-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.sign__company {
+  border: 1px solid var(--line-color);
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--tag-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.sign__company-title {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-color);
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #6bd98c;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.sign__company-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sign__company-item {
+  width: auto;
+
+  p {
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--text-color);
+  }
+
+  h5 {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-color);
+  }
+}
+
+.sign__review {
+  border: 1px solid var(--line-color);
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--tag-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sign__review-rating {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.sign__review-text {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.48;
+  color: var(--text-color);
+}
+
+.sign__review-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.sign__review-photo {
+  width: 30px;
+  height: auto;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.sign__review-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--text-color);
+  }
+}
+
+.sign__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  li {
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--text-color);
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #c4b5fd;
+    }
+  }
+}
+
+.sign__forms {
+  .header__logo {
+    display: none;
+  }
+
+  .menu__header {
+    justify-content: flex-end;
+  }
 }
 
 .menu__header {
@@ -644,6 +834,7 @@
   border-radius: 100%;
   background-color: var(--main-bg);
   position: relative;
+  cursor: pointer;
 }
 
 .close__line {
@@ -670,7 +861,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 28px 0 63px;
+  padding: 28px 0 0;
 }
 
 .menu__list {
@@ -867,6 +1058,18 @@
   }
 }
 
+@media (max-width: 1080px) {
+  .sign__left {
+    display: none;
+  }
+  .sign__forms .menu__header {
+    justify-content: space-between;
+  }
+  .sign__forms .header__logo {
+    display: flex;
+  }
+}
+
 @media (max-width: 540px) {
   .header__top-wrapper {
     gap: 4vw;
@@ -928,7 +1131,7 @@
     font-size: 4vw;
   }
   .header__start img {
-    width: 3.4vw;
+    width: 3vw;
   }
   .header__info-items {
     justify-content: space-between;

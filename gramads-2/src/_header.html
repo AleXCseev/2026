@@ -17,7 +17,7 @@
             <a href="#optimization"> Оптимизация </a>
           </li>
           <li>
-            <a href="#contact"> Контакты </a>
+            <a data-fancybox data-src="#contact" href="javascript:;"> Контакты </a>
           </li>
         </ul>
         <div class="header__top-right">
@@ -149,39 +149,41 @@
 </header>
 
 <div class="menu" id="menu">
-  <div class="container">
-    <div class="menu__wrapper">
-      <div class="menu__header">
-        <div class="header__logo">
-          <img src="img/logo.png" alt="" />
-          <span>Grmads</span>
+  <div class="overlay">
+    <div class="container">
+      <div class="menu__wrapper">
+        <div class="menu__header">
+          <div class="header__logo">
+            <img src="img/logo.png" alt="" />
+            <span>Grmads</span>
+          </div>
+          <button type="button" id="close-menu" class="menu__close">
+            <span class="close__line close__line-1"></span>
+            <span class="close__line close__line-2"></span>
+          </button>
         </div>
-        <button type="button" id="close-menu" class="menu__close">
-          <span class="close__line close__line-1"></span>
-          <span class="close__line close__line-2"></span>
-        </button>
-      </div>
-      <div class="menu__body">
-        <ul class="menu__list">
-          <li>
-            <a class="menu__list-link" href="#format"> Форматы </a>
-          </li>
-          <li>
-            <a class="menu__list-link" href="#target"> Таргетинг </a>
-          </li>
-          <li>
-            <a class="menu__list-link" href="#optimization"> Оптимизация </a>
-          </li>
-          <li>
-            <a class="menu__list-link" href="#contact"> Контакты </a>
-          </li>
-        </ul>
-        <div class="menu__bootom">
-          <button type="button" class="menu__signin signin">Войти</button>
-          <a href="#" class="header__start">
-            <span> Запустить рекламу </span>
-            <img src="img/arrow.svg" alt="" />
-          </a>
+        <div class="menu__body">
+          <ul class="menu__list">
+            <li>
+              <a class="menu__list-link" href="#format"> Форматы </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="#target"> Таргетинг </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="#optimization"> Оптимизация </a>
+            </li>
+            <li>
+              <a class="menu__list-link" data-fancybox data-src="#contact" href="javascript:;"> Контакты </a>
+            </li>
+          </ul>
+          <div class="menu__bootom">
+            <button type="button" class="menu__signin signin">Войти</button>
+            <a href="#" class="header__start">
+              <span> Запустить рекламу </span>
+              <img src="img/arrow.svg" alt="" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -189,86 +191,139 @@
 </div>
 
 <div class="sign" id="sign">
-  <div class="container">
-    <div class="menu__wrapper">
-      <div class="menu__header">
-        <div class="header__logo">
-          <img src="img/logo.png" alt="" />
-          <span>Grmads</span>
-        </div>
-        <button type="button" id="close-sign-menu" class="menu__close">
-          <span class="close__line close__line-1"></span>
-          <span class="close__line close__line-2"></span>
-        </button>
-      </div>
-      <div class="sign__body">
-        <div class="sign__info sign__info-enter active">
-          <h2>С возвращением</h2>
-          <p>Войдите, чтобы управлять кампаниями</p>
-        </div>
-        <div class="sign__info sign__info-register">
-          <h2>Создайте аккаунт</h2>
-          <p>Начните привлекать аудиторию Telegram Mini Apps</p>
-        </div>
-        <div class="sign__nav">
-          <button type="button" data-sign="enter" class="sign__trigger sign__btn-enter sign__btn active">Вход</button>
-          <button type="button" data-sign="register" class="sign__trigger sign__btn-register sign__btn">Регистрация</button>
-        </div>
-        <form class="sign__form enter active" action="">
-          <div class="input__wrapper">
-            <label>
-              <span>Email</span>
-              <input type="mail" placeholder="you@company.com" required />
-            </label>
+  <div class="overlay">
+    <div class="container">
+      <div class="sign__wrapper">
+        <div class="sign__left">
+          <div class="menu__header">
+            <div class="header__logo">
+              <img src="img/logo.png" alt="" />
+              <span>Grmads</span>
+            </div>
           </div>
-          <div class="input__wrapper">
-            <label>
-              <span>Пароль</span>
-              <input type="password" placeholder="••••••••" required />
-            </label>
+          <h2 class="sign__left-title">Управляйте рекламой в Telegram Mini Apps из одного кабинета</h2>
+          <div class="sign__company">
+            <h4 class="sign__company-title">Кампания активна</h4>
+            <div class="sign__company-items">
+              <div class="sign__company-item">
+                <p>CTR</p>
+                <h5>4.8%</h5>
+              </div>
+              <div class="sign__company-item">
+                <p>CPC</p>
+                <h5>$0.06</h5>
+              </div>
+              <div class="sign__company-item">
+                <p>ROI</p>
+                <h5>+35%</h5>
+              </div>
+            </div>
           </div>
-          <a href="#" class="forget__link"> Забыли пароль? </a>
-          <button type="submit" class="header__start sign__submit">
-            <span> Войти </span>
-          </button>
+          <div class="sign__review">
+            <p class="sign__review-rating">★★★★★</p>
+            <div class="sign__review-text">
+              «Настроили первую кампанию за вечер — трафик пошёл уже на следующий день. CPI ниже, чем в других сетках.»
+            </div>
+            <div class="sign__review-bottom">
+              <img src="img/review/7.png" alt="" class="sign__review-photo" />
+              <div class="sign__review-body">
+                <h3>Марк Соловьёв</h3>
+                <p>UA-менеджер, Fintech-проект</p>
+              </div>
+            </div>
+          </div>
+          <ul class="sign__list">
+            <li>50M+ показов в день по всем Mini Apps</li>
+            <li>Запуск кампании за 5 минут</li>
+            <li>Антифрод и точный таргетинг</li>
+          </ul>
+        </div>
+        <div class="sign__forms">
+          <div class="menu__header">
+            <div class="header__logo">
+              <img src="img/logo.png" alt="" />
+              <span>Grmads</span>
+            </div>
+            <button type="button" id="close-sign-menu" class="menu__close">
+              <span class="close__line close__line-1"></span>
+              <span class="close__line close__line-2"></span>
+            </button>
+          </div>
+          <div class="sign__body">
+            <div class="sign__info sign__info-enter active">
+              <h2>С возвращением</h2>
+              <p>Войдите, чтобы управлять кампаниями</p>
+            </div>
+            <div class="sign__info sign__info-register">
+              <h2>Создайте аккаунт</h2>
+              <p>Начните привлекать аудиторию Telegram Mini Apps</p>
+            </div>
+            <div class="sign__nav">
+              <button type="button" data-sign="enter" class="sign__trigger sign__btn-enter sign__btn active">
+                Вход
+              </button>
+              <button type="button" data-sign="register" class="sign__trigger sign__btn-register sign__btn">
+                Регистрация
+              </button>
+            </div>
+            <form class="sign__form enter active" action="">
+              <div class="input__wrapper">
+                <label>
+                  <span>Email</span>
+                  <input type="mail" placeholder="you@company.com" required />
+                </label>
+              </div>
+              <div class="input__wrapper">
+                <label>
+                  <span>Пароль</span>
+                  <input type="password" placeholder="••••••••" required />
+                </label>
+              </div>
+              <a href="#" class="forget__link"> Забыли пароль? </a>
+              <button type="submit" class="header__start sign__submit">
+                <span> Войти </span>
+              </button>
 
-          <div class="sign__or">
-            <span>или</span>
-          </div>
-          <p class="sign__bottom">
-            Нет аккаунта? <button type="button" data-sign="register" class="sign__trigger">Зарегистрироваться</button>
-          </p>
-        </form>
-        <form class="sign__form register" action="">
-          <div class="input__wrapper">
-            <label>
-              <span>Имя</span>
-              <input type="name" placeholder="Как к вам обращаться" required />
-            </label>
-          </div>
-          <div class="input__wrapper">
-            <label>
-              <span>Email</span>
-              <input type="mail" placeholder="you@company.com" required />
-            </label>
-          </div>
-          <div class="input__wrapper">
-            <label>
-              <span>Пароль</span>
-              <input type="password" placeholder="••••••••" required />
-            </label>
-          </div>
-          <button type="submit" class="header__start sign__submit">
-            <span> Создать аккаунт </span>
-          </button>
+              <div class="sign__or">
+                <span>или</span>
+              </div>
+              <p class="sign__bottom">
+                Нет аккаунта?
+                <button type="button" data-sign="register" class="sign__trigger">Зарегистрироваться</button>
+              </p>
+            </form>
+            <form class="sign__form register" action="">
+              <div class="input__wrapper">
+                <label>
+                  <span>Имя</span>
+                  <input type="name" placeholder="Как к вам обращаться" required />
+                </label>
+              </div>
+              <div class="input__wrapper">
+                <label>
+                  <span>Email</span>
+                  <input type="mail" placeholder="you@company.com" required />
+                </label>
+              </div>
+              <div class="input__wrapper">
+                <label>
+                  <span>Пароль</span>
+                  <input type="password" placeholder="••••••••" required />
+                </label>
+              </div>
+              <button type="submit" class="header__start sign__submit">
+                <span> Создать аккаунт </span>
+              </button>
 
-          <div class="sign__or">
-            <span>или</span>
+              <div class="sign__or">
+                <span>или</span>
+              </div>
+              <p class="sign__bottom">
+                Уже есть аккаунт? <button type="button" data-sign="enter" class="sign__trigger">Войти</button>
+              </p>
+            </form>
           </div>
-          <p class="sign__bottom">
-            Уже есть аккаунт? <button type="button" data-sign="enter" class="sign__trigger">Войти</button>
-          </p>
-        </form>
+        </div>
       </div>
     </div>
   </div>

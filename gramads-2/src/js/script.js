@@ -6,9 +6,7 @@ var landingFunctions = {
     this.menu();
     this.sign();
     this.tab();
-    // this.time();
-    // this.bar();
-    // this.faq();
+    this.faq();
   },
 
   initLibraris: function () {
@@ -21,31 +19,30 @@ var landingFunctions = {
       e.preventDefault();
     });
 
-    // gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-    // const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section");
 
-    // sections.forEach((section) => {
-    //   // Создаем анимацию для каждой отдельной секции
-    //   gsap.fromTo(
-    //     section,
-    //     {
-    //       opacity: 0,
-    //       y: 50,
-    //     },
-    //     {
-    //       opacity: 1,
-    //       y: 0, // Возвращаем в исходное положение
-    //       duration: 1, // Длительность анимации в секундах
-    //       ease: "power2.out", // Плавное замедление в конце
-    //       scrollTrigger: {
-    //         trigger: section, // Элемент, который запускает анимацию
-    //         start: "top 80%", // Анимация начнется, когда верх секции пересечет 80% высоты экрана
-    //         end: "bottom 20%", // Конечная точка (опционально)
-    //       },
-    //     },
-    //   );
-    // });
+    sections.forEach((section) => {
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1, 
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 20%",
+          },
+        },
+      );
+    });
 
     // AOS.init({
     //   disable: function () {
@@ -174,93 +171,14 @@ var landingFunctions = {
     });
   },
 
-  time: function () {
-    Date.prototype.daysInMonth = function () {
-      return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
-    };
-
-    if (!String.prototype.padStart) {
-      String.prototype.padStart = function padStart(targetLength, padString) {
-        targetLength = targetLength >> 0; //truncate if number or convert non-number to 0;
-        padString = String(typeof padString !== "undefined" ? padString : " ");
-        if (this.length > targetLength) {
-          return String(this);
-        } else {
-          targetLength = targetLength - this.length;
-          if (targetLength > padString.length) {
-            padString += padString.repeat(targetLength / padString.length);
-          }
-          return padString.slice(0, targetLength) + String(this);
-        }
-      };
-    }
-
-    function timer() {
-      function runMultiple(hoursSelector, minutesSelector, secondsSelector, milisecondsSelector) {
-        var d = new Date();
-        var h = String(23 - d.getHours()).padStart(2, "0");
-        var m = String(59 - d.getMinutes()).padStart(2, "0");
-        var s = String(60 - d.getSeconds()).padStart(2, "0");
-        // var ms = String(1000 - d.getMilliseconds()).padStart(3, "0");
-        $(hoursSelector).text(h);
-        $(minutesSelector).text(m);
-        $(secondsSelector).text(s);
-        // $(milisecondsSelector).text(ms)
-      }
-      setInterval(function () {
-        runMultiple(".hours", ".minutes", ".seconds");
-      }, 1000);
-    }
-
-    timer();
-
-    function getDate(plusDays) {
-      var now = new Date();
-      now.setDate(now.getDate() + plusDays);
-      var dayNum = "";
-      if (now.getDate() < 10) {
-        dayNum = "0";
-      }
-      dayNum += now.getDate();
-      var monthNum = "";
-      if (now.getMonth() + 1 < 10) {
-        monthNum = "0";
-      }
-      monthNum += now.getMonth() + 1;
-
-      // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
-    }
-
-    // $(".date__1").text(getDate(-5));
-    // $(".date").text(getDate(2));
-  },
-
-  bar: function () {
-    $(".bar__start").click(function () {
-      $(".bar__track").addClass("active");
-
-      setTimeout(() => {
-        $(".result").fadeIn(300);
-        $(".order__bar").css("opacity", 0);
-      }, 6000);
-
-      setTimeout(() => {
-        $(".result").fadeOut(300);
-        $(".order__bar").hide();
-        $(".order__content").fadeIn(300);
-      }, 8000);
-    });
-  },
-
   faq: function () {
     $(".faq__btn").click(function () {
-      if ($(this).hasClass("active")) {
-        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
-        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
+      if ($(this).closest(".faq__item").hasClass("active")) {
+        $(this).closest(".faq__item").removeClass("active");
+        $(this).closest(".faq__item").find(".faq__item-text").slideUp(300);
       } else {
-        $(this).addClass("active");
-        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
+        $(this).closest(".faq__item").addClass("active");
+        $(this).closest(".faq__item").find(".faq__item-text").slideDown(300);
       }
     });
   },
