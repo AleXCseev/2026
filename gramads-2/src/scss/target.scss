@@ -18,7 +18,7 @@
 .target__block {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 24px;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 33px;
 }
 
 .target__item {
@@ -91,6 +91,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -106,6 +107,10 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+
+  &:last-child {
+    padding-bottom: 26px;
+  }
 
   h3 {
     font-weight: 600;
@@ -172,7 +177,7 @@
   }
   .target__small-item {
     border-radius: 4vw;
-    padding: 4vw;
+    padding: 4vw !important;
     gap: 1.5vw;
   }
   .target__small-item h3 {

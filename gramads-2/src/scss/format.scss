@@ -305,9 +305,31 @@
   color: var(--tag-bg-color);
 }
 
+.tab__video .format__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .video {
-  padding: 70px 24px;
+  // padding: 70px 24px;
+  // align-items: center;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
   align-items: center;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transform: scale(1.01);
+  }
 }
 
 .video__icon {
@@ -322,14 +344,27 @@
 }
 
 .native {
-  border: 1px solid var(--line-color);
-  border-radius: 14px;
-  padding: 18px;
+  // border: 1px solid var(--line-color);
+  // border-radius: 14px;
+  // padding: 18px;
   background: var(--tag-bg-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+    padding-right: 30px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-color-alt);
+  }
 }
 
 .native__text-small {
@@ -342,7 +377,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+}
+
+.native__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .native__icon {
@@ -474,13 +515,23 @@
   .video {
     border: none;
     border-radius: 4vw;
-    padding: 4vw;
+    padding: 0;
     gap: 2vw;
     background-color: var(--tag-bg-color);
+  }
+  .banner__bottom {
+    gap: 1.5vw;
+    padding: 1.5vw 2.5vw 4vw;
+  }
+  .banner__bottom h3 {
+    font-size: 4vw;
   }
   .banner__icon {
     width: 44px;
     height: 44px;
+  }
+  .banner__bottom p {
+    font-size: 3.2vw;
   }
   .banner__icon img {
     width: 20px;
@@ -509,15 +560,25 @@
     font-size: 3vw;
   }
   .video {
-    padding: 18vw 4vw;
+    padding: 0;
   }
   .video__text {
     font-size: 3vw;
   }
   .native {
-    border-radius: 3vw;
-    padding: 4vw;
+    border-radius: 0;
+    padding: 0;
     gap: 2vw;
+  }
+  .native__img {
+    border-radius: 2vw;
+  }
+  .native h3 {
+    font-size: 3.8vw;
+    padding-right: 6vw;
+  }
+  .native p {
+    font-size: 3.2vw;
   }
   .native__text-small {
     font-size: 3vw;

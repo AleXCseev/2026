@@ -33,7 +33,7 @@ var landingFunctions = {
         {
           opacity: 1,
           y: 0,
-          duration: 1, 
+          duration: 1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: section,
@@ -44,21 +44,44 @@ var landingFunctions = {
       );
     });
 
-    // AOS.init({
-    //   disable: function () {
-    //     if ($(window).width() <= 1080) {
-    //       return true;
-    //     }
-    //     return false;
-    //   },
-    //   once: true,
-    //   duration: 1000,
-    //   offset: 0,
-    // });
+    const chartContainer = document.querySelector("#animatedChart");
+    const path = document.querySelector("#animated-path");
 
-    // $(window).resize(function () {
-    //   AOS.refresh();
-    // });
+    const pathLength = path.getTotalLength();
+    
+    chartContainer.style.setProperty('--path-length', pathLength);
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.3 
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                chartContainer.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(chartContainer);
+
+    AOS.init({
+      // disable: function () {
+      //   if ($(window).width() <= 1080) {
+      //     return true;
+      //   }
+      //   return false;
+      // },
+      once: false,
+      duration: 1000,
+      offset: 0,
+    });
+
+    $(window).resize(function () {
+      AOS.refresh();
+    });
 
     // $("[data-fancybox]").fancybox({
     //   loop: true,
