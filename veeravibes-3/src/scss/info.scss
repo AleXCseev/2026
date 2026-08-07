@@ -1,0 +1,162 @@
+.section-3 {
+}
+
+.section-3__wrapper {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.section-3__title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.section-3__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #47525c;
+}
+
+.section-3__columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.section-3__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.section-3__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 15px;
+    color: #0f766e;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    li {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #525961;
+    }
+  }
+}
+
+.section-3__img {
+  width: 368px;
+  height: auto;
+  border-radius: 14px;
+}
+
+.section-3__info {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  color: #8c9499;
+}
+
+@media (max-width: 1080px) {
+  .section-3__columns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-3__wrapper {
+    padding: 6vw 0;
+    gap: 3.5vw;
+  }
+  .section-3__title {
+    font-size: 5vw;
+  }
+  .section-3__text {
+    font-size: 3.5vw;
+  }
+  .section-3__columns {
+    gap: 3.5vw;
+  }
+  .section-3__col {
+    gap: 3.5vw;
+  }
+  .section-3__item {
+    gap: 1vw;
+  }
+  .section-3__item h3 {
+    font-size: 3.5vw;
+  }
+  .section-3__item ul {
+    gap: 1vw;
+  }
+  .section-3__item ul li {
+    font-size: 3.2vw;
+  }
+  .section-3__img {
+    width: 100%;
+    border-radius: 3vw;
+  }
+  .section-3__info {
+    display: block;
+    font-size: 3vw;
+  }
+}
+
+.info__section {
+  background: #fafaf7;
+}
+
+.info__secion-wrapper {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.info__section-title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.info__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 56px;
+}
+
+.info__block-img {
+    width: 460px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.section-1__content {
+}
+
+.info__block-reverse {
+    flex-direction: row-reverse;
+}
