@@ -1,0 +1,277 @@
+.table__section {
+  background: #fafaf7;
+}
+
+.table__section-wrapper {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.table__section-title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr;
+  border: 1px solid #d9dee0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.table__item {
+  padding: 16px 20px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #4d545c;
+  border-bottom: 1px solid #e5e8eb;
+}
+
+.table__top {
+  background: #f2f2f0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.center__col {
+  background: #e6f2f0;
+}
+
+.item__center {
+  background: #f6fbfa;
+}
+
+.table__item-bottom {
+  border-bottom: none;
+}
+
+.table__info {
+  border-radius: 10px;
+  padding: 16px 20px;
+  background: #f5f5ed;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #736b4d;
+}
+
+@media (max-width: 1080px) {
+  .table {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .table__section-wrapper {
+    padding: 6vw 0;
+    gap: 3vw;
+  }
+  .table__section-title {
+    font-size: 5vw;
+  }
+  .table {
+    border-radius: 2.5vw;
+  }
+  .table__item {
+    padding: 2.5vw 2vw;
+    font-size: 2.8vw;
+  }
+  .table__info {
+    border-radius: 2vw;
+    padding: 3vw;
+    font-size: 2.8vw;
+  }
+}
+
+.section-7 {
+}
+
+.section-7__wrapper {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.section-7__title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.section-7__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.section-7__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding-left: 18px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #0f766e;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 15px;
+    color: #1f2937;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #666e75;
+  }
+}
+
+.section-7__info {
+  font-weight: 400;
+  font-size: 12px;
+  color: #8c9499;
+}
+
+.section-7__img {
+  width: 100%;
+  max-width: 964px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+@media (max-width: 540px) {
+  .section-7__wrapper {
+    padding: 6vw 0;
+    gap: 3.5vw;
+  }
+  .section-7__title {
+    font-size: 5vw;
+    order: 1;
+  }
+  .section-7__img {
+    order: 2;
+    margin-top: 0;
+  }
+  .section-7__items {
+    order: 3;
+  }
+  .section-7__items {
+    gap: 3.5vw;
+  }
+  .section-7__item {
+    gap: 0.5vw;
+
+    h3 {
+      font-size: 3.2vw;
+    }
+
+    p {
+      font-size: 3vw;
+    }
+  }
+  .section-7__info {
+    font-size: 3vw;
+  }
+}
+
+.sert {
+}
+
+.sert__wrapper {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.sert__section-title {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.sert__section-text {
+  display: none;
+}
+
+.sert__items {
+  width: 100%;
+  max-width: 724px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.sert__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sert__item-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.sert__item-text {
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+  color: #525961;
+}
+
+@media (max-width: 540px) {
+  .sert__wrapper {
+    padding: 6vw 0;
+    gap: 3.5vw;
+  }
+  .sert__section-title {
+    font-size: 5vw;
+    text-align: left;
+  }
+  .sert__section-text {
+    display: block;
+    font-weight: 400;
+    font-size: 3.2vw;
+    line-height: 1.45;
+    color: #666e75;
+  }
+  .sert__items {
+    gap: 4.5vw;
+  }
+  .sert__item {
+    gap: 2vw;
+  }
+  .sert__item-img {
+    border-radius: 2.5vw;
+  }
+  .sert__item-text {
+    font-size: 2.5vw;
+  }
+}
