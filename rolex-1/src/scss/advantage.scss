@@ -1,0 +1,221 @@
+.advantage__section {
+  background: #f3f3fd;
+}
+
+.advantage__section-wrapper {
+  padding: 64px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 32px;
+}
+
+.advantage__img-block {
+  background-image: url(../img/advantage-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.advantage__discount {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  padding: 8px 16px;
+  background: #ff5630;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.advantage__content {
+}
+
+.advantage__title {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #191b23;
+  margin-bottom: 24px;
+}
+
+.advantage__price {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 16px;
+
+  .old__price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #737685;
+  }
+
+  .new__price {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    color: #ff5630;
+  }
+}
+
+.advantage__item {
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background: #faf8ff;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+
+  &:last-of-type {
+    margin-bottom: 48px;
+  }
+}
+
+.advantage__item-icon {
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  background: rgba(54, 179, 126, 0.2);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 20px;
+    height: auto;
+  }
+}
+
+.advantage__item-text {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191b23;
+}
+
+.advantage__btn {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #191b23;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 24px 0 rgba(255, 171, 0, 0.3);
+  background: #ffab00;
+  transition: 0.3s ease;
+
+  &:hover {
+    background: #c71f16;
+    color: #fff;
+  }
+}
+
+.advantage__info {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #434654;
+  margin-top: 8px;
+}
+
+@media (max-width: 1080px) {
+  .advantage__section-wrapper {
+    flex-direction: column;
+  }
+  .advantage__img-block {
+    height: 700px;
+  }
+}
+
+@media (max-width: 540px) {
+  .advantage__section-wrapper {
+    padding: 15vw 0;
+    gap: 8vw;
+  }
+  .advantage__img-block {
+    height: 160vw;
+  }
+  .advantage__discount {
+    border-radius: 3vw;
+    padding: 2vw 4vw;
+    font-size: 4vw;
+    top: 4vw;
+    left: 4vw;
+  }
+  .advantage__title {
+    font-size: 4vw;
+    margin-bottom: 6vw;
+  }
+  .advantage__price {
+    margin-bottom: 10vw;
+    gap: 4vw;
+
+    .old__price {
+      font-size: 4vw;
+    }
+    .new__price {
+      font-size: 12vw;
+    }
+  }
+
+  .advantage__item {
+    margin-bottom: 4vw;
+    border-radius: 2vw;
+    padding: 4vw;
+    gap: 4vw;
+  }
+  .advantage__item:last-of-type {
+    margin-bottom: 12vw;
+  }
+  .advantage__item-icon {
+    border-radius: 3vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  .advantage__item-icon img {
+    width: 5vw;
+  }
+  .advantage__item-text {
+    font-size: 3.8vw;
+  }
+  .advantage__btn {
+    font-size: 4vw;
+    border-radius: 2vw;
+    padding: 6vw;
+  }
+  .advantage__info {
+    font-size: 4vw;
+    margin-top: 2vw;
+  }
+}

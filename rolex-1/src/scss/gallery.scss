@@ -1,0 +1,133 @@
+.gallery__section {
+}
+
+.gallery__section-wrapper {
+  padding: 24px 0 104px;
+}
+
+.gallery__subtitle {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #2e5d45;
+  margin-bottom: 10px;
+}
+
+.gallery__title {
+  font-family: var(--font3);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.08;
+  color: #1b1a17;
+  margin-bottom: 34px;
+}
+
+.gallery__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery__item {
+  border: 1px solid #e4e0d6;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.gallery__item-img {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.gallery__tag {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 100px;
+  padding: 6px 12px;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #2e5d45;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.gallery__item-wrapper {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.gallery__item-title {
+  font-family: var(--font3);
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 1.12;
+  color: #1b1a17;
+}
+
+.gallery__item-text {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6e6a60;
+}
+
+@media (max-width: 1080px) {
+  .gallery__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .gallery__section-wrapper {
+    padding: 8vw 0;
+  }
+  .gallery__subtitle {
+    font-size: 3.2vw;
+    margin-bottom: 2.5vw;
+  }
+  .gallery__title {
+    font-size: 7.5vw;
+    margin-bottom: 8vw;
+  }
+  .gallery__items {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6vw;
+  }
+  .gallery__item {
+    border-radius: 4vw;
+  }
+  .gallery__tag {
+    border-radius: 20vw;
+    padding: 1.5vw 3vw;
+    font-size: 3vw;
+    top: 4vw;
+    left: 4vw;
+  }
+  .gallery__item-wrapper {
+    padding: 5vw 5.4vw 5.4vw;
+    gap: 2vw;
+  }
+  .gallery__item-title {
+    font-size: 5.6vw;
+  }
+  .gallery__item-text {
+    font-size: 3.5vw;
+  }
+}
