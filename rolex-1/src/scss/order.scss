@@ -289,3 +289,132 @@
 .order__img-3 {
   grid-column: span 2;
 }
+
+@media (max-width: 1080px) {
+  .order__section-block {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .order__info {
+    width: 100%;
+    max-width: 480px;
+  }
+  .order__block {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 540px) {
+  .order__section-wrapper {
+    padding: 16vw 0 8vw;
+  }
+  .order__section-title {
+    font-size: 5.5vw;
+    margin-bottom: 8vw;
+  }
+  .order__section-block {
+    gap: 12vw;
+  }
+  .order__info {
+    width: 100%;
+    max-width: 100%;
+    gap: 3vw;
+  }
+  .order__block {
+    width: 100%;
+    max-width: 100%;
+  }
+  .order__timer {
+    border-radius: 4vw;
+    padding: 4vw;
+    gap: 3vw;
+  }
+  .order__timer-text {
+    font-size: 2.8vw;
+  }
+  .timer__items {
+    gap: 1.5vw;
+  }
+  .timer__item {
+    width: 11vw;
+    gap: 1vw;
+  }
+  .timer__number {
+    border-radius: 1.5vw;
+    padding: 1.4vw 0;
+    font-size: 5vw;
+  }
+  .timer__text {
+    font-size: 2.5vw;
+  }
+  .order__info-block {
+    border-radius: 2vw;
+    padding: 3.5vw;
+  }
+  .order__info-block p {
+    font-size: 3.2vw;
+  }
+  .order__info-imgs {
+    gap: 3vw;
+  }
+  .order__img {
+    border-radius: 1.5vw;
+  }
+  .order__block {
+    border-radius: 3vw;
+    padding: 6vw 6vw 12vw;
+    gap: 4vw;
+  }
+  .order__old-price {
+    border-radius: 1vw;
+    padding: 2vw 4vw;
+    font-size: 2.8vw;
+    margin-bottom: 2vw;
+  }
+  .order__price-text {
+    font-size: 3vw;
+  }
+  .order__new-price {
+    font-size: 8vw;
+  }
+  .order__discount {
+    font-size: 2.8vw;
+    margin-top: 1vw;
+  }
+  .order__block-info {
+    border-radius: 1.5vw;
+    padding: 2.8vw;
+  }
+  .order__block-info p {
+    font-size: 3vw;
+  }
+  .order__list {
+    gap: 2vw;
+  }
+  .order__list li {
+    padding-left: 7vw;
+    font-size: 3.2vw;
+  }
+  .order__list li:before {
+    width: 4.2vw;
+    height: 4.2vw;
+    flex-shrink: 0;
+  }
+  .order__form {
+    gap: 2.4vw;
+  }
+  .order__input-wrapper input {
+    border-radius: 2vw;
+    padding: 2.6vw;
+    font-size: 2.8vw;
+  }
+  .order__submit {
+    border-radius: 3vw;
+    padding: 3vw;
+    font-size: 3vw;
+  }
+  .order__bottom {
+    font-size: 2.2vw;
+  }
+}
