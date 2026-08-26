@@ -3,6 +3,7 @@ var landingFunctions = {
     this.initLibraris();
     this.time();
     this.price();
+    this.bar();
   },
 
   initLibraris: function () {
@@ -51,10 +52,12 @@ var landingFunctions = {
 
   price: function () {
     $(".new__price").each(function () {
-      let p = parseInt($(this).text());
+      const p = parseInt($(this).text());
       const currency = $(this).text().replace(/[0-9]/g, "");
-      p = (p * 100) / 10;
-      p2 = Math.ceil(p);
+      price = (p * 100) / 10;
+      p2 = Math.ceil(price);
+      const result = p2 - p
+      $(".result").text(result + " " + currency)
       $(this)
         .closest(".price")
         .find(".old__price")
@@ -122,6 +125,49 @@ var landingFunctions = {
 
     // $(".date__1").text(getDate(-5));
     $(".date").text(getDate(-2));
+  },
+
+  bar: function () {
+    const wheel = document.querySelector(".bar img");
+    const resultWrapper = document.querySelector(".card__block");
+
+    $(".start").click(function () {
+      if (wheel.classList.contains("rotated")) {
+        // resultWrapper.style.display = "block";
+        return false;
+      } else {
+        wheel.classList.add("super-rotation");
+        setTimeout(function () {
+          $(".bar__block").slideUp(1000);
+          $(".card__block").slideDown(1000);
+          start_timer();
+        }, 8000);
+        setTimeout(function () {
+          $(".card__decor img").addClass("active");
+        }, 9000);
+        wheel.classList.add("rotated");
+      }
+    });
+
+    var time = 600;
+    var intr;
+
+    function start_timer() {
+      intr = setInterval(tick, 1000);
+    }
+
+    function tick() {
+      time = time - 1;
+      var mins = Math.floor(time / 60);
+      var secs = time - mins * 60;
+      if (mins == 0 && secs == 0) {
+        clearInterval(intr);
+      }
+      secs = secs >= 10 ? secs : "0" + secs;
+      mins = mins >= 10 ? mins : "0" + mins;
+      $("#min").html(mins);
+      $("#sec").html(secs);
+    }
   },
 };
 
