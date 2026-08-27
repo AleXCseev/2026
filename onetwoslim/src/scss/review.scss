@@ -62,3 +62,31 @@
     background: #e08a00;
   }
 }
+
+@media (max-width: 540px) {
+  .review__section-wrapper {
+    border: none;
+    padding-bottom: 6vw;
+    gap: 6vw;
+  }
+  .review__section-title {
+    font-size: 7vw;
+    padding-left: 5vw;
+  }
+  .review__title {
+    font-size: 5vw;
+  }
+  .review__text {
+    font-size: 4vw;
+  }
+  .review__img {
+    border-radius: 7vw;
+  }
+  .review__order {
+    width: 100%;
+    font-size: 4.5vw;
+    padding: 4vw;
+    line-height: 1.4;
+    border-radius: 2.5vw;
+  }
+}
