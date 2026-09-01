@@ -3,7 +3,8 @@ var landingFunctions = {
     this.initLibraris();
     this.time();
     this.price();
-    this.bar();
+    // this.bar();
+    this.faq();
   },
 
   initLibraris: function () {
@@ -14,6 +15,12 @@ var landingFunctions = {
         .stop()
         .animate({ scrollTop: $(this.hash).offset().top + fixedOffset }, 1000);
       e.preventDefault();
+    });
+
+    $(".twentytwenty__container[data-orientation!='vertical']").twentytwenty({ default_offset_pct: 0.5 });
+    $(".twentytwenty__container[data-orientation='vertical']").twentytwenty({
+      default_offset_pct: 0.5,
+      orientation: "vertical",
     });
 
     gsap.registerPlugin(ScrollTrigger);
@@ -54,10 +61,10 @@ var landingFunctions = {
     $(".new__price").each(function () {
       const p = parseInt($(this).text());
       const currency = $(this).text().replace(/[0-9]/g, "");
-      price = (p * 100) / 10;
+      price = (p * 100) / 50;
       p2 = Math.ceil(price);
-      const result = p2 - p
-      $(".result").text(result + " " + currency)
+      const result = p2 - p;
+      $(".result").text(result + " " + currency);
       $(this)
         .closest(".price")
         .find(".old__price")
@@ -168,6 +175,18 @@ var landingFunctions = {
       $("#min").html(mins);
       $("#sec").html(secs);
     }
+  },
+
+  faq: function () {
+    $(".faq__btn").click(function () {
+      if ($(this).hasClass("active")) {
+        $(this).closest(".faq__item").find(".faq__btn").removeClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideUp(300);
+      } else {
+        $(this).addClass("active");
+        $(this).closest(".faq__item").find(".faq__text").slideDown(300);
+      }
+    });
   },
 };
 
