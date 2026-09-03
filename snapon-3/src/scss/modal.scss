@@ -1,0 +1,52 @@
+.footer__modal {
+  width: 100%;
+  max-width: 900px;
+  display: none;
+  color: #222;
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  h6 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer__modal h2 {
+    font-size: 6vw;
+  }
+  .footer__modal h6 {
+    font-size: 5vw;
+  }
+  .footer__modal p {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 540px) {
+  [id^="modal"] p {
+    font-size: 4vw;
+    margin-bottom: 2.5vw;
+  }
+  [id^="modal"] h2 {
+    font-size: 6vw;
+    margin-bottom: 5vw;
+  }
+  [id^="modal"] h6 {
+    font-size: 5vw;
+    margin-bottom: 2.5vw;
+  }
+  .fancybox-content {
+    padding: 44px 15px 20px;
+  }
+}

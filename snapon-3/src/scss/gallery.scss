@@ -1,0 +1,255 @@
+.gallery__section {
+  background: #f7f9fb;
+}
+
+.gallery__section-wrapper {
+  padding: 80px 0;
+}
+
+.gallery__section-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #191c1e;
+  margin-bottom: 8px;
+}
+
+.gallery__section-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #404850;
+  margin-bottom: 60px;
+}
+
+.gallery__slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery__slider {
+  width: 700px;
+  height: auto;
+}
+
+.owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.gallery__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.gallary__slide-wrapper {
+  border-radius: 21px 21px 0 0;
+  padding: 41px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background: #f2f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.gallary__quote {
+  font-weight: 400;
+  font-size: 69px;
+  line-height: 0.5;
+  color: rgba(0, 93, 144, 0.2);
+}
+
+.gallery__title {
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #0077b6;
+}
+
+.gallery__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #404850;
+}
+
+.gallary__img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallary__bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+}
+
+.gallery__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background: #1a1694;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 69%;
+  color: #fff;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.gallary__bottom-body {
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #191c1e;
+  }
+
+  p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    color: #404850;
+
+    img {
+      width: 10px !important;
+      height: auto;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.owl-nav {
+  position: absolute;
+  width: 100vw;
+  max-width: 1200px;
+  top: 50%;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+
+  button {
+    pointer-events: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: #f7f9fb !important;
+    background-image: url(../img/gallery-arrow.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 16px auto;
+
+    span {
+      display: none;
+    }
+
+    &.owl-next {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .owl-nav {
+    width: 100vw;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .gallery__slider-wrapper {
+    overflow: visible;
+  }
+  .owl-nav {
+    width: 100vw;
+    max-width: 700px;
+  }
+  .gallery__slider {
+    width: 560px;
+  }
+}
+
+@media (max-width: 540px) {
+  .gallery__section-wrapper {
+    padding: 10vw 0;
+  }
+  .gallery__section-title {
+    font-size: 7vw;
+    margin-bottom: 2vw;
+  }
+  .gallery__section-text {
+    font-size: 4vw;
+    margin-bottom: 4vw;
+  }
+  .gallery__slider {
+    width: 72vw;
+  }
+  .gallery__slide {
+    gap: 4vw;
+  }
+  .gallary__slide-wrapper {
+    border-radius: 2.5vw 2.5vw 0 0;
+    padding: 4vw;
+    gap: 2vw;
+  }
+  .gallary__quote {
+    font-size: 8vw;
+  }
+  .gallery__title {
+    font-size: 3.2vw;
+  }
+  .gallery__text {
+    font-size: 2.5vw;
+  }
+  .gallary__img {
+    border-radius: 1vw;
+  }
+  .gallary__bottom {
+    gap: 2vw;
+  }
+  .gallery__icon {
+    width: 8vw;
+    height: 8vw;
+    font-size: 3vw;
+  }
+  .gallary__bottom-body h3 {
+    font-size: 3vw;
+  }
+  .gallary__bottom-body p {
+    gap: 0.5vw;
+    font-size: 2.5vw;
+  }
+  .gallary__bottom-body p img {
+    width: 2vw !important;
+  }
+  .owl-nav {
+    width: 100vw;
+    max-width: 100vw;
+    left: -4vw;
+  }
+}
